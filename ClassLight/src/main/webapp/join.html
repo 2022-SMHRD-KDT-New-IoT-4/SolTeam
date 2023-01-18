@@ -5,18 +5,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="#" method="get">
-		이름 : <input type="text" name="name">
+	<form action="JoinProgram" method="post">
+		아이디<input type="text" name="id">
 		<br>
-		아이디 : <input type="text" name="id">
+		비번<input type="text" name="pw">
 		<br>
-	    패스워드 : <input type="password" name="pw">
+		이름<input type="text" name="name">
 		<br>
-		생년월일 <input type="date" name="birth">
+		생년월일<input type="date" name="birth">
 		<br>
-		회원유형 <input type="">
-	    <br>
-		<input type="submit">
+		회원유형
+		<br>
+		강사<input type="radio" name="job" value="teacher">
+		학생<input type="radio" name="job" value="student">
+		<br>
+		<input type="submit" value="제출하기">
 	</form>
 </body>
 </html>
