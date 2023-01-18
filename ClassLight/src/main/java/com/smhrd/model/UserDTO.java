@@ -1,100 +1,106 @@
 package com.smhrd.model;
 
+// 회원 
 public class UserDTO {
 
-	    // 회원 아이디 
-	    private String userId;
+    // 회원 아이디 
+    private String user_id;
 
-	    // 회원 패스워드 
-	    private String userPw;
+    // 회원 패스워드 
+    private String user_pw;
 
-	    // 회원 이름 
-	    private String userName;
+    // 회원 이름 
+    private String user_name;
 
-	    // 회원 가입일자 
-	    private String userJoindate;
+    // 회원 가입일자 
+    private String user_joindate;
 
-	    // 회원 생년월일 
-	    private String userBirthdate;
+    // 회원 생년월일 
+    private String user_birthdate;
 
-	    // 회원 포인트 
-	    private Double userPoint;
+    // 회원 포인트 
+    private Double user_point;
 
-	    // 회원 유형 
-	    private String userType;
+    // 회원 유형 
+    private String user_type;
 
-	    // 시리얼 넘버 
-	    private String serialNo;
+    // 시리얼 넘버 
+    private String serial_no;
 
-	    public String getUserId() {
-	        return userId;
-	    }
+    public String getUserId() {
+        return user_id;
+    }
 
-	    public void setUserId(String userId) {
-	        this.userId = userId;
-	    }
+    public void setUserId(String user_id) {
+        this.user_id = user_id;
+    }
 
-	    public String getUserPw() {
-	        return userPw;
-	    }
+    public String getUserPw() {
+        return user_pw;
+    }
 
-	    public void setUserPw(String userPw) {
-	        this.userPw = userPw;
-	    }
+    public void setUserPw(String user_pw) {
+        this.user_pw = user_pw;
+    }
 
-	    public String getUserName() {
-	        return userName;
-	    }
+    public String getUserName() {
+        return user_name;
+    }
 
-	    public void setUserName(String userName) {
-	        this.userName = userName;
-	    }
+    public void setUserName(String user_name) {
+        this.user_name = user_name;
+    }
 
-	    public String getUserJoindate() {
-	        return userJoindate;
-	    }
+    public String getUserJoindate() {
+        return user_joindate;
+    }
 
-	    public void setUserJoindate(String userJoindate) {
-	        this.userJoindate = userJoindate;
-	    }
+    public void setUserJoindate(String user_joindate) {
+        this.user_joindate = user_joindate;
+    }
 
-	    public String getUserBirthdate() {
-	        return userBirthdate;
-	    }
+    public String getUserBirthdate() {
+        return user_birthdate;
+    }
 
-	    public void setUserBirthdate(String userBirthdate) {
-	        this.userBirthdate = userBirthdate;
-	    }
+    public void setUserBirthdate(String user_birthdate) {
+        this.user_birthdate = user_birthdate;
+    }
 
-	    public Double getUserPoint() {
-	        return userPoint;
-	    }
+    public Double getUserPoint() {
+        return user_point;
+    }
 
-	    public void setUserPoint(Double userPoint) {
-	        this.userPoint = userPoint;
-	    }
+    public void setUserPoint(Double user_point) {
+        this.user_point = user_point;
+    }
 
-	    public String getUserType() {
-	        return userType;
-	    }
+    public String getUserType() {
+        return user_type;
+    }
 
-	    public void setUserType(String userType) {
-	        this.userType = userType;
-	    }
+    public void setUserType(String user_type) {
+        this.user_type = user_type;
+    }
 
-	    public String getSerialNo() {
-	        return serialNo;
-	    }
+    public String getSerialNo() {
+        return serial_no;
+    }
 
-	    public void setSerialNo(String serialNo) {
-	        this.serialNo = serialNo;
-	    }
+    public void setSerialNo(String serial_no) {
+        this.serial_no = serial_no;
+    }
 
-		public UserDTO(String userId, String userPw, String userName, String userBirthdate) {
-			super();
-			this.userId = userId;
-			this.userPw = userPw;
-			this.userName = userName;
-			this.userBirthdate = userBirthdate;
-		}
+    // user_tb 모델 복사
+    public void CopyData(UserDTO param)
+    {
+        this.user_id = param.getUserId();
+        this.user_pw = param.getUserPw();
+        this.user_name = param.getUserName();
+        this.user_joindate = param.getUserJoindate();
+        this.user_birthdate = param.getUserBirthdate();
+        this.user_point = param.getUserPoint();
+        this.user_type = param.getUserType();
+        this.serial_no = param.getSerialNo();
+    }
 }
