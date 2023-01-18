@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.Command;
 import com.smhrd.controller.JoinProgram;
+import com.smhrd.controller.LevelCheckProgram;
 import com.smhrd.controller.LoginProgram;
 import com.smhrd.controller.QuestionProgram;
 import com.smhrd.controller.ResearchId;
@@ -52,9 +53,6 @@ public class FrontController extends HttpServlet {
 	    
 	    // WEB-INF에 파일 넣으면 rdPath 앞에 "WEB-INF" 추가 할 것 
 	    RequestDispatcher rd  = request.getRequestDispatcher(rdPath);
-	    
-		
-	
 	}
 
 }
