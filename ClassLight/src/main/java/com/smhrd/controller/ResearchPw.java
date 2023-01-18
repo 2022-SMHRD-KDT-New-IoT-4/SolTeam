@@ -10,33 +10,29 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
 
-public class LoginProgram implements Command {
+public class ResearchPw implements Command {
 	private static final long serialVersionUID = 1L;
+
+	
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String result = null ;
-				
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
+		String result = null; 
 		
+		String name = request.getParameter("name");
+		String id = request.getParameter("id");
 		
 		UserDTO dto = new UserDTO();
 		
+		dto.setUserName(name);
 		dto.setUserId(id);
-		dto.setUserPw(pw);
 		
-		UserDAO dao = new UserDAO();
-		
-		UserDTO row = dao.login(dto);
-		
-		if(row != null) {
-			request.getSession().setAttribute("name", row);
-		}
+	    UserDAO dao = new UserDAO();
+	    
+	    UserDTO row = dao.researchPw(dto);
 		
 		
-		// 로그인 실패시 main 으로 이동 --> result 값에 "main.jsp" 넣어주기
 		return result;
 	}
 

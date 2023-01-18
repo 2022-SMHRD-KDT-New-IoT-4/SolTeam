@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.controller.Command;
 import com.smhrd.controller.JoinProgram;
 import com.smhrd.controller.LoginProgram;
+import com.smhrd.controller.ResearchId;
+import com.smhrd.controller.ResearchPw;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -24,6 +26,10 @@ public class FrontController extends HttpServlet {
 	
 	map.put("Join.do", new JoinProgram());
 	map.put("Login.do", new LoginProgram());
+	map.put("ResearchId.do", new ResearchId());
+	map.put("ResearchPw.do", new ResearchPw());
+	
+	
 	}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)

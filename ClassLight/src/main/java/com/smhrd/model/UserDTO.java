@@ -26,8 +26,15 @@ public class UserDTO {
 
     // 시리얼 넘버 
     private String serial_no;
+    
 
-    public String getUserId() {
+    public UserDTO(String id, String pw, String name, String job) {
+	}
+    
+    public UserDTO() {
+    }
+
+	public String getUserId() {
         return user_id;
     }
 
@@ -91,16 +98,5 @@ public class UserDTO {
         this.serial_no = serial_no;
     }
 
-    // user_tb 모델 복사
-    public void CopyData(UserDTO param)
-    {
-        this.user_id = param.getUserId();
-        this.user_pw = param.getUserPw();
-        this.user_name = param.getUserName();
-        this.user_joindate = param.getUserJoindate();
-        this.user_birthdate = param.getUserBirthdate();
-        this.user_point = param.getUserPoint();
-        this.user_type = param.getUserType();
-        this.serial_no = param.getSerialNo();
-    }
+  
 }

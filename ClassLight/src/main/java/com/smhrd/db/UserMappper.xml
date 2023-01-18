@@ -6,6 +6,16 @@
 <mapper namespace="해당model명">
 	
 	<!-- 쿼리문 작성 -->
+	
+	<!-- join구문 -->
+	<insert id="join" parameterType="UserDTO">
+	insert into user_tb
+	values (#{userId},#{userPw},#{userName},sysdate,#{userBirthdate},0,#{userType})
+	</insert>
+	
+	<!-- login구문 -->
+	
+	<select id="login" parameterType=""></select>
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
 
