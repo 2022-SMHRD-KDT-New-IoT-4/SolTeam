@@ -10,10 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
 
-
 public class JoinProgram implements Command {
 	private static final long serialVersionUID = 1L;
-
 	
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)

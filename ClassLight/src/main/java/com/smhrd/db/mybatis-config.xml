@@ -30,6 +30,10 @@
   <mappers>
   	<!-- 파일에 접근할 때에는 .이 아닌 /로 접근 -->
     <mapper resource="com/smhrd/db/mapper파일명.xml"/>
+    
+    <!-- 문제 생성 -->
+    <mapper resource="com/smhrd/db/UserMapper.xml"/>
+    
   </mappers>
   
   
