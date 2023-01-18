@@ -90,17 +90,11 @@ public class UserDTO {
 	        this.serialNo = serialNo;
 	    }
 
-	    // UserTb 모델 복사
-	    public void CopyData(UserDTO param)
-	    {
-	        this.userId = param.getUserId();
-	        this.userPw = param.getUserPw();
-	        this.userName = param.getUserName();
-	        this.userJoindate = param.getUserJoindate();
-	        this.userBirthdate = param.getUserBirthdate();
-	        this.userPoint = param.getUserPoint();
-	        this.userType = param.getUserType();
-	        this.serialNo = param.getSerialNo();
-	    }
-	
+		public UserDTO(String userId, String userPw, String userName, String userBirthdate) {
+			super();
+			this.userId = userId;
+			this.userPw = userPw;
+			this.userName = userName;
+			this.userBirthdate = userBirthdate;
+		}
 }
