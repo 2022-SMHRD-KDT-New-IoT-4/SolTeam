@@ -19,11 +19,16 @@
 		회원유형
 		<br>
 		<select name="job">
-			<option value="teacher">강사
-			<option value="student">학생
+			<option value="1">강사
+			<option value="2">학생
 		</select>
 		<br>
 		<input type="submit" value="제출하기">
 	</form>
+	
+	<%
+	String name = (String)request.getSession().getAttribute("name");
+	%>
+	<%=name %>
 </body>
 </html>

@@ -24,6 +24,7 @@ public class JoinProgram implements Command {
 		String name = request.getParameter("name");
 		String birth = request.getParameter("birth");
 		String job = request.getParameter("job");
+		birth = birth.replaceAll("-", "");
 		
 		UserDTO dto = new UserDTO(id, pw, name, birth, job);
 				
@@ -35,7 +36,7 @@ public class JoinProgram implements Command {
 			request.getSession().setAttribute("name", name);
 			
 			// 웹 구현되면 join success 화면 만들어서 연결해야함!
-			result = "join_success.jsp";
+			result = "join.jsp";
 		}else {
 			// 웹 구현되면 main 화면 만들어서 연결해야함!
 			result = "main.jsp";

@@ -36,4 +36,7 @@ public class SqlSessionManager {
 		public static SqlSessionFactory getSqlSession() {
 			return sqlSessionFactory;
 		}
+		
+		
+		
 }
