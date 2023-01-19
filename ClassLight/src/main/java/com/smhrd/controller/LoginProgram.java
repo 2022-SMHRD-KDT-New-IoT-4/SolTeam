@@ -11,7 +11,6 @@ import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
 
 public class LoginProgram implements Command {
-	private static final long serialVersionUID = 1L;
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -34,7 +33,6 @@ public class LoginProgram implements Command {
 		if(row != null) {
 			request.getSession().setAttribute("name", row);
 		}
-		
 		
 		// 로그인 실패시 main 으로 이동 --> result 값에 "main.jsp" 넣어주기
 		return result;

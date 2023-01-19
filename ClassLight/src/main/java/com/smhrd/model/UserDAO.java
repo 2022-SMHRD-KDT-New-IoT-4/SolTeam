@@ -10,8 +10,6 @@ import com.smhrd.db.SqlSessionManager;
 public class UserDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	
-	
-	
     // join
 	public int join(UserDTO dto) {
 		int row = 0;

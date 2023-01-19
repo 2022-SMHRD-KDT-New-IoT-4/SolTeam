@@ -27,10 +27,15 @@ public class UserDTO {
     // 시리얼 넘버 
     private String serial_no;
     
-
-    public UserDTO(String id, String pw, String name, String job) {
+	public UserDTO(String user_id, String user_pw, String user_name, String user_birthdate, String user_type) {
+		super();
+		this.user_id = user_id;
+		this.user_pw = user_pw;
+		this.user_name = user_name;
+		this.user_birthdate = user_birthdate;
+		this.user_type = user_type;
 	}
-    
+	
     public UserDTO() {
     }
 
@@ -98,5 +103,4 @@ public class UserDTO {
         this.serial_no = serial_no;
     }
 
-  
 }

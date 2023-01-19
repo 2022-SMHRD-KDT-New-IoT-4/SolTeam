@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="JoinProgram" method="post">
+	<form action="Join.do" method="post">
 		아이디<input type="text" name="id">
 		<br>
 		비번<input type="text" name="pw">
@@ -16,8 +18,10 @@
 		<br>
 		회원유형
 		<br>
-		강사<input type="radio" name="job" value="teacher">
-		학생<input type="radio" name="job" value="student">
+		<select name="job">
+			<option value="teacher">강사
+			<option value="student">학생
+		</select>
 		<br>
 		<input type="submit" value="제출하기">
 	</form>

@@ -10,10 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
 
-
 public class JoinProgram implements Command {
 	private static final long serialVersionUID = 1L;
-
 	
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -24,11 +22,11 @@ public class JoinProgram implements Command {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
+		String birth = request.getParameter("birth");
 		String job = request.getParameter("job");
 		
-	    
-		UserDTO dto = new UserDTO(id,pw,name, job);
-		
+		UserDTO dto = new UserDTO(id, pw, name, birth, job);
+				
 		UserDAO dao = new UserDAO();
 		
 		int row = dao.join(dto);
@@ -42,7 +40,6 @@ public class JoinProgram implements Command {
 			// 웹 구현되면 main 화면 만들어서 연결해야함!
 			result = "main.jsp";
 		}
-		
 		return result;
 	}
 

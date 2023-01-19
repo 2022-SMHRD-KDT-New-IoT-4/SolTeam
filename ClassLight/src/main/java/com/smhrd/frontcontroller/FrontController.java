@@ -14,6 +14,7 @@ import com.smhrd.controller.Command;
 import com.smhrd.controller.JoinProgram;
 import com.smhrd.controller.LevelCheckProgram;
 import com.smhrd.controller.LoginProgram;
+import com.smhrd.controller.QuestionProgram;
 import com.smhrd.controller.ResearchId;
 import com.smhrd.controller.ResearchPw;
 
@@ -29,17 +30,19 @@ public class FrontController extends HttpServlet {
 	map.put("Login.do", new LoginProgram());
 	map.put("ResearchId.do", new ResearchId());
 	map.put("ResearchPw.do", new ResearchPw());
-    map.put("LevelCheck.do", new LevelCheckProgram());
-	
-	
+	map.put("Question.do", new QuestionProgram());
+	map.put("LevelCheck.do", new LevelCheckProgram());
 	}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		String uri = request.getRequestURI();
+		System.out.println("요청 uri: "+uri);
 		
 		String path = request.getContextPath();
+		String finalUrl = uri.substring(path.length()+1);
+		System.out.println("잘라낸 url: "+finalUrl);
 		
 		String finalurl = uri.substring(path.length()+1);
 		
@@ -53,9 +56,7 @@ public class FrontController extends HttpServlet {
 	    
 	    // WEB-INF에 파일 넣으면 rdPath 앞에 "WEB-INF" 추가 할 것 
 	    RequestDispatcher rd  = request.getRequestDispatcher(rdPath);
-	    
-		
-	
+	    rd.forward(request, response);
 	}
 
 }
