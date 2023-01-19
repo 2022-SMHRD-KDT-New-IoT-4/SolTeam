@@ -14,8 +14,32 @@
 	</insert>
 	
 	<!-- login구문 -->
+	<select id="login" parameterType="UserDTO" resultType="UserDTO">
+    select *
+    from user_tb
+    where user_id = #{user_id} and user_pw =#{user_pw}
+	</select>
 	
-	<select id="login" parameterType=""></select>
+	<!-- 아이디 찾기 -->
+	<select id="researchId" parameterType="UserDTO" resultType="UserDTO">
+	select user_id
+	from user_tb
+	where user_name = #{user_name}
+	</select>
+	
+	<!-- 비밀번호 찾기 -->
+	<select id="researchPw" parameterType="UserDTO" resultType="UserDTO">
+	select user_pw
+	from user_tb
+	where user_name = #{user_name} and user_id =#{user_id}
+	</select>
+	
+	
+	
+	
+	
+	
+	
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
 
