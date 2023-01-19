@@ -36,10 +36,13 @@ public class FrontController extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		String uri = request.getRequestURI();
+		System.out.println("요청 uri: "+uri);
 		
 		String path = request.getContextPath();
+		String finalUrl = uri.substring(path.length()+1);
+		System.out.println("잘라낸 url: "+finalUrl);
 		
 		String finalurl = uri.substring(path.length()+1);
 		
@@ -53,6 +56,7 @@ public class FrontController extends HttpServlet {
 	    
 	    // WEB-INF에 파일 넣으면 rdPath 앞에 "WEB-INF" 추가 할 것 
 	    RequestDispatcher rd  = request.getRequestDispatcher(rdPath);
+	    rd.forward(request, response);
 	}
 
 }

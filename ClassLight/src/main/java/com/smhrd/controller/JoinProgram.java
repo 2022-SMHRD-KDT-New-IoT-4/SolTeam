@@ -40,7 +40,6 @@ public class JoinProgram implements Command {
 			// 웹 구현되면 main 화면 만들어서 연결해야함!
 			result = "main.jsp";
 		}
-		
 		return result;
 	}
 
