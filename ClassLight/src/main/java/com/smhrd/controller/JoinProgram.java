@@ -22,11 +22,11 @@ public class JoinProgram implements Command {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
+		String birth = request.getParameter("birth");
 		String job = request.getParameter("job");
 		
-	    
-		UserDTO dto = new UserDTO(id,pw,name, job);
-		
+		UserDTO dto = new UserDTO(id, pw, name, birth, job);
+				
 		UserDAO dao = new UserDAO();
 		
 		int row = dao.join(dto);

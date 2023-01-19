@@ -13,7 +13,7 @@
 	<insert id="join" parameterType="UserDTO">
 		insert into user_tb
 		values
-		(#{userId},#{userPw},#{userName},sysdate,#{userBirthdate},0,#{userType})
+		(#{userId},#{userPw},#{userName},sysdate,#{user Birthdate},0,#{userType})
 	</insert>
 
 	<!-- login구문 -->
