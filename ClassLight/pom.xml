@@ -3,7 +3,7 @@
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-<!-- 어떤 마크업 언어를 사용할건지 스키마(xml안에 들어가게 될 데이터) 지정 -->
+	<!-- 어떤 마크업 언어를 사용할건지 스키마(xml안에 들어가게 될 데이터) 지정 -->
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.smhrd</groupId>

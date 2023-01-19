@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"> 
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="QuestionProgram" method="post">
+	<form action="makeQuestion.do" method="post">
 		문제 제목: <input type="text" name="title">
 		<br>
 		문제 내용: <input type="text" name="content">
