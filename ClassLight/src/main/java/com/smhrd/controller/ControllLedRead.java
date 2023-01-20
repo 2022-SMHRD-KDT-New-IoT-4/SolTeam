@@ -70,6 +70,6 @@ public class ControllLedRead extends HttpServlet {
 //         // 작성실패
 //      }
 //      
-       System.out.println("Humidity: " + info.getRed_led() +  ", Temperature: " + info.getOrange_led() + ", Weight: " + info.getGreen_led());
+       System.out.println("Humidity: " + info.getRed_led() +  ", Temperature: " + info.getOrange_led() + ", Weight: " + info.getGreen_led()+" , serila :"+info.getSerila_no());
    }
 }
