@@ -17,23 +17,23 @@ public class LedCountDTO {
 	    // 학생 아이디 
 	    private String student_id;
 	    //시리얼 넘버
-	    private String serila_no;
-		public LedCountDTO(String control_seq, String red_led, String orange_led, String green_led, String student_id , String serila_no) {
+	    private String serial_no;
+		public LedCountDTO(String control_seq, String red_led, String orange_led, String green_led, String student_id , String serial_no) {
 			super();
 			this.control_seq = control_seq;
 			this.red_led = red_led;
 			this.orange_led = orange_led;
 			this.green_led = green_led;
 			this.student_id = student_id;
-			this.serila_no = serila_no;
+			this.serial_no = serial_no;
 		}
 
-		public String getSerila_no() {
-			return serila_no;
+		public String getSerial_no() {
+			return serial_no;
 		}
 
-		public void setSerila_no(String serila_no) {
-			this.serila_no = serila_no;
+		public void setSerila_no(String serial_no) {
+			this.serial_no = serial_no;
 		}
 
 		public String getControl_seq() {

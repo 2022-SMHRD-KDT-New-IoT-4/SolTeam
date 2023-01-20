@@ -53,6 +53,7 @@ public class ControllLedRead extends HttpServlet {
  
         // 읽어온 데이터를 json으로 파싱하는 구간
        Gson gson = new Gson();       
+       System.out.println("들어오니>"+stringBuilder.toString());
        LedCountDTO info = gson.fromJson(stringBuilder.toString(), LedCountDTO.class);
              
 //       // db에 저장하는 구간
@@ -70,6 +71,6 @@ public class ControllLedRead extends HttpServlet {
 //         // 작성실패
 //      }
 //      
-       System.out.println("Humidity: " + info.getRed_led() +  ", Temperature: " + info.getOrange_led() + ", Weight: " + info.getGreen_led()+" , serila :"+info.getSerila_no());
+       System.out.println("redled: " + info.getRed_led() +  ", orangeled: " + info.getOrange_led() + ", greenled: " + info.getGreen_led()+" , serial :"+info.getSerial_no());
    }
 }
