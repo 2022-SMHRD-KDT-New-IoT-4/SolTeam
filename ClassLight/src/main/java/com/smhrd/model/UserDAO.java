@@ -11,11 +11,24 @@ public class UserDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	
     // join
-	public int join(UserDTO dto) {
+	public int joinTeacher(UserDTO dto) {
 		int row = 0;
 		SqlSession session = sqlSessionFactory.openSession(true);
 		try {
-			row = session.insert("com.smhrd.model.UserDAO.join", dto);
+			row = session.insert("com.smhrd.model.UserDAO.joinTeacher", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return row;
+	}
+	// join
+	public int joinStudent(UserDTO dto) {
+		int row = 0;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		try {
+			row = session.insert("com.smhrd.model.UserDAO.joinStudent", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
