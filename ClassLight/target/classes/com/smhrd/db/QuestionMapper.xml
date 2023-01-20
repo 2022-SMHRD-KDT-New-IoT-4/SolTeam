@@ -11,7 +11,7 @@
 	<!-- Question구문 -->
 	<insert id="makeQuestion" parameterType="QuestionDTO">
 		insert into question_tb
-		values(q_seq.nextval,#{title},#{content},#{time},#{score})
+		values(question_tb_seq.nextval,#{q_title},#{q_content},#{q_time},#{q_score})
 	</insert>
 
 </mapper>
