@@ -1,4 +1,4 @@
-package com.smhrd.controller;
+package com.smhrd.questioncontroller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model.QuestionDAO;
 import com.smhrd.model.QuestionDTO;
+import com.smhrd.usercontroller.Command;
 
 public class QuestionProgram implements Command {
 	private static final long serialVersionUID = 1L;
@@ -34,7 +35,7 @@ public class QuestionProgram implements Command {
 			request.setAttribute("title", title);
 
 			// 웹 구현시 이동할 페이지(로그인 성공) 아래에 기술
-			return "join_success.jsp";
+			return "question.jsp";
 		} else {
 
 			// 웹 구현시 이동할 페이지(로그인 실패) 아래에 기술

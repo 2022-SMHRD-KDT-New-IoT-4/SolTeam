@@ -1,4 +1,4 @@
-package com.smhrd.controller;
+package com.smhrd.ledcontroller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model.ControlLedDAO;
 import com.smhrd.model.ControlLedDTO;
+import com.smhrd.usercontroller.Command;
 
 public class orangeLed implements Command {
 	private static final long serialVersionUID = 1L;

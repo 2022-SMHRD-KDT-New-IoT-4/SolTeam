@@ -3,17 +3,25 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="해당model명">
+<mapper namespace="com.smhrd.model.UserDAO">
 
 	<!-- 쿼리문 작성 -->
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
 
 	<!-- join구문 -->
-	<insert id="join" parameterType="UserDTO">
+	<insert id="joinTeacher" parameterType="UserDTO">
 		insert into user_tb
 		values
-		(#{userId},#{userPw},#{userName},sysdate,#{user Birthdate},0,#{userType})
+		<!-- null, null -> 시리얼 넘버, 학급 -->
+		(#{user_id},#{user_pw},#{user_name},sysdate,#{user_birthdate},0,#{user_type},null,null)
+	</insert>
+	
+	<insert id="joinStudent" parameterType="UserDTO">
+		insert into user_tb
+		values
+		<!-- null -> 시리얼 넘버 -->
+		(#{user_id},#{user_pw},#{user_name},sysdate,#{user_birthdate},0,#{user_type},null, #{user_class})
 	</insert>
 
 	<!-- login구문 -->
@@ -38,11 +46,4 @@
 		from user_tb
 		where user_name = #{user_name} and user_id =#{user_id}
 	</select>
-
-	<!-- Question구문 -->
-	<insert id="mQuestion" parameterType="QuestionDTO">
-		insert into question_tb
-		values(q_seq.nextval,#{title},#{content},#{time},#{score})
-	</insert>
-
 </mapper>
