@@ -1,4 +1,4 @@
-package com.smhrd.controller;
+package com.smhrd.usercontroller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,23 +10,28 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
 
-public class ResearchId implements Command {
+public class ResearchPw implements Command {
 	private static final long serialVersionUID = 1L;
+
+	
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String result = null;
+		String result = null; 
 		
 		String name = request.getParameter("name");
+		String id = request.getParameter("id");
 		
-	    UserDTO dto = new UserDTO();
-	    
-	    dto.setUserName(name);
-	    
+		UserDTO dto = new UserDTO();
+		
+		dto.setUserName(name);
+		dto.setUserId(id);
+		
 	    UserDAO dao = new UserDAO();
 	    
-	    UserDTO row = dao.researchId(dto);
+	    UserDTO row = dao.researchPw(dto);
+		
 		
 		return result;
 	}
