@@ -1,4 +1,4 @@
-package com.smhrd.usercontroller;
+package com.smhrd.questioncontroller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model.QuestionDAO;
 import com.smhrd.model.QuestionDTO;
+import com.smhrd.usercontroller.Command;
 
 public class QuestionProgram implements Command {
 	private static final long serialVersionUID = 1L;

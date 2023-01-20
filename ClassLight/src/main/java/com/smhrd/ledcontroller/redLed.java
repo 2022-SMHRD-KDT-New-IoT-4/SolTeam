@@ -1,4 +1,4 @@
-package com.smhrd.usercontroller;
+package com.smhrd.ledcontroller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,13 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model.ControlLedDAO;
 import com.smhrd.model.ControlLedDTO;
+import com.smhrd.usercontroller.Command;
 
-public class orangeLed implements Command {
+public class redLed implements Command {
 	private static final long serialVersionUID = 1L;
 
-
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		
 		String id = request.getParameter("id");
 		
@@ -25,15 +24,16 @@ public class orangeLed implements Command {
 		
 		ControlLedDAO dao = new ControlLedDAO();
 		
-		String row = dao.orangeLed(dto);
+		String row = dao.redLed(dto);
 		
 		if(row != null) {
-			request.getSession().setAttribute("orangeLed", 1);
+			request.getSession().setAttribute("redLed", 1);
 		} else if (row == null) {
-			request.getSession().setAttribute("orangeLed", 0);
+			request.getSession().setAttribute("redLed", 0);
 		}
 		
 		return row;
+
 	}
 
 }
