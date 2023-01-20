@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="LoginProgram" method="get">
+	<form action="Login.do" method="post">
 		<h1> 로그인 </h1>
 		<h4> 아이디 입력</h4>
 		<input name = "id" type="text" placeholder="아이디를 입력하세요">
@@ -19,5 +20,11 @@
 		<br>
 		<a href="#">아이디 찾기</a> <a href="#">비밀번호찾기</a>
 	</form>
+	
+		
+	<%
+	UserDTO name = (UserDTO)request.getSession().getAttribute("name");
+	%>
+	<%=name.getUserName() %>
 </body>
 </html>

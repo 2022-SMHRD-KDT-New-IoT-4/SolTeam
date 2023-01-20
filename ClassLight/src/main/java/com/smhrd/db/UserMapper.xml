@@ -10,11 +10,18 @@
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
 
 	<!-- join구문 -->
-	<insert id="join" parameterType="UserDTO">
+	<insert id="joinTeacher" parameterType="UserDTO">
 		insert into user_tb
 		values
-		<!-- 마지막 칸은 시리얼 넘버 칸인데 회의된 내용이 없기 때문에 널로 비워둠 -->
-		(#{user_id},#{user_pw},#{user_name},sysdate,#{user_birthdate},0,#{user_type},null)
+		<!-- null, null -> 시리얼 넘버, 학급 -->
+		(#{user_id},#{user_pw},#{user_name},sysdate,#{user_birthdate},0,#{user_type},null,null)
+	</insert>
+	
+	<insert id="joinStudent" parameterType="UserDTO">
+		insert into user_tb
+		values
+		<!-- null -> 시리얼 넘버 -->
+		(#{user_id},#{user_pw},#{user_name},sysdate,#{user_birthdate},0,#{user_type},null, #{user_class})
 	</insert>
 
 	<!-- login구문 -->

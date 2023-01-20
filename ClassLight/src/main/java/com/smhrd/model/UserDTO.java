@@ -27,6 +27,12 @@ public class UserDTO {
     // 시리얼 넘버 
     private String serial_no;
     
+    // 회원(학생) 학급
+    private String user_class;
+    
+    // 강사일 때 매개변수 5개 학생일 때 6개
+    
+    // 학급 매개변수를 뺀 dto
 	public UserDTO(String user_id, String user_pw, String user_name, String user_birthdate, String user_type) {
 		super();
 		this.user_id = user_id;
@@ -36,7 +42,19 @@ public class UserDTO {
 		this.user_type = user_type;
 	}
 	
-    public UserDTO() {
+	// 학급 매개변수가 표함된 dto
+    public UserDTO(String user_id, String user_pw, String user_name, String user_birthdate, String user_type,
+			String user_class) {
+		super();
+		this.user_id = user_id;
+		this.user_pw = user_pw;
+		this.user_name = user_name;
+		this.user_birthdate = user_birthdate;
+		this.user_type = user_type;
+		this.user_class = user_class;
+	}
+
+	public UserDTO() {
     }
 
 	public String getUserId() {
@@ -102,5 +120,15 @@ public class UserDTO {
     public void setSerialNo(String serial_no) {
         this.serial_no = serial_no;
     }
+
+	public String getUser_class() {
+		return user_class;
+	}
+
+	public void setUser_class(String user_class) {
+		this.user_class = user_class;
+	}
+    
+    
 
 }
