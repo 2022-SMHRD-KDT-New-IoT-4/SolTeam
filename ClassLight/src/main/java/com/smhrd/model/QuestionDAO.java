@@ -23,7 +23,6 @@ public class QuestionDAO {
 		}finally {
 			// 3) sqlsession 자원 반납
 			sqlSession.close();
-			
 		}
 		// 4) 결과값 반환
 		return row;
