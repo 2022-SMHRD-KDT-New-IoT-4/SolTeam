@@ -22,7 +22,7 @@ import com.google.gson.Gson;
 /**
  * Servlet implementation class Commentdelete
  */
-@WebServlet("/api/info")
+@WebServlet("/api/info2")
 public class ControllLedRead extends HttpServlet {
    private static final long serialVersionUID = 1L;
 
