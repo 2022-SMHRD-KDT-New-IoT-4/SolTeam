@@ -16,14 +16,13 @@ public class QuestionDAO {
 		
 		try {
 		// 2) session사용해서 insert진행
-		row = sqlSession.insert("com.smhrd.model.QuestionDAO.mQuestion", dto);
+		row = sqlSession.insert("com.smhrd.model.QuestionDAO.makeQuestion", dto);
 		
 		} catch(Exception e) {
 			e.printStackTrace();
 		}finally {
 			// 3) sqlsession 자원 반납
 			sqlSession.close();
-			
 		}
 		// 4) 결과값 반환
 		return row;

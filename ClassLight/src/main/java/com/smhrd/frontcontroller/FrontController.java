@@ -10,13 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.smhrd.controller.Command;
-import com.smhrd.controller.JoinProgram;
-import com.smhrd.controller.LevelCheckProgram;
-import com.smhrd.controller.LoginProgram;
-import com.smhrd.controller.QuestionProgram;
-import com.smhrd.controller.ResearchId;
-import com.smhrd.controller.ResearchPw;
+import com.smhrd.questioncontroller.QuestionProgram;
+import com.smhrd.usercontroller.Command;
+import com.smhrd.usercontroller.JoinProgram;
+import com.smhrd.usercontroller.LevelCheckProgram;
+import com.smhrd.usercontroller.LoginProgram;
+import com.smhrd.usercontroller.ResearchId;
+import com.smhrd.usercontroller.ResearchPw;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -30,7 +30,7 @@ public class FrontController extends HttpServlet {
 	map.put("Login.do", new LoginProgram());
 	map.put("ResearchId.do", new ResearchId());
 	map.put("ResearchPw.do", new ResearchPw());
-	map.put("Question.do", new QuestionProgram());
+	map.put("makeQuestion.do", new QuestionProgram());
 	map.put("LevelCheck.do", new LevelCheckProgram());
 	}
 	
