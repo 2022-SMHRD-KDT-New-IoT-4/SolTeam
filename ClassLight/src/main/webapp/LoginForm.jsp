@@ -20,11 +20,13 @@
 		<br>
 		<a href="#">아이디 찾기</a> <a href="#">비밀번호찾기</a>
 	</form>
-	
 		
 	<%
-	UserDTO name = (UserDTO)request.getSession().getAttribute("name");
+	Object data = request.getSession().getAttribute("name");
+	if(data != null){
+		UserDTO name = (UserDTO)data;
+		out.print(name.getUserName());
+	}
 	%>
-	<%=name.getUserName() %>
 </body>
 </html>
