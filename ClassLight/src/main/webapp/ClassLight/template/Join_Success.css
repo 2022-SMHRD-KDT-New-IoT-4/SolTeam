@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+button {
+  font-size: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.cen {
+  text-align: center;
+}
+
+button {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
