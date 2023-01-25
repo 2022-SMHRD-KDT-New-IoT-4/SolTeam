@@ -54,6 +54,8 @@ public class ControllLedRead extends HttpServlet {
         // 읽어온 데이터를 json으로 파싱하는 구간
        Gson gson = new Gson();       
        System.out.println("들어오니>"+stringBuilder.toString());
+       //값이 담겨있는 변수최최최최초최최종 
+       
        LedCountDTO info = gson.fromJson(stringBuilder.toString(), LedCountDTO.class);
              
 //       // db에 저장하는 구간
