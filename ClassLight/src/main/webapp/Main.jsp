@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,23 +13,23 @@
     <!-- index.html >>> Main.html로 타이틀 변경 -->
     <title>Main</title>
     <!-- Main : css-->
-    <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" href="./Wep-CSS/Main.css">
 
     <!-- plugins:css -->
-    <link rel="stylesheet" href="vendors/feather/feather.css">
-    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
 
-    <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="./template/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
 </head>
 
 <body>
@@ -33,10 +38,10 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
                 <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-                <a class="navbar-brand brand-logo mr-5" href="Main.html"><img src="../tempLogo/자산 3.png" class="mr-2"
+                <a class="navbar-brand brand-logo mr-5" href="Main.html"><img src="./ClassLight/templogo/자산 3.png" class="mr-2"
                         alt="logo" /></a>
                 <!-- 최소화로고이미지 :  -->
-                <a class="navbar-brand brand-logo-mini" href="Main.html"><img src="../tempLogo/자산 4.png"
+                <a class="navbar-brand brand-logo-mini" href="Main.html"><img src="./ClassLight/tempLogo/자산 4.png"
                         alt="logo" /></a>
             </div>
             <!-- 상단 고정 바-->
@@ -54,10 +59,10 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item dropdown">
                         <!-- 사이드바 A태그 -->
-                        <a class="menu" id="notificationDropdown" href="/template/pages/samples/login.html">
+                        <a class="menu" id="notificationDropdown" href="./ClassLight/template/login.html">
                             <span>로그인</span>
                         </a>
-                        <a class="menu" href="/template/pages/samples/join.html">
+                        <a class="menu" href="./ClassLight/template/join.html">
                             <span>회원가입</span>
                         </a>
                     </li>
@@ -86,7 +91,7 @@
         <!-- main 이미지-->
         <div class="card tale-bg">
             <div class="card-people mt-auto">
-                <img src="images/dashboard/people.svg" alt="people">
+                <img src="./ClassLight/template/images/dashboard/people.svg" alt="people">
                 
                 <div class="weather-info">
                     <div class="d-flex">
@@ -121,25 +126,25 @@
         <!-- container-scroller -->
 
         <!-- plugins:js -->
-        <script src="vendors/js/vendor.bundle.base.js"></script>
+        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
         <!-- endinject -->
         <!-- Plugin js for this page -->
-        <script src="vendors/chart.js/Chart.min.js"></script>
-        <script src="vendors/datatables.net/jquery.dataTables.js"></script>
-        <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-        <script src="js/dataTables.select.min.js"></script>
+        <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <script src="./ClassLight/template/js/dataTables.select.min.js"></script>
 
         <!-- End plugin js for this page -->
         <!-- inject:js -->
-        <script src="js/off-canvas.js"></script>
-        <script src="js/hoverable-collapse.js"></script>
-        <script src="js/template.js"></script>
-        <script src="js/settings.js"></script>
-        <script src="js/todolist.js"></script>
+        <script src="./ClassLight/template/js/off-canvas.js"></script>
+        <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
+        <script src="./ClassLight/template/s/template.js"></script>
+        <script src="./ClassLight/template/js/settings.js"></script>
+        <script src="./ClassLight/template/js/todolist.js"></script>
         <!-- endinject -->
         <!-- Custom js for this page-->
-        <script src="js/dashboard.js"></script>
-        <script src="js/Chart.roundedBarCharts.js"></script>
+        <script src="./ClassLight/template/js/dashboard.js"></script>
+        <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
         <!-- End custom js for this page-->
 </body>
 
