@@ -9,7 +9,7 @@
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
 	<!-- Question구문 -->
-	<insert id="makeQuestion" parameterType="QuestionDTO">
+	<insert id="mQuestion" parameterType="QuestionDTO">
 		insert into question_tb
 		values(question_tb_seq.nextval,#{q_title},#{q_content},#{q_time},#{q_score})
 	</insert>
