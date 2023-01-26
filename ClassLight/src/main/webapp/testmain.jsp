@@ -1,3 +1,4 @@
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -26,9 +27,11 @@
 	
 	<!-- 학생 조회 -->
 	<%
-	String selectStudent_name = (String)request.getSession().getAttribute("name");
+	List<UserDTO> Student = (List<UserDTO>)request.getSession().getAttribute("list");
+	for(int i = 0; i < Student.size(); i++){
+	out.print(Student.get(i).getUserId() + " ");
+	}
 	%>
-	<%=selectStudent_name%>
 
 </body>
 </html>
