@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd.infocontroller.InfoStudent;
 import com.smhrd.questioncontroller.QuestionProgram;
 import com.smhrd.usercontroller.Command;
 import com.smhrd.usercontroller.JoinProgram;
@@ -32,6 +33,8 @@ public class FrontController extends HttpServlet {
 	map.put("ResearchId.do", new ResearchId());
 	map.put("ResearchPw.do", new ResearchPw());
 	map.put("makeQuestion.do", new QuestionProgram());
+	map.put("LevelCheck.do", new LevelCheckProgram());
+	map.put("InfoStudent.do", new InfoStudent());
 	map.put("LevelCheck.do", new LevelCheckProgram());
 	map.put("mainTeacher.do", new MainProgram());
 	}
