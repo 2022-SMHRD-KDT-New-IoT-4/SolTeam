@@ -9,6 +9,7 @@
 	<!-- MemberMapper파일에서 사용할 type들의 별명을 지정해주는 공간 -->
 		<typeAlias type="com.smhrd.model.UserDTO" alias="UserDTO"/>
 		<typeAlias type="com.smhrd.model.QuestionDTO" alias="QuestionDTO"/>
+		<typeAlias type="com.smhrd.model.LedCountDTO" alias="LedCountDTO"/>
 	</typeAliases>
 
   <environments default="development">
@@ -29,6 +30,9 @@
   <!-- 연결하고 싶은 파일의 명칭 -->
   <!-- mapper파일이 생길때마다 반드시 연결할 수 있도록 기술해줄 것 -->
   <mappers>
+    
+      <!-- led카운트 -->
+ <mapper resource="com/smhrd/db/CountMapper.xml"/>
     
     <!-- 문제 생성 -->
     <mapper resource="com/smhrd/db/UserMapper.xml"/>

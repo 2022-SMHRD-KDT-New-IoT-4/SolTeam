@@ -12,7 +12,6 @@ import com.smhrd.model.UserDTO;
 
 public class LoginProgram implements Command {
 
-	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String result = null ;
@@ -32,6 +31,10 @@ public class LoginProgram implements Command {
 		
 		if(row != null) {
 			request.getSession().setAttribute("name", row);
+			
+			result = "mainTeacher.jsp";
+		}else {
+			result="main.jsp";
 		}
 		
 		// 로그인 실패시 main 으로 이동 --> result 값에 "main.jsp" 넣어주기
