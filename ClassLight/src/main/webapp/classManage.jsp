@@ -253,7 +253,7 @@
                   <span class="sr-only">Toggle Dropdown</span>
                 </label>
                 
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" style="">
+                <div id="class" class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" style="">
                   <a class="dropdown-item" id="class1" href="#">IoT 강의실5</a>
                   <a class="dropdown-item" id="class2" href="#">빅데이터 강의실4</a>
                   <a class="dropdown-item" id="class3" href="#">인공지능 강의실3</a>
@@ -263,7 +263,7 @@
               <script>
                 funtion = categoryChange(e){
                 	var class_05 =["별찍기 실습","포켓몬 실습","계산기 프로그램 실습"];
-                	var class_04 =[""];
+                	var class_04 =["ex01","ex02","ex03"];
                 	var class_03=[""];
                 	var target= document.getElementById("class");
                 	
