@@ -1,4 +1,4 @@
-package com.smhrd.usercontroller;
+package com.smhrd.infocontroller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,31 +9,32 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
+import com.smhrd.usercontroller.Command;
 
-public class LoginProgram implements Command {
+public class InfoStudent implements Command {
 
+	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String result = null;
-				
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
+		String result = null ;
 		
+		request.setCharacterEncoding("UTF-8");
 		
-		UserDTO dto = new UserDTO();
+		String name = request.getParameter("name");
+		String clas = request.getParameter("clas");
 		
-		dto.setUserId(id);
-		dto.setUserPw(pw);
+		UserDTO dto = new UserDTO(name, clas);
 		
 		UserDAO dao = new UserDAO();
 		
-		UserDTO row = dao.login(dto);
+		// 학생관리 페이지에서 학생 한 명의 정보를 받아오는 메소드
+		UserDTO row = dao.SelectStudent(dto);
 		
 		if(row != null) {
 			request.getSession().setAttribute("name", row);
-			result = "mainTeacher.jsp";
+			result = "testmain.jsp";
 		}else {
-			result="main.jsp";
+			result = "testpage.jsp";
 		}
 		
 		// 로그인 실패시 main 으로 이동 --> result 값에 "main.jsp" 넣어주기

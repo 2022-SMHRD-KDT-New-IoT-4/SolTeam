@@ -15,14 +15,14 @@ import javax.servlet.http.HttpSession;
 import org.apache.ibatis.annotations.Select;
 import org.apache.tomcat.util.json.JSONParser;
 
-import com.smhrd.model.LedCountDTO;
-import com.smhrd.model.ControlLedDAO;
+import com.smhrd.model.LedDTO;
+import com.smhrd.model.LedDAO;
 
 import com.google.gson.Gson;
 /////////////////////////아두이노 센서 신호 읽어오는 구간
 
 @WebServlet("/api/info")
-public class ControllLedRead extends HttpServlet {
+public class LedStateProgram extends HttpServlet {
 
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 아두이노 요청을 읽어오는 구간
@@ -48,16 +48,16 @@ public class ControllLedRead extends HttpServlet {
 
 		// 읽어온 데이터를 json으로 파싱하는 구간
 		Gson gson = new Gson();
-		LedCountDTO inputState = gson.fromJson(stringBuilder.toString(), LedCountDTO.class);
+		LedDTO inputState = gson.fromJson(stringBuilder.toString(), LedDTO.class);
 
 		System.out.println("들어오니>" + stringBuilder.toString());
-		LedCountDTO dto = new LedCountDTO();
-		ControlLedDAO dao = new ControlLedDAO();
+		LedDTO dto = new LedDTO();
+		LedDAO dao = new LedDAO();
 
-		LedCountDTO query = new LedCountDTO();
+		LedDTO query = new LedDTO();
 		query.setSerila_no(inputState.getSerial_no());
 		//Serial_no :  select로 값을 받아와 현재 led들의 정보를 확인 
-		LedCountDTO lastState = dao.LedSelect(query);
+		LedDTO lastState = dao.LedSelect(query);
 
 		if (lastState == null) {
 			System.out.println(inputState.getSerial_no());

@@ -30,6 +30,10 @@ public class UserDTO {
     // 회원(학생) 학급
     private String user_class;
     
+    // 기본 생성자
+	public UserDTO() {
+    }
+    
     // 강사일 때 매개변수 5개 학생일 때 6개
     
     // 학급 매개변수를 뺀 dto
@@ -53,8 +57,12 @@ public class UserDTO {
 		this.user_type = user_type;
 		this.user_class = user_class;
 	}
-
-	public UserDTO() {
+    
+    // InfoStudent에 사용할 dto (매개변수 name, class)
+    public UserDTO(String user_name, String user_class) {
+    	super();
+    	this.user_name = user_name;
+    	this.user_class = user_class;
     }
 
 	public String getUserId() {
