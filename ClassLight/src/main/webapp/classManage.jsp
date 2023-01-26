@@ -253,12 +253,7 @@
                 <option value="class3">인공지능 강의실3</option>
                 </select>
               </div>
-<<<<<<< HEAD
-              
-              
-=======
-             
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/SolTeam.git
+            
               <!-- 문제 선택 버튼 토글 -->
               <div class="btn-group" >
                 <select id ="good" type="button" class="btn btn-primary">
