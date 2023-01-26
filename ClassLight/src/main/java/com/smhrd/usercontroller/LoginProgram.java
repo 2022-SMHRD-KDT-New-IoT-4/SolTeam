@@ -15,7 +15,7 @@ public class LoginProgram implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String result = null ;
+		String result = null;
 				
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
