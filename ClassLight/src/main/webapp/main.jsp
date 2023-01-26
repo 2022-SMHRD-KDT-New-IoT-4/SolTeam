@@ -39,6 +39,7 @@
 </head>
 
 <body>
+
 	<%
 	UserDTO dto = (UserDTO) session.getAttribute("name");
 	%>
