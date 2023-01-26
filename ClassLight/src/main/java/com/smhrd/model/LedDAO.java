@@ -7,17 +7,15 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.db.SqlSessionManager;
 
-public class ControlLedDAO {
+public class LedDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-	
-	
-	
-	//시리얼넘버를 사용하여 현재 led의 값을 확인
-	public LedCountDTO LedSelect(LedCountDTO dto) {
-		LedCountDTO row = null;
+
+	// 시리얼넘버를 사용하여 현재 led의 값을 확인
+	public LedDTO LedSelect(LedDTO dto) {
+		LedDTO row = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.selectOne("com.smhrd.model.ControlLedDAO.LedSelect", dto);
+			row = sqlSession.selectOne("com.smhrd.model.LedDAO.LedSelect", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -25,13 +23,13 @@ public class ControlLedDAO {
 		}
 		return row;
 	}
-	
-	//아두이노 버튼 값 
-	public int LedUpdate(LedCountDTO dto) {
+
+	// 아두이노 버튼 값
+	public int LedUpdate(LedDTO dto) {
 		int row = 0;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.update("com.smhrd.model.ControlLedDAO.LedUpdate", dto);
+			row = sqlSession.update("com.smhrd.model.DAO.LedUpdate", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -39,7 +37,5 @@ public class ControlLedDAO {
 		}
 		return row;
 	}
-   
-	
-   
+
 }

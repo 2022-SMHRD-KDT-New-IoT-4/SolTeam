@@ -3,19 +3,21 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.smhrd.model.ControlLedDAO">
+<mapper namespace="com.smhrd.model.LedDAO">
 
-<select id="LedSelect" parameterType="LedCountDTO" resultType="LedCountDTO">
-select *
-from control_led_tb 
-where serial_no =#{serial_no}
-</select>
+	<select id="LedSelect" parameterType="LedDTO"
+		resultType="LedDTO">
+		select *
+		from control_led_tb
+		where serial_no =#{serial_no}
+	</select>
 
-	<update id="LedUpdate" parameterType="LedCountDTO">
+	<update id="LedUpdate" parameterType="LedDTO">
 		update control_led_tb set
 		red_led =#{red_led},
 		orange_led =#{orange_led},
 		green_led =#{green_led}
 		where serial_no =#{serial_no}
 	</update>
+
 </mapper>
