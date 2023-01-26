@@ -260,32 +260,7 @@
                   <div class="dropdown-divider"></div>
                 </div>
               </div>
-              <script>
-                funtion = categoryChange(e){
-                	var class_05 =["별찍기 실습","포켓몬 실습","계산기 프로그램 실습"];
-                	var class_04 =["ex01","ex02","ex03"];
-                	var class_03=[""];
-                	var target= document.getElementById("class");
-                	
-                	if(e.value == "05") var d = class_05;
-                	else if(e.value == "04") var d = class_04;
-                	else if(e.value == "03") var d = class_03;
-                	
-                	target.options.length = 0;
-                
-                
-                for(x in d){
-                	var opt = 
-                		document.createElement("a");
-                	    opt.value = d[x];
-                	    opt.innerHTML = d[x];
-                	    target.appendChild(opt);
-                }
-                
-                }
               
-              
-              </script>
               
               <!-- 문제 선택 버튼 토글 -->
               <div class="btn-group">
