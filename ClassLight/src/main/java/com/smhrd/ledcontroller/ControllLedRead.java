@@ -76,6 +76,16 @@ public class ControllLedRead extends HttpServlet {
 			int row = dao.LedUpdate(inputState);
 			if (row > 0) {
 				System.out.println("업데이트 성공");
+				if(inputState.getSerial_no().equals("1")){
+					
+				}else if(inputState.getSerial_no().equals("2")){
+					
+				}else if(inputState.getSerial_no().equals("3")) {
+					
+				}else if(inputState.getSerial_no().equals("4")) {
+					
+				}
+				
 			} else {
 				System.out.println("업데이트 실패");
 			}
