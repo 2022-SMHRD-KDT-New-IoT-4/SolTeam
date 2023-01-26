@@ -52,7 +52,11 @@
 		select * from user_tb where user_class = #{user_class} and user_name =#{user_name} and user_type != '1'
 	</select>
 	
-	
+	<!-- Question구문 -->
+	<insert id="mQuestion" parameterType="QuestionDTO">
+		insert into question_tb
+		values(q_seq.nextval,#{title},#{content},#{time},#{score})
+	</insert>
 	
 	
 </mapper>
