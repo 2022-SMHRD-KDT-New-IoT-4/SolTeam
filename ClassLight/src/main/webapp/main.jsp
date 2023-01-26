@@ -40,9 +40,7 @@
 
 <body>
 
-	<%
-	UserDTO dto = (UserDTO) session.getAttribute("name");
-	%>
+	
 	<div class="container-scroller">
 		<!-- 1. 네비게이션바 -->
 		<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -68,20 +66,12 @@
 					</li>
 				</ul>
 				<ul class="navbar-nav navbar-nav-right">
-				<%
-				
-				if(dto != null){
-					out.print("<li class='nav-item dropdown'> <a class='nav-link count-indicator dropdown-toggle' id='notificationDropdown' href='#' data-toggle='dropdown'><i class='icon-bell mx-0'></i> <span class='count'></span></a>");
-				}else{
-				
-				%>
 					<li class="nav-item dropdown">
 						<!-- 사이드바 A태그 --> <a class="menu" id="notificationDropdown"
 						href="login.jsp"> <span>로그인</span>
 					</a> <a class="menu" href="join.jsp"> <span>회원가입</span>
 					</a>
 					</li>
-			    <%} %>
 				</ul>
 		</nav>
 	</div>
