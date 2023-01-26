@@ -1,6 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +22,7 @@
     <!-- index.html >>> Main.html로 타이틀 변경 -->
     <title>Main</title>
     <!-- Main : css-->
-    <link rel="stylesheet" href="./Wep-CSS/Main.css">
+    <link rel="stylesheet" href="./Wep-CSS/ReadyToClass.css">
 
     <!-- plugins:css -->
     <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
