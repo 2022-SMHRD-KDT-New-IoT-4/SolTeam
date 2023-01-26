@@ -1,24 +1,24 @@
 package com.smhrd.model;
 
 public class LedCountDTO {
-	
+	//학생 led 점등현화 DTO
 	///////아두이노에서 받아온 센서값 DTO
 	  private String control_seq;
 
 	    // 빨강 LED 
-	    private String red_led;
+	    private Integer red_led;
 
 	    // 주황 LED 
-	    private String orange_led;
+	    private Integer orange_led;
 
 	    // 녹색 LED 
-	    private String green_led;
+	    private Integer green_led;
 
 	    // 학생 아이디 
 	    private String student_id;
 	    //시리얼 넘버
-	    private String serial_no;
-		public LedCountDTO(String control_seq, String red_led, String orange_led, String green_led, String student_id , String serial_no) {
+	    private Integer serial_no;
+		public LedCountDTO(String control_seq, Integer red_led, Integer orange_led, Integer green_led, String student_id , Integer serial_no) {
 			super();
 			this.control_seq = control_seq;
 			this.red_led = red_led;
@@ -27,12 +27,26 @@ public class LedCountDTO {
 			this.student_id = student_id;
 			this.serial_no = serial_no;
 		}
+		
+		// db에 넣을 정보
+		public LedCountDTO(Integer red_led, Integer orange_led, Integer green_led, Integer serial_no) {
+			super();
+			this.red_led = red_led;
+			this.orange_led = orange_led;
+			this.green_led = green_led;
+			this.serial_no = serial_no;
+		}
 
-		public String getSerial_no() {
+
+
+		public LedCountDTO() {
+		}
+
+		public Integer getSerial_no() {
 			return serial_no;
 		}
 
-		public void setSerila_no(String serial_no) {
+		public void setSerila_no(Integer serial_no) {
 			this.serial_no = serial_no;
 		}
 
@@ -44,27 +58,27 @@ public class LedCountDTO {
 			this.control_seq = control_seq;
 		}
 
-		public String getRed_led() {
+		public Integer getRed_led() {
 			return red_led;
 		}
 
-		public void setRed_led(String red_led) {
+		public void setRed_led(Integer red_led) {
 			this.red_led = red_led;
 		}
 
-		public String getOrange_led() {
+		public Integer getOrange_led() {
 			return orange_led;
 		}
 
-		public void setOrange_led(String orange_led) {
+		public void setOrange_led(Integer orange_led) {
 			this.orange_led = orange_led;
 		}
 
-		public String getGreen_led() {
+		public Integer getGreen_led() {
 			return green_led;
 		}
 
-		public void setGreen_led(String green_led) {
+		public void setGreen_led(Integer green_led) {
 			this.green_led = green_led;
 		}
 
