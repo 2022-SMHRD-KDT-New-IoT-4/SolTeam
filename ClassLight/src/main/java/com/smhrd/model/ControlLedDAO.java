@@ -10,12 +10,14 @@ import com.smhrd.db.SqlSessionManager;
 public class ControlLedDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	
-    // student_id
-	public ControlLedDTO studentId(ControlLedDTO dto) {
-		ControlLedDTO row = null;
+	
+	
+	//시리얼넘버를 사용하여 현재 led의 값을 확인
+	public LedCountDTO LedSelect(LedCountDTO dto) {
+		LedCountDTO row = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.selectOne("com.smhrd.model.ControlLedDAO.studentId", dto);
+			row = sqlSession.selectOne("com.smhrd.model.ControlLedDAO.LedSelect", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -24,12 +26,12 @@ public class ControlLedDAO {
 		return row;
 	}
 	
-    // control_seq
-	public ControlLedDTO controlSeq(ControlLedDTO dto) {
-		ControlLedDTO row = null;
+	//아두이노 버튼 값 
+	public int LedUpdate(LedCountDTO dto) {
+		int row = 0;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.selectOne("com.smhrd.model.ControlLedDAO.controlSeq", dto);
+			row = sqlSession.update("com.smhrd.model.ControlLedDAO.LedUpdate", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -37,45 +39,7 @@ public class ControlLedDAO {
 		}
 		return row;
 	}
+   
 	
-    // red_led
-	public String redLed(ControlLedDTO dto) {
-		String row = null;
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		try {
-			row = sqlSession.selectOne("com.smhrd.model.ControlLedDAO.redLed", dto);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
-		return row;
-	}
-	
-    // orange_led
-	public String orangeLed(ControlLedDTO dto) {
-		String row = null;
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		try {
-			row = sqlSession.selectOne("com.smhrd.model.ControlLedDAO.orangeLed", dto);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
-		return row;
-	}
-	// green_led
-		public String greenLed(ControlLedDTO dto) {
-			String row = null;
-			SqlSession sqlSession = sqlSessionFactory.openSession(true);
-			try {
-				row = sqlSession.selectOne("com.smhrd.model.ControlLedDAO.greenLed", dto);
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				sqlSession.close();
-			}
-			return row;
-		}
+   
 }
