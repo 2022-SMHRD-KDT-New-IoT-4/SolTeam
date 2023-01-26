@@ -16,14 +16,14 @@ public class LoginProgram implements Command {
 			throws ServletException, IOException {
 		String result = null;
 				
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
+		String user_id = request.getParameter("user_id");
+		String user_pw = request.getParameter("user_pw");
 		
 		
 		UserDTO dto = new UserDTO();
 		
-		dto.setUserId(id);
-		dto.setUserPw(pw);
+		dto.setUserId(user_id);
+		dto.setUserPw(user_pw);
 		
 		UserDAO dao = new UserDAO();
 		

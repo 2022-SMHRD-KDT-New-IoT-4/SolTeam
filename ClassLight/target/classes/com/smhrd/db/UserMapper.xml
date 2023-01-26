@@ -6,7 +6,8 @@
  <mapper namespace="해당 model명">
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
-
+   
+   <!-- join 구문 -->
 	<insert id="joinTeacher" parameterType="UserDTO">
 		insert into user_tb
 		values
