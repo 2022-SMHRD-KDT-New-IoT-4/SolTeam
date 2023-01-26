@@ -3,13 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.smhrd.model.UserDAO">
-
-	<!-- 쿼리문 작성 -->
+ <mapper namespace="해당model명">
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
 
-	<!-- join구문 -->
 	<insert id="joinTeacher" parameterType="UserDTO">
 		insert into user_tb
 		values
@@ -57,6 +54,11 @@
 		insert into question_tb
 		values(q_seq.nextval,#{title},#{content},#{time},#{score})
 	</insert>
-	
-	
+
+	<!-- Question구문 -->
+	<insert id="mQuestion" parameterType="QuestionDTO">
+		insert into question_tb
+		values(q_seq.nextval,#{title},#{content},#{time},#{score})
+	</insert>
+
 </mapper>
