@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
+    
+   
 </head>
 
 <body>
@@ -245,34 +247,62 @@
             <div class="seat-position">
               <!--강의실 선택 버튼 토글-->
               <div class="btn-group">
-                <button type="button" class="btn btn-primary">강의실 선택</button>
-                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                <label type="button" class="btn btn-primary">강의실 선택</label>
+                <label type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                   id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="sr-only">Toggle Dropdown</span>
-                </button>
+                </label>
+                
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" style="">
-                  <a class="dropdown-item" href="#">빅데이터 강의실4</a>
-                  <a class="dropdown-item" href="#">인공지능 강의실3</a>
-                  <a class="dropdown-item" href="#">IoT 강의실5</a>
+                  <a class="dropdown-item" id="class1" href="#">IoT 강의실5</a>
+                  <a class="dropdown-item" id="class2" href="#">빅데이터 강의실4</a>
+                  <a class="dropdown-item" id="class3" href="#">인공지능 강의실3</a>
                   <div class="dropdown-divider"></div>
                 </div>
               </div>
+              <script>
+                funtion = categoryChange(e){
+                	var class_05 =["별찍기 실습","포켓몬 실습","계산기 프로그램 실습"];
+                	var class_04 =[""];
+                	var class_03=[""];
+                	var target= document.getElementById("class");
+                	
+                	if(e.value == "05") var d = class_05;
+                	else if(e.value == "04") var d = class_04;
+                	else if(e.value == "03") var d = class_03;
+                	
+                	target.options.length = 0;
+                
+                
+                for(x in d){
+                	var opt = 
+                		document.createElement("a");
+                	    opt.value = d[x];
+                	    opt.innerHTML = d[x];
+                	    target.appendChild(opt);
+                }
+                
+                }
+              
+              
+              </script>
               
               <!-- 문제 선택 버튼 토글 -->
               <div class="btn-group">
-                <button type="button" class="btn btn-primary">문제 선택</button>
-                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                <label type="button" class="btn btn-primary">문제 선택</label>
+                <label type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                   id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="sr-only">Toggle Dropdown</span>
-                </button>
+                </label> 
+                <nav id="class_nav">
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" >
                   <a class="dropdown-item" href="#">별찍기 실습</a>
                   <a class="dropdown-item" href="#">포켓몬 실습</a>
                   <a class="dropdown-item" href="#">계산기 프로그램 실습</a>
                   <div class="dropdown-divider"></div>
                 </div>
+                </nav>
               </div>
-              
               <!-- 자리 배치도 -->
               <div class="card">
                 <div class="card-body">
