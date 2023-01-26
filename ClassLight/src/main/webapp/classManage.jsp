@@ -1,28 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- index.html >>> Main.html로 타이틀 변경 -->
-  <title>ClassManage</title>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- index.html >>> Main.html로 타이틀 변경 -->
+    <title>classManage</title>
+    <!-- Main : css-->
+    <link rel="stylesheet" href="./Wep-CSS/ClassManage.css">
 
-  <link rel="stylesheet" href="./ClassManage.css">
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="vendors/feather/feather.css">
-  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="./template/js/select.dataTables.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
 </head>
 
 <body>
@@ -34,10 +38,10 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-        <a class="navbar-brand brand-logo mr-5" href="Main.html"><img src="../tempLogo/자산 3.png" class="mr-2"
+        <a class="navbar-brand brand-logo mr-5" href="main.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
             alt="logo" /></a>
         <!-- 최소화로고이미지 :  -->
-        <a class="navbar-brand brand-logo-mini" href="Main.html"><img src="../tempLogo/자산 4.png" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="main.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -83,7 +87,7 @@
 
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face23.jpg" alt="profile" />
+              <img src="./ClassLight/template/images/faces/face23.jpg" alt="profile" />
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
@@ -188,7 +192,7 @@
           <!-- 1) Dashboard 메뉴 -->
           <li class="nav-item">
             <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
-            <a class="nav-link" href="ClassManage.html">
+            <a class="nav-link" href="ClassManage.jsp">
               <!-- 아이콘 -->
               <i class="icon-grid menu-icon"></i>
               <!-- 메뉴이름 -->
@@ -197,7 +201,7 @@
           </li>
           <!-- 2) 수업진행 -->
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
+            <a class="nav-link" href="ReadyToClass.jsp">
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">수업 준비</span>
             </a>
@@ -211,15 +215,15 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="./Ex-manage.html">분석 조회</a></li>
-                <li class="nav-item"> <a class="nav-link" href="./Product-manage.html">제품연동관리</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Ex-manage.jsp">분석 조회</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Product-manage.jsp">제품연동관리</a></li>
               </ul>
             </div>
           </li>
 
           <!-- 4) 게시판 -->
           <li class="nav-item">
-            <a class="nav-link" href="./Board.html">
+            <a class="nav-link" href="./Board.jsp">
               <i class="icon-head menu-icon"></i>
               <span class="menu-title">게시판</span>
             </a>
@@ -253,7 +257,22 @@
                   <div class="dropdown-divider"></div>
                 </div>
               </div>
-
+              
+              <!-- 문제 선택 버튼 토글 -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary">문제 선택</button>
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                  id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" >
+                  <a class="dropdown-item" href="#">별찍기 실습</a>
+                  <a class="dropdown-item" href="#">포켓몬 실습</a>
+                  <a class="dropdown-item" href="#">계산기 프로그램 실습</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </div>
+              
               <!-- 자리 배치도 -->
               <div class="card">
                 <div class="card-body">
@@ -364,8 +383,8 @@
             </div>
             <!-- led 제어 버튼-->
             <div id="led-button">
-              <button type="button" class="btn btn-primary">실습 예제</button>
-              <button type="button" class="btn btn-primary">강의 진행</button>
+              <button type="button" class="btn btn-primary">기기 ON</button>
+              <button type="button" class="btn btn-primary">기기 OFF</button>
             </div>
             
           </div>
@@ -378,26 +397,26 @@
 
 
     <!-- plugins:js -->
-    <script src="vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="vendors/chart.js/Chart.min.js"></script>
-    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <script src="js/dataTables.select.min.js"></script>
+        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <script src="./ClassLight/template/js/dataTables.select.min.js"></script>
 
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="js/off-canvas.js"></script>
-    <script src="js/hoverable-collapse.js"></script>
-    <script src="js/template.js"></script>
-    <script src="js/settings.js"></script>
-    <script src="js/todolist.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="js/dashboard.js"></script>
-    <script src="js/Chart.roundedBarCharts.js"></script>
-    <!-- End custom js for this page-->
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="./ClassLight/template/js/off-canvas.js"></script>
+        <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
+        <script src="./ClassLight/template/s/template.js"></script>
+        <script src="./ClassLight/template/js/settings.js"></script>
+        <script src="./ClassLight/template/js/todolist.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src="./ClassLight/template/js/dashboard.js"></script>
+        <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
+        <!-- End custom js for this page-->
 </body>
 
 </html>
