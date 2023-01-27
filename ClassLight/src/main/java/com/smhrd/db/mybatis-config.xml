@@ -39,6 +39,7 @@
 		<mapper resource="com/smhrd/db/LedMapper.xml" />
 		<mapper resource="com/smhrd/db/QuestionMapper.xml" />
 		<mapper resource="com/smhrd/db/UserMapper.xml" />
+		
 
 	</mappers>
 
