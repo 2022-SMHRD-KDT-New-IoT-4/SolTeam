@@ -27,7 +27,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
-    <!-- endinject -->
+    <!-- endinject -->01
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
 </head>
 <body>
