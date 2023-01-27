@@ -118,7 +118,7 @@
 							aria-labelledby="profileDropdown">
 							<a class="dropdown-item"> <i class="ti-settings text-primary"></i>
 								Settings
-							</a> <a class="dropdown-item" href="./Main.html"> <i
+							</a> <a class="dropdown-item" href="main.jsp"> <i
 								class="ti-power-off text-primary"></i> Logout
 							</a>
 						</div></li>
