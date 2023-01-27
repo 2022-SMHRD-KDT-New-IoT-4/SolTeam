@@ -1,6 +1,8 @@
 package com.smhrd.infocontroller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,10 +30,10 @@ public class InfoStudent implements Command {
 		UserDAO dao = new UserDAO();
 		
 		// 학생관리 페이지에서 학생 한 명의 정보를 받아오는 메소드
-		UserDTO row = dao.SelectStudent(dto);
+		List<UserDTO> list = dao.SelectStudent(dto);
 		
-		if(row != null) {
-			request.getSession().setAttribute("name", row);
+		if(list != null) {
+			request.getSession().setAttribute("list", list);
 			result = "testmain.jsp";
 		}else {
 			result = "testpage.jsp";

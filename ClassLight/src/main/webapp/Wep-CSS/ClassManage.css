@@ -151,3 +151,8 @@ img{
     top:100px;
     left: 20px;
 }
+
+.btn-group{
+    padding-bottom:10px;
+    padding-left:5px
+    }

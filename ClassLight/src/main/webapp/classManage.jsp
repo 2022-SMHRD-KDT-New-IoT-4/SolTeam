@@ -28,13 +28,12 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
     
-   
+  
 </head>
 
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-
 
     <!-- 1. 네비게이션바 -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -246,63 +245,47 @@
             <!-- 배치도-->
             <div class="seat-position">
               <!--강의실 선택 버튼 토글-->
-              <div class="btn-group">
-                <label type="button" class="btn btn-primary">강의실 선택</label>
-                <label type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                  id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </label>
-                
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" style="">
-                  <a class="dropdown-item" id="class1" href="#">IoT 강의실5</a>
-                  <a class="dropdown-item" id="class2" href="#">빅데이터 강의실4</a>
-                  <a class="dropdown-item" id="class3" href="#">인공지능 강의실3</a>
-                  <div class="dropdown-divider"></div>
-                </div>
+              <div class="btn-group" >
+                <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
+                <option >강의실 선택</option>
+                <option value="class1" >IoT 강의실5</option>
+                <option value="class2">빅데이터 강의실4</option>
+                <option value="class3">인공지능 강의실3</option>
+                </select>
               </div>
-              <script>
-                funtion = categoryChange(e){
-                	var class_05 =["별찍기 실습","포켓몬 실습","계산기 프로그램 실습"];
-                	var class_04 =[""];
-                	var class_03=[""];
-                	var target= document.getElementById("class");
-                	
-                	if(e.value == "05") var d = class_05;
-                	else if(e.value == "04") var d = class_04;
-                	else if(e.value == "03") var d = class_03;
-                	
-                	target.options.length = 0;
-                
-                
-                for(x in d){
-                	var opt = 
-                		document.createElement("a");
-                	    opt.value = d[x];
-                	    opt.innerHTML = d[x];
-                	    target.appendChild(opt);
-                }
-                
-                }
-              
-              
-              </script>
-              
+            
               <!-- 문제 선택 버튼 토글 -->
-              <div class="btn-group">
-                <label type="button" class="btn btn-primary">문제 선택</label>
-                <label type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                  id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </label> 
-                <nav id="class_nav">
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" >
-                  <a class="dropdown-item" href="#">별찍기 실습</a>
-                  <a class="dropdown-item" href="#">포켓몬 실습</a>
-                  <a class="dropdown-item" href="#">계산기 프로그램 실습</a>
-                  <div class="dropdown-divider"></div>
-                </div>
-                </nav>
+              <div class="btn-group" >
+                <select id ="good" type="button" class="btn btn-primary">
+                <option>문제선택</option>
+                </select>
               </div>
+              
+              <script>
+	function categoryChange(e) {
+	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+	var good_b = ["문제1", "문제2", "문제3", "문제4"];
+	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+	var target = document.getElementById("good");
+
+	if(e.value == "class1") var d = good_a;
+	else if(e.value == "class2") var d = good_b;
+	else if(e.value == "class3") var d = good_c;
+
+	target.options.length = 0;
+
+	for (x in d) {
+		var opt = document.createElement("option");
+		opt.value = d[x];
+		opt.innerHTML = d[x];
+		target.appendChild(opt);
+	}	
+}
+</script>
+              
+              
+              
+              
               <!-- 자리 배치도 -->
               <div class="card">
                 <div class="card-body">
@@ -413,7 +396,7 @@
             </div>
             <!-- led 제어 버튼-->
             <div id="led-button">
-              <button type="button" class="btn btn-primary">기기 ON</button>
+              <button  type="button" class="btn btn-primary">기기 ON</button>
               <button type="button" class="btn btn-primary">기기 OFF</button>
             </div>
             
