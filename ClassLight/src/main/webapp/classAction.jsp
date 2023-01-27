@@ -318,71 +318,8 @@
 
                   <div>
                     <div id="row1">
-                      <table border="1px">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                      </table>
+                     
                     </div>
-
-                    <div id="row2">
-                      <table border="1px">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-
-                      </table>
-                    </div>
-
-                    <div id="row3">
-                      <table border="1px">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-
-                      </table>
-
-                    </div>
-
                   </div>
                 </div>
 
