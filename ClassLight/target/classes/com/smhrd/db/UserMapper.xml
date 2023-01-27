@@ -42,9 +42,6 @@
 		from user_tb
 		where user_name = #{user_name} and user_id =#{user_id}
 	</select>
-<<<<<<< HEAD
-
-=======
 
 	<!-- 학생관리 select -->
 	<select id="SelectStudent" parameterType="UserDTO"
@@ -52,5 +49,4 @@
 		select * from user_tb where user_class = #{user_class} and
 		user_name =#{user_name} and user_type != '1'
 	</select>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/SolTeam.git
 </mapper>
