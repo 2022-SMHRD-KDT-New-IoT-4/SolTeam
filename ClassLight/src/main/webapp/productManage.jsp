@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,108 +7,86 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수업준비</title>
-
+<title>제품연동관리</title>
 <style>
-div>button {
-	width: 200px;
-	height: 50px;
+td {
+	height: 70px;
 }
 
-#divbutton>button {
-	float: right;
-}
-
-#title {
-	border-radius: 15px;
-}
-
-tr>.th1 {
+#btn {
 	text-align: center;
-	width: 30px;
 }
 
-tr>.th2 {
-	text-align: center;
-	width: 300px;
+.btn1 {
+	border-radius: 20%;
+	display: inline-block;
 }
 
-td>a ~p {
-	font-size: 20px;
+#divbtn {
+	text-align: right;
 }
 </style>
 
+<!-- Required meta tags -->
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- index.html >>> Main.html로 타이틀 변경 -->
+    <title>classManage</title>
+    <!-- Main : css-->
+    <link rel="stylesheet" href="./Wep-CSS/Board.css">
 
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="./ClassLight/template/js/select.dataTables.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
 </head>
 
 <body>
-	<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- index.html >>> Main.html로 타이틀 변경 -->
-<title>Main</title>
-<!-- plugins:css -->
-<link rel="stylesheet" href="vendors/feather/feather.css">
-<link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-<link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-<!-- endinject -->
-<!-- Plugin css for this page -->
-<link rel="stylesheet"
-	href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-<link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-<link rel="stylesheet" type="text/css"
-	href="js/select.dataTables.min.css">
-<!-- End plugin css for this page -->
-<!-- inject:css -->
-<link rel="stylesheet" href="css/vertical-layout-light/style.css">
-<!-- endinject -->
-<link rel="shortcut icon" href="images/favicon.png" />
-</head>
-
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_navbar.html -->
 
 
+		
 		<!-- 1. 네비게이션바 -->
-		<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-			<div
-				class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-				<!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-				<a class="navbar-brand brand-logo mr-5" href="Main.html"><img
-					src="../tempLogo/자산 3.png" class="mr-2" alt="logo" /></a>
-				<!-- 최소화로고이미지 :  -->
-				<a class="navbar-brand brand-logo-mini" href="Main.html"><img
-					src="../tempLogo/자산 4.png" alt="logo" /></a>
-			</div>
-			<div
-				class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-				<button class="navbar-toggler navbar-toggler align-self-center"
-					type="button" data-toggle="minimize">
-					<span class="icon-menu"></span>
-				</button>
-				<ul class="navbar-nav mr-lg-2">
-					<li class="nav-item nav-search d-none d-lg-block">
-						<div class="input-group">
-							<div class="input-group-prepend hover-cursor"
-								id="navbar-search-icon">
-								<span class="input-group-text" id="search"> <i
-									class="icon-search"></i>
-								</span>
-							</div>
-							<input type="text" class="form-control" id="navbar-search-input"
-								placeholder="Search now" aria-label="search"
-								aria-describedby="search">
-						</div>
-					</li>
-				</ul>
-				<ul class="navbar-nav navbar-nav-right">
-					<li class="nav-item dropdown">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
+        <a class="navbar-brand brand-logo mr-5" href="main.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
+            alt="logo" /></a>
+        <!-- 최소화로고이미지 :  -->
+        <a class="navbar-brand brand-logo-mini" href="main.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now"
+                aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
 						<!-- 사이드바 A태그 --> <a
 						class="nav-link count-indicator dropdown-toggle"
 						id="notificationDropdown" href="#" data-toggle="dropdown"> <i
@@ -156,14 +136,14 @@ td>a ~p {
 					</li>
 					<li class="nav-item nav-profile dropdown"><a
 						class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-						id="profileDropdown"> <img src="images/faces/face23.jpg"
+						id="profileDropdown"> <img src="./ClassLight/template/images/faces/face23.jpg"
 							alt="profile" />
 					</a>
 						<div class="dropdown-menu dropdown-menu-right navbar-dropdown"
 							aria-labelledby="profileDropdown">
 							<a class="dropdown-item"> <i class="ti-settings text-primary"></i>
 								Settings
-							</a> <a class="dropdown-item"> <i
+							</a> <a class="dropdown-item" href="./Main.html"> <i
 								class="ti-power-off text-primary"></i> Logout
 							</a>
 						</div></li>
@@ -308,7 +288,7 @@ td>a ~p {
 						<ul class="chat-list">
 							<li class="list active">
 								<div class="profile">
-									<img src="images/faces/face1.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face1.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -318,7 +298,7 @@ td>a ~p {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face2.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face2.jpg" alt="image"><span
 										class="offline"></span>
 								</div>
 								<div class="info">
@@ -332,7 +312,7 @@ td>a ~p {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face3.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face3.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -342,7 +322,7 @@ td>a ~p {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face4.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face4.jpg" alt="image"><span
 										class="offline"></span>
 								</div>
 								<div class="info">
@@ -352,7 +332,7 @@ td>a ~p {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face5.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face5.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -362,7 +342,7 @@ td>a ~p {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face6.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face6.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -375,147 +355,144 @@ td>a ~p {
 					<!-- chat tab ends -->
 				</div>
 			</div>
-			<!-- partial -->
-			<!-- partial:partials/_sidebar.html -->
-
-			<!-- ***** 사이드바 ****** -->
+				<!-- ***** 사이드바 ****** -->
 			<!-- ul > li (각 메뉴)-->
-			<nav class="sidebar sidebar-offcanvas" id="sidebar">
-				<ul class="nav">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
 
-					<!-- 1) Dashboard 메뉴 -->
-					<li class="nav-item">
-						<!-- 메뉴 클릭시 이동경로 / 스타일클래스 --> <a class="nav-link"
-						href="ClassManage.html"> <!-- 아이콘 --> <i
-							class="icon-grid menu-icon"></i> <!-- 메뉴이름 --> <span
-							class="menu-title">수업 진행</span>
-					</a>
-					</li>
-					<!-- 2) 수업진행 -->
-					<li class="nav-item"><a class="nav-link"
-						href="pages/documentation/documentation.html"> <i
-							class="icon-layout menu-icon"></i> <span class="menu-title">수업
-								준비</span>
-					</a></li>
-					<li class="nav-item">
-						<!-- 3) 수업관리 --> <a class="nav-link" data-toggle="collapse"
-						href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-							<i class="icon-bar-graph menu-icon"></i> <span class="menu-title">수업
-								관리</span> <i class="menu-arrow"></i>
-					</a>
-						<div class="collapse" id="ui-basic">
-							<ul class="nav flex-column sub-menu">
-								<li class="nav-item"><a class="nav-link"
-									href="../Ex-manage.html">분석 조회</a></li>
-								<li class="nav-item"><a class="nav-link"
-									href="../Product-manage.html">제품연동관리</a></li>
-							</ul>
-						</div>
-					</li>
+          <!-- 1) Dashboard 메뉴 -->
+          <li class="nav-item">
+            <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
+            <a class="nav-link" href="classAction.jsp">
+              <!-- 아이콘 -->
+              <i class="icon-grid menu-icon"></i>
+              <!-- 메뉴이름 -->
+              <span class="menu-title">수업 진행</span>
+            </a>
+          </li>
+          <!-- 2) 수업진행 -->
+          <li class="nav-item">
+            <a class="nav-link" href="readyToClass.jsp">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">수업 준비</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <!-- 3) 수업관리 -->
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">수업 관리</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="exManage.jsp">분석 조회</a></li>
+                <li class="nav-item"> <a class="nav-link" href="productManage.jsp">제품연동관리</a></li>
+              </ul>
+            </div>
+          </li>
 
 					<!-- 4) 게시판 -->
-					<li class="nav-item"><a class="nav-link" href="../Board.html">
+					<li class="nav-item"><a class="nav-link" href="board.jsp">
 							<i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
 					</a></li>
 				</ul>
 			</nav>
-
-
-
-
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
+					<button type="button" class="btn btn-primary">Primary</button>
+					<h1 style="text-align: center;">제품 연동관리</h1>
+					<hr width="100%" color="black" size="3">
 
-					<table class="display expandable-table" style="width: 100%">
-						<thead>
-							<tr>
-								<th id="title" height="100px"><h1>예제준비</h1></th>
-							</tr>
-						</thead>
-					</table>
-					<br>
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary">반 선택</button>
-						<button type="button"
-							class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-							id="dropdownMenuSplitButton1" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							<span class="sr-only">Toggle Dropdown</span>
-						</button>
-						<div class="dropdown-menu"
-							aria-labelledby="dropdownMenuSplitButton1">
-							<a class="dropdown-item" href="#">1반</a> <a class="dropdown-item"
-								href="#">2반</a> <a class="dropdown-item" href="#">3반</a> <a
-								class="dropdown-item" href="#">4반</a> <a class="dropdown-item"
-								href="#">5반</a>
-						</div>
-					</div>
-
-
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary">과목선택</button>
-						<button type="button"
-							class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-							id="dropdownMenuSplitButton1" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							<span class="sr-only">Toggle Dropdown</span>
-						</button>
-						<div class="dropdown-menu"
-							aria-labelledby="dropdownMenuSplitButton1">
-							<a class="dropdown-item" href="#">JSP/Servlet 기본개념</a> <a
-								class="dropdown-item" href="#">JSP/Servlet 기본실습</a> <a
-								class="dropdown-item" href="#">Page 실습</a> <a
-								class="dropdown-item" href="#">Servlet 과제 실습</a> <a
-								class="dropdown-item" href="#">지시자를 이용한 실습</a> <a
-								class="dropdown-item" href="#">Footer 출력 실습</a> <a
-								class="dropdown-item" href="#">내장객체 Request 실습</a> <a
-								class="dropdown-item" href="#">CreateInput 실습</a>
-						</div>
-					</div>
-
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary">문제제목/내용</button>
-						<button type="button"
-							class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-							id="dropdownMenuSplitButton1" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							<span class="sr-only">Toggle Dropdown</span>
-						</button>
-						<div class="dropdown-menu"
-							aria-labelledby="dropdownMenuSplitButton1">
-							<a class="dropdown-item" href="#">내용 1</a> <a
-								class="dropdown-item" href="#">내용 2</a> <a class="dropdown-item"
-								href="#">내용 3</a> <a class="dropdown-item" href="#">내용 4</a> <a
-								class="dropdown-item" href="#">내용 5</a> <a class="dropdown-item"
-								href="#">내용 6</a> <a class="dropdown-item" href="#">내용 7</a> <a
-								class="dropdown-item" href="#">내용 8</a>
-						</div>
-					</div>
-
-					<hr>
 					<div class="col-lg-12 grid-margin stretch-card">
 						<div class="card">
 							<div class="card-body">
-								<h4 class="card-title">수업용 자료</h4>
-								<p class="card-description">수업에 필요한 컨텐츠를 찾아주세요.</p>
-								<img src="/tempLogo/ex5.png" alt="">
+								<h4 class="card-title">학생현황</h4>
 
+								<div class="table-responsive pt-3">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>번호</th>
+												<th>사용자</th>
+												<th>LED</th>
+												<th>버튼</th>
+												<th>PC연결</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>김경진</td>
+												<td>SM_PC_0044</td>
+												<td>SM_MONITOR_0085</td>
+												<td>CUMA023</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>김담희</td>
+												<td>SM_PC_0044</td>
+												<td>SM_MONITOR_0085</td>
+												<td>CUMA023</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>김담희</td>
+												<td>SM_PC_0044</td>
+												<td>SM_MONITOR_0085</td>
+												<td>CUMA023</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>김담희</td>
+												<td>SM_PC_0044</td>
+												<td>SM_MONITOR_0085</td>
+												<td>CUMA023</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>김담희</td>
+												<td>SM_PC_0044</td>
+												<td>SM_MONITOR_0085</td>
+												<td>CUMA023</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>김담희</td>
+												<td>SM_PC_0044</td>
+												<td>SM_MONITOR_0085</td>
+												<td>CUMA023</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>김담희</td>
+												<td>SM_PC_0044</td>
+												<td>SM_MONITOR_0085</td>
+												<td>CUMA023</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
-					</footer>
-					<!-- partial -->
+
 				</div>
-				<!-- main-panel ends -->
 			</div>
-			<!-- page-body-wrapper ends -->
 		</div>
-		<!-- container-scroller -->
+	</div>
+	</div>
 
 
-		</footer>
-		<!-- partial -->
+
+
+
+
+
+
+	</footer>
+	<!-- partial -->
 	</div>
 	<!-- main-panel ends -->
 	</div>
@@ -524,26 +501,26 @@ td>a ~p {
 	<!-- container-scroller -->
 
 	<!-- plugins:js -->
-	<script src="vendors/js/vendor.bundle.base.js"></script>
-	<!-- endinject -->
-	<!-- Plugin js for this page -->
-	<script src="vendors/chart.js/Chart.min.js"></script>
-	<script src="vendors/datatables.net/jquery.dataTables.js"></script>
-	<script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-	<script src="js/dataTables.select.min.js"></script>
+        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <script src="./ClassLight/template/js/dataTables.select.min.js"></script>
 
-	<!-- End plugin js for this page -->
-	<!-- inject:js -->
-	<script src="js/off-canvas.js"></script>
-	<script src="js/hoverable-collapse.js"></script>
-	<script src="js/template.js"></script>
-	<script src="js/settings.js"></script>
-	<script src="js/todolist.js"></script>
-	<!-- endinject -->
-	<!-- Custom js for this page-->
-	<script src="js/dashboard.js"></script>
-	<script src="js/Chart.roundedBarCharts.js"></script>
-	<!-- End custom js for this page-->
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="./ClassLight/template/js/off-canvas.js"></script>
+        <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
+        <script src="./ClassLight/template/s/template.js"></script>
+        <script src="./ClassLight/template/js/settings.js"></script>
+        <script src="./ClassLight/template/js/todolist.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src="./ClassLight/template/js/dashboard.js"></script>
+        <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
+        <!-- End custom js for this page-->
 </body>
 
 </html>

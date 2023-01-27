@@ -10,7 +10,7 @@
     <!-- index.html >>> Main.html로 타이틀 변경 -->
     <title>classManage</title>
     <!-- Main : css-->
-    <link rel="stylesheet" href="./Wep-CSS/ClassManage.css">
+    <link rel="stylesheet" href="./Wep-CSS/ClassAction.css">
 
     <!-- plugins:css -->
     <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
 
-    <link rel="stylesheet" type="text/css" href="./template/js/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="./ClassLight/template/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
@@ -193,7 +193,7 @@
           <!-- 1) Dashboard 메뉴 -->
           <li class="nav-item">
             <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
-            <a class="nav-link" href="ClassManage.jsp">
+            <a class="nav-link" href="classAction.jsp">
               <!-- 아이콘 -->
               <i class="icon-grid menu-icon"></i>
               <!-- 메뉴이름 -->
@@ -202,7 +202,7 @@
           </li>
           <!-- 2) 수업진행 -->
           <li class="nav-item">
-            <a class="nav-link" href="ReadyToClass.jsp">
+            <a class="nav-link" href="readyToClass.jsp">
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">수업 준비</span>
             </a>
@@ -216,21 +216,18 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="Ex-manage.jsp">분석 조회</a></li>
-                <li class="nav-item"> <a class="nav-link" href="Product-manage.jsp">제품연동관리</a></li>
+                <li class="nav-item"> <a class="nav-link" href="exManage.jsp">분석 조회</a></li>
+                <li class="nav-item"> <a class="nav-link" href="productManage.jsp">제품연동관리</a></li>
               </ul>
             </div>
           </li>
 
-          <!-- 4) 게시판 -->
-          <li class="nav-item">
-            <a class="nav-link" href="./Board.jsp">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">게시판</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+					<!-- 4) 게시판 -->
+					<li class="nav-item"><a class="nav-link" href="board.jsp">
+							<i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
+					</a></li>
+				</ul>
+			</nav>
 
 
 
