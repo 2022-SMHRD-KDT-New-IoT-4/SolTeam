@@ -79,17 +79,17 @@ public class UserDAO {
 	}
 	
 	// InfoStudent
-	public UserDTO SelectStudent(UserDTO dto) {
-		UserDTO row = null;
+	public List<UserDTO> SelectStudent(UserDTO dto) {
+		List<UserDTO> list = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.selectOne("com.smhrd.model.UserDAO.SelectStudent", dto);
+			list = sqlSession.selectList("com.smhrd.model.UserDAO.SelectStudent", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
 		}
-		return row;
+		return list;
 	}
 
 }

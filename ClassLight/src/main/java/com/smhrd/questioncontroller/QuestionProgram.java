@@ -35,11 +35,11 @@ public class QuestionProgram implements Command {
 			request.setAttribute("title", title);
 
 			// 웹 구현시 이동할 페이지(로그인 성공) 아래에 기술
-			return "question.jsp";
+			return "testmain.jsp";
 		} else {
 
 			// 웹 구현시 이동할 페이지(로그인 실패) 아래에 기술
-			return "main.jsp";
+			return "testpage.jsp";
 		}
 		
 	}
