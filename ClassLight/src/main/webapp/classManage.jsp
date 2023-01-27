@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
-    
+     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   
 </head>
 
@@ -248,9 +248,9 @@
               <div class="btn-group" >
                 <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
                 <option >강의실 선택</option>
-                <option value="class1" >IoT 강의실5</option>
-                <option value="class2">빅데이터 강의실4</option>
-                <option value="class3">인공지능 강의실3</option>
+                <option value="class1" id="class1">IoT 강의실5</option>
+                <option value="class2" id="class2">빅데이터 강의실4</option>
+                <option value="class3" id="class3">인공지능 강의실3</option>
                 </select>
               </div>
             
@@ -268,7 +268,37 @@
 	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
 	var target = document.getElementById("good");
 
-	if(e.value == "class1") var d = good_a;
+	if(e.value == "class1") {
+		var d = good_a;	
+             $.ajax({
+                 url: "Class5List.html",
+                 dataType: 'json',
+                 success: function (result) {
+                     console.log(result);
+                     var html="<table border='1'>";
+                   
+                     $.each(result, function (index, value) {
+                     	console.log(value.name);
+                     	
+                     	 html+="<tr>";
+                          html+="<td>"+value.name+"</td>";
+                          html+="</tr>";
+                     });
+                     html+="</table>";
+                     $("#row1").html(html);
+                     
+                     
+                 },
+                 error: function () {
+                     alert("통신실패");
+                 }
+             });
+	
+	}
+		
+		
+		
+		
 	else if(e.value == "class2") var d = good_b;
 	else if(e.value == "class3") var d = good_c;
 
@@ -289,15 +319,19 @@
                   <div>
                     <h4 class="card-title">자리 배치도</h4>
                   </div>
+<script>
 
+           
+       
+
+
+
+    </script>
+  
                   <div>
-                    <div id="row1">
+                  <div id="row1">
                       <table border="1px">
                         <tr>
-                          <td bgcolor='red'></td>
-                          <td></td>
-                        </tr>
-                        <tr>
                           <td></td>
                           <td></td>
                         </tr>
@@ -309,9 +343,13 @@
                           <td></td>
                           <td></td>
                         </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                        </tr>
+
                       </table>
                     </div>
-
                     <div id="row2">
                       <table border="1px">
                         <tr>
@@ -406,27 +444,6 @@
 
 
 
-    <!-- plugins:js -->
-        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
-        <!-- endinject -->
-        <!-- Plugin js for this page -->
-        <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
-        <script src="./ClassLight/template/vendors/datatables.net/jquery.dataTables.js"></script>
-        <script src="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-        <script src="./ClassLight/template/js/dataTables.select.min.js"></script>
-
-        <!-- End plugin js for this page -->
-        <!-- inject:js -->
-        <script src="./ClassLight/template/js/off-canvas.js"></script>
-        <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
-        <script src="./ClassLight/template/s/template.js"></script>
-        <script src="./ClassLight/template/js/settings.js"></script>
-        <script src="./ClassLight/template/js/todolist.js"></script>
-        <!-- endinject -->
-        <!-- Custom js for this page-->
-        <script src="./ClassLight/template/js/dashboard.js"></script>
-        <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
-        <!-- End custom js for this page-->
+   
 </body>
-
 </html>
