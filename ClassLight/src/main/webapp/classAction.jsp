@@ -221,13 +221,12 @@
               </ul>
             </div>
           </li>
-
-					<!-- 4) 게시판 -->
-					<li class="nav-item"><a class="nav-link" href="board.jsp">
-							<i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
-					</a></li>
-				</ul>
-			</nav>
+			<!-- 4) 게시판 -->
+			<li class="nav-item"><a class="nav-link" href="board.jsp">
+				<i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
+				</a></li>
+			</ul>
+		</nav>
 
 
 
@@ -253,32 +252,58 @@
             
               <!-- 문제 선택 버튼 토글 -->
               <div class="btn-group" >
-                <select id ="good" type="button" class="btn btn-primary">
+                <select id ="good" onchange="categoryChange1(this)" type="button" class="btn btn-primary">
                 <option>문제선택</option>
                 </select>
               </div>
               
               <script>
-	function categoryChange(e) {
-	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
-	var good_b = ["문제1", "문제2", "문제3", "문제4"];
-	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
-	var target = document.getElementById("good");
+				function categoryChange(e) {
+					var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+					var good_b = ["문제1", "문제2", "문제3", "문제4"];
+					var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+					var target = document.getElementById("good");
 
-	if(e.value == "class1") var d = good_a;
-	else if(e.value == "class2") var d = good_b;
-	else if(e.value == "class3") var d = good_c;
+					if(e.value == "class1") var d = good_a;
+					else if(e.value == "class2") var d = good_b;
+					else if(e.value == "class3") var d = good_c;
 
-	target.options.length = 0;
+					target.options.length = 0;
 
-	for (x in d) {
-		var opt = document.createElement("option");
-		opt.value = d[x];
-		opt.innerHTML = d[x];
-		target.appendChild(opt);
-	}	
-}
-</script>
+					for (x in d) {
+						var opt = document.createElement("option");
+						opt.value = d[x];
+						opt.innerHTML = d[x];
+						target.appendChild(opt);
+					}	
+				}
+				// 문제 선택에서의 onchange
+				function categoryChange1(e) {
+					console.log(e.value);
+					var num;
+					if(e.value == "별찍기 프로그램"){
+						num=0;
+					}else if(e.value == "포켓몬 프로그램"){
+						num=1;
+					}else if(e.value == "계산기 프로그램"){
+						num=2;
+					}
+						$.ajax({
+		                    url: "timeOfQuestion.html",
+		                    dataType: 'json',
+		                    success: function (result) {
+		                        console.log(result.time);
+		                        console.log(result.time[num].time1);
+		                        // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
+		                        // result.time 배열 안의 키time의 value값을 불러오는 작업
+		                        $("#time-left").text(result.time[num].time1);
+		                    },
+		                    error: function () {
+		                        alert("통신실패");
+		                    }
+		                });	
+				}
+			</script>
               
               
               
