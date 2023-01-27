@@ -283,9 +283,6 @@
 }
 </script>
               
-              
-              
-              
               <!-- 자리 배치도 -->
               <div class="card">
                 <div class="card-body">
@@ -297,7 +294,7 @@
                     <div id="row1">
                       <table border="1px">
                         <tr>
-                          <td></td>
+                          <td bgcolor='red'></td>
                           <td></td>
                         </tr>
                         <tr>
