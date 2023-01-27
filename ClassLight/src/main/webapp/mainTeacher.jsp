@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- index.html >>> Main.html로 타이틀 변경 -->
-    <title>Main</title>
+    <title>신호등프로그램</title>
     <!-- Main : css-->
 
     <!-- plugins:css -->
