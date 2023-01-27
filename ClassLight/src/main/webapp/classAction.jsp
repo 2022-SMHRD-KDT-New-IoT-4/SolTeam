@@ -8,9 +8,9 @@
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- index.html >>> Main.html로 타이틀 변경 -->
-    <title>classManage</title>
+    <title>classAction</title>
     <!-- Main : css-->
-    <link rel="stylesheet" href="./Wep-CSS/ClassManage.css">
+    <link rel="stylesheet" href="./Wep-CSS/ClassAction.css">
 
     <!-- plugins:css -->
     <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
@@ -21,13 +21,13 @@
     <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
 
-    <link rel="stylesheet" type="text/css" href="./template/js/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="./ClassLight/template/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
-     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    
   
 </head>
 
@@ -39,10 +39,10 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-        <a class="navbar-brand brand-logo mr-5" href="main.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
+        <a class="navbar-brand brand-logo mr-5" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
             alt="logo" /></a>
         <!-- 최소화로고이미지 :  -->
-        <a class="navbar-brand brand-logo-mini" href="main.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -95,7 +95,7 @@
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
-              <a class="dropdown-item" href="./Main.html">
+              <a class="dropdown-item" href="main.jsp">
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a>
@@ -193,7 +193,7 @@
           <!-- 1) Dashboard 메뉴 -->
           <li class="nav-item">
             <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
-            <a class="nav-link" href="ClassManage.jsp">
+            <a class="nav-link" href="classAction.jsp">
               <!-- 아이콘 -->
               <i class="icon-grid menu-icon"></i>
               <!-- 메뉴이름 -->
@@ -202,7 +202,7 @@
           </li>
           <!-- 2) 수업진행 -->
           <li class="nav-item">
-            <a class="nav-link" href="ReadyToClass.jsp">
+            <a class="nav-link" href="readyToClass.jsp">
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">수업 준비</span>
             </a>
@@ -216,20 +216,16 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="Ex-manage.jsp">분석 조회</a></li>
-                <li class="nav-item"> <a class="nav-link" href="Product-manage.jsp">제품연동관리</a></li>
+                <li class="nav-item"> <a class="nav-link" href="exManage.jsp">분석 조회</a></li>
+                <li class="nav-item"> <a class="nav-link" href="productManage.jsp">제품연동관리</a></li>
               </ul>
             </div>
           </li>
-
-          <!-- 4) 게시판 -->
-          <li class="nav-item">
-            <a class="nav-link" href="./Board.jsp">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">게시판</span>
-            </a>
-          </li>
-        </ul>
+         <!-- 4) 게시판 -->
+         <li class="nav-item"><a class="nav-link" href="board.jsp">
+            <i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
+            </a></li>
+         </ul>
       </nav>
 
 
@@ -248,70 +244,69 @@
               <div class="btn-group" >
                 <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
                 <option >강의실 선택</option>
-                <option value="class1" id="class1">IoT 강의실5</option>
-                <option value="class2" id="class2">빅데이터 강의실4</option>
-                <option value="class3" id="class3">인공지능 강의실3</option>
+                <option value="class1" >IoT 강의실5</option>
+                <option value="class2">빅데이터 강의실4</option>
+                <option value="class3">인공지능 강의실3</option>
                 </select>
               </div>
             
               <!-- 문제 선택 버튼 토글 -->
               <div class="btn-group" >
-                <select id ="good" type="button" class="btn btn-primary">
+                <select id ="good" onchange="categoryChange1(this)" type="button" class="btn btn-primary">
                 <option>문제선택</option>
                 </select>
               </div>
               
               <script>
-	function categoryChange(e) {
-	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
-	var good_b = ["문제1", "문제2", "문제3", "문제4"];
-	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
-	var target = document.getElementById("good");
+            function categoryChange(e) {
+               var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+               var good_b = ["문제1", "문제2", "문제3", "문제4"];
+               var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+               var target = document.getElementById("good");
 
-	if(e.value == "class1") {
-		var d = good_a;	
-             $.ajax({
-                 url: "Class5List.html",
-                 dataType: 'json',
-                 success: function (result) {
-                     console.log(result);
-                     var html="<table border='1'>";
-                   
-                     $.each(result, function (index, value) {
-                     	console.log(value.name);
-                     	
-                     	 html+="<tr>";
-                          html+="<td>"+value.name+"</td>";
-                          html+="</tr>";
-                     });
-                     html+="</table>";
-                     $("#row1").html(html);
-                     
-                     
-                 },
-                 error: function () {
-                     alert("통신실패");
-                 }
-             });
-	
-	}
-		
-		
-		
-		
-	else if(e.value == "class2") var d = good_b;
-	else if(e.value == "class3") var d = good_c;
+               if(e.value == "class1") var d = good_a;
+               else if(e.value == "class2") var d = good_b;
+               else if(e.value == "class3") var d = good_c;
 
-	target.options.length = 0;
+               target.options.length = 0;
 
-	for (x in d) {
-		var opt = document.createElement("option");
-		opt.value = d[x];
-		opt.innerHTML = d[x];
-		target.appendChild(opt);
-	}	
-}
-</script>
+               for (x in d) {
+                  var opt = document.createElement("option");
+                  opt.value = d[x];
+                  opt.innerHTML = d[x];
+                  target.appendChild(opt);
+               }   
+            }
+            // 문제 선택에서의 onchange
+            function categoryChange1(e) {
+               console.log(e.value);
+               var num;
+               if(e.value == "별찍기 프로그램"){
+                  num=0;
+               }else if(e.value == "포켓몬 프로그램"){
+                  num=1;
+               }else if(e.value == "계산기 프로그램"){
+                  num=2;
+               }
+                  $.ajax({
+                          url: "timeOfQuestion.html",
+                          dataType: 'json',
+                          success: function (result) {
+                              console.log(result.time);
+                              console.log(result.time[num].time1);
+                              // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
+                              // result.time 배열 안의 키time의 value값을 불러오는 작업
+                              $("#time-left").text(result.time[num].time1);
+                          },
+                          error: function () {
+                              alert("통신실패");
+                          }
+                      });   
+            }
+         </script>
+              
+              
+              
               
               <!-- 자리 배치도 -->
               <div class="card">
@@ -319,17 +314,9 @@
                   <div>
                     <h4 class="card-title">자리 배치도</h4>
                   </div>
-<script>
 
-           
-       
-
-
-
-    </script>
-  
                   <div>
-                  <div id="row1">
+                    <div id="row1">
                       <table border="1px">
                         <tr>
                           <td></td>
@@ -347,9 +334,9 @@
                           <td></td>
                           <td></td>
                         </tr>
-
                       </table>
                     </div>
+
                     <div id="row2">
                       <table border="1px">
                         <tr>
@@ -444,6 +431,27 @@
 
 
 
-   
+    <!-- plugins:js -->
+        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <script src="./ClassLight/template/js/dataTables.select.min.js"></script>
+
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="./ClassLight/template/js/off-canvas.js"></script>
+        <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
+        <script src="./ClassLight/template/s/template.js"></script>
+        <script src="./ClassLight/template/js/settings.js"></script>
+        <script src="./ClassLight/template/js/todolist.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src="./ClassLight/template/js/dashboard.js"></script>
+        <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
+        <!-- End custom js for this page-->
 </body>
+
 </html>
