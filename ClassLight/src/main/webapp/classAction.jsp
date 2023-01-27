@@ -39,10 +39,10 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-        <a class="navbar-brand brand-logo mr-5" href="main.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
+        <a class="navbar-brand brand-logo mr-5" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
             alt="logo" /></a>
         <!-- 최소화로고이미지 :  -->
-        <a class="navbar-brand brand-logo-mini" href="main.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -95,7 +95,7 @@
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
-              <a class="dropdown-item" href="./Main.html">
+              <a class="dropdown-item" href="main.jsp">
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a>
