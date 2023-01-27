@@ -1,15 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>수업준비</title>
-
-</head>
-
 <body>
   <!DOCTYPE html>
   <html lang="en">
@@ -30,10 +20,10 @@
     <link rel="stylesheet" href="./ClassLight/template/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
 
-    <link rel="stylesheet" type="text/css" href="./template/js/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="./ClassLight/template/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
@@ -50,10 +40,10 @@
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-          <a class="navbar-brand brand-logo mr-5" href="Main.html"><img src="../tempLogo/자산 3.png" class="mr-2"
+          <a class="navbar-brand brand-logo mr-5" href="Main.html"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
               alt="logo" /></a>
           <!-- 최소화로고이미지 :  -->
-          <a class="navbar-brand brand-logo-mini" href="Main.html"><img src="../tempLogo/자산 4.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="Main.html"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -126,7 +116,7 @@
             </li>
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                <img src="images/faces/face23.jpg" alt="profile" />
+                <img src="./ClassLight/template/images/faces/face23.jpg" alt="profile" />
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                 <a class="dropdown-item">
@@ -275,7 +265,7 @@
               </div>
               <ul class="chat-list">
                 <li class="list active">
-                  <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Thomas Douglas</p>
                     <p>Available</p>
@@ -283,7 +273,7 @@
                   <small class="text-muted my-auto">19 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
                   <div class="info">
                     <div class="wrapper d-flex">
                       <p>Catherine</p>
@@ -294,7 +284,7 @@
                   <small class="text-muted my-auto">23 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face3.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Daniel Russell</p>
                     <p>Available</p>
@@ -302,7 +292,7 @@
                   <small class="text-muted my-auto">14 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
                   <div class="info">
                     <p>James Richardson</p>
                     <p>Away</p>
@@ -310,15 +300,14 @@
                   <small class="text-muted my-auto">2 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face5.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Madeline Kennedy</p>
                     <p>Available</p>
                   </div>
                   <small class="text-muted my-auto">5 min</small>
-                </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face6.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Sarah Graves</p>
                     <p>Available</p>
@@ -341,7 +330,7 @@
           <!-- 1) Dashboard 메뉴 -->
           <li class="nav-item">
             <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
-            <a class="nav-link" href="">
+            <a class="nav-link" href="classAction.jsp">
               <!-- 아이콘 -->
               <i class="icon-grid menu-icon"></i>
               <!-- 메뉴이름 -->
@@ -350,7 +339,7 @@
           </li>
           <!-- 2) 수업진행 -->
           <li class="nav-item">
-            <a class="nav-link" href="./ReadyToClass.html">
+            <a class="nav-link" href="./readyToClass.jsp">
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">수업 준비</span>
             </a>
@@ -364,15 +353,15 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="./Ex-manage.html">분석 조회</a></li>
-                <li class="nav-item"> <a class="nav-link" href="./Product-manage.html">제품연동관리</a></li>
+                <li class="nav-item"> <a class="nav-link" href="./exManage.jsp">분석 조회</a></li>
+                <li class="nav-item"> <a class="nav-link" href="./productManage.jsp">제품연동관리</a></li>
               </ul>
             </div>
           </li>
             
             <!-- 4) 게시판 -->
             <li class="nav-item">
-              <a class="nav-link" href="./Board.html">
+              <a class="nav-link" href="./board.jsp">
                 <i class="icon-head menu-icon"></i>
                 <span class="menu-title">게시판</span>
               </a>

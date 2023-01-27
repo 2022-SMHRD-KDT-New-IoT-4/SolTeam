@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,100 +8,64 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>게시판</title>
-<style>
-td {
-	height: 70px;
-}
 
-#btn {
-	text-align: center;
-}
-
-.btn1 {
-	border-radius: 20%;
-	display: inline-block;
-}
-
-#divbtn {
-	text-align: right;
-}
-
-#title {
-	border-radius: 15px;
-}
-</style>
-
-
-</head>
-
-<body>
-	<!DOCTYPE html>
-<html lang="en">
-
-<head>
 <!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- index.html >>> Main.html로 타이틀 변경 -->
-<title>Main</title>
-<!-- plugins:css -->
-<link rel="stylesheet" href="vendors/feather/feather.css">
-<link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-<link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-<!-- endinject -->
-<!-- Plugin css for this page -->
-<link rel="stylesheet"
-	href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-<link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-<link rel="stylesheet" type="text/css"
-	href="js/select.dataTables.min.css">
-<!-- End plugin css for this page -->
-<!-- inject:css -->
-<link rel="stylesheet" href="css/vertical-layout-light/style.css">
-<!-- endinject -->
-<link rel="shortcut icon" href="images/favicon.png" />
-</head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- index.html >>> Main.html로 타이틀 변경 -->
+    <title>classManage</title>
+    <!-- Main : css-->
+    <link rel="stylesheet" href="./Wep-CSS/Board.css">
 
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="./ClassLight/template/js/select.dataTables.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
+</head>
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_navbar.html -->
 
 
 		<!-- 1. 네비게이션바 -->
-		<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-			<div
-				class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-				<!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-				<a class="navbar-brand brand-logo mr-5" href="Main.html"><img
-					src="../tempLogo/자산 3.png" class="mr-2" alt="logo" /></a>
-				<!-- 최소화로고이미지 :  -->
-				<a class="navbar-brand brand-logo-mini" href="Main.html"><img
-					src="../tempLogo/자산 4.png" alt="logo" /></a>
-			</div>
-			<div
-				class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-				<button class="navbar-toggler navbar-toggler align-self-center"
-					type="button" data-toggle="minimize">
-					<span class="icon-menu"></span>
-				</button>
-				<ul class="navbar-nav mr-lg-2">
-					<li class="nav-item nav-search d-none d-lg-block">
-						<div class="input-group">
-							<div class="input-group-prepend hover-cursor"
-								id="navbar-search-icon">
-								<span class="input-group-text" id="search"> <i
-									class="icon-search"></i>
-								</span>
-							</div>
-							<input type="text" class="form-control" id="navbar-search-input"
-								placeholder="Search now" aria-label="search"
-								aria-describedby="search">
-						</div>
-					</li>
-				</ul>
-				<ul class="navbar-nav navbar-nav-right">
-					<li class="nav-item dropdown">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
+        <a class="navbar-brand brand-logo mr-5" href="main.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
+            alt="logo" /></a>
+        <!-- 최소화로고이미지 :  -->
+        <a class="navbar-brand brand-logo-mini" href="main.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now"
+                aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
 						<!-- 사이드바 A태그 --> <a
 						class="nav-link count-indicator dropdown-toggle"
 						id="notificationDropdown" href="#" data-toggle="dropdown"> <i
@@ -149,7 +115,7 @@ td {
 					</li>
 					<li class="nav-item nav-profile dropdown"><a
 						class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-						id="profileDropdown"> <img src="images/faces/face23.jpg"
+						id="profileDropdown"> <img src="./ClassLight/template/images/faces/face23.jpg"
 							alt="profile" />
 					</a>
 						<div class="dropdown-menu dropdown-menu-right navbar-dropdown"
@@ -301,7 +267,7 @@ td {
 						<ul class="chat-list">
 							<li class="list active">
 								<div class="profile">
-									<img src="images/faces/face1.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face1.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -311,7 +277,7 @@ td {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face2.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face2.jpg" alt="image"><span
 										class="offline"></span>
 								</div>
 								<div class="info">
@@ -325,7 +291,7 @@ td {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face3.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face3.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -335,7 +301,7 @@ td {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face4.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face4.jpg" alt="image"><span
 										class="offline"></span>
 								</div>
 								<div class="info">
@@ -345,7 +311,7 @@ td {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face5.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face5.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -355,7 +321,7 @@ td {
 							</li>
 							<li class="list">
 								<div class="profile">
-									<img src="images/faces/face6.jpg" alt="image"><span
+									<img src="./ClassLight/template/images/faces/face6.jpg" alt="image"><span
 										class="online"></span>
 								</div>
 								<div class="info">
@@ -373,41 +339,43 @@ td {
 
 			<!-- ***** 사이드바 ****** -->
 			<!-- ul > li (각 메뉴)-->
-			<nav class="sidebar sidebar-offcanvas" id="sidebar">
-				<ul class="nav">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
 
-					<!-- 1) Dashboard 메뉴 -->
-					<li class="nav-item">
-						<!-- 메뉴 클릭시 이동경로 / 스타일클래스 --> <a class="nav-link"
-						href="ClassManage.html"> <!-- 아이콘 --> <i
-							class="icon-grid menu-icon"></i> <!-- 메뉴이름 --> <span
-							class="menu-title">수업 진행</span>
-					</a>
-					</li>
-					<!-- 2) 수업진행 -->
-					<li class="nav-item"><a class="nav-link"
-						href="pages/documentation/documentation.html"> <i
-							class="icon-layout menu-icon"></i> <span class="menu-title">수업
-								준비</span>
-					</a></li>
-					<li class="nav-item">
-						<!-- 3) 수업관리 --> <a class="nav-link" data-toggle="collapse"
-						href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-							<i class="icon-bar-graph menu-icon"></i> <span class="menu-title">수업
-								관리</span> <i class="menu-arrow"></i>
-					</a>
-						<div class="collapse" id="ui-basic">
-							<ul class="nav flex-column sub-menu">
-								<li class="nav-item"><a class="nav-link" href="./예제관리.html">분석
-										조회</a></li>
-								<li class="nav-item"><a class="nav-link"
-									href="./제품연동관리.html">제품연동관리</a></li>
-							</ul>
-						</div>
-					</li>
+          <!-- 1) Dashboard 메뉴 -->
+          <li class="nav-item">
+            <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
+            <a class="nav-link" href="classAction.jsp">
+              <!-- 아이콘 -->
+              <i class="icon-grid menu-icon"></i>
+              <!-- 메뉴이름 -->
+              <span class="menu-title">수업 진행</span>
+            </a>
+          </li>
+          <!-- 2) 수업진행 -->
+          <li class="nav-item">
+            <a class="nav-link" href="readyToClass.jsp">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">수업 준비</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <!-- 3) 수업관리 -->
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">수업 관리</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="exManage.jsp">분석 조회</a></li>
+                <li class="nav-item"> <a class="nav-link" href="productManage.jsp">제품연동관리</a></li>
+              </ul>
+            </div>
+          </li>
 
 					<!-- 4) 게시판 -->
-					<li class="nav-item"><a class="nav-link" href="./게시판.html">
+					<li class="nav-item"><a class="nav-link" href="board.jsp">
 							<i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
 					</a></li>
 				</ul>
@@ -651,28 +619,27 @@ td {
 			<!-- page-body-wrapper ends -->
 		</div>
 		<!-- container-scroller -->
+<!-- plugins:js -->
+        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <script src="./ClassLight/template/js/dataTables.select.min.js"></script>
 
-		<!-- plugins:js -->
-		<script src="vendors/js/vendor.bundle.base.js"></script>
-		<!-- endinject -->
-		<!-- Plugin js for this page -->
-		<script src="vendors/chart.js/Chart.min.js"></script>
-		<script src="vendors/datatables.net/jquery.dataTables.js"></script>
-		<script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-		<script src="js/dataTables.select.min.js"></script>
-
-		<!-- End plugin js for this page -->
-		<!-- inject:js -->
-		<script src="js/off-canvas.js"></script>
-		<script src="js/hoverable-collapse.js"></script>
-		<script src="js/template.js"></script>
-		<script src="js/settings.js"></script>
-		<script src="js/todolist.js"></script>
-		<!-- endinject -->
-		<!-- Custom js for this page-->
-		<script src="js/dashboard.js"></script>
-		<script src="js/Chart.roundedBarCharts.js"></script>
-		<!-- End custom js for this page-->
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="./ClassLight/template/js/off-canvas.js"></script>
+        <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
+        <script src="./ClassLight/template/s/template.js"></script>
+        <script src="./ClassLight/template/js/settings.js"></script>
+        <script src="./ClassLight/template/js/todolist.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src="./ClassLight/template/js/dashboard.js"></script>
+        <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
+        <!-- End custom js for this page-->
 </body>
 
 </html>
