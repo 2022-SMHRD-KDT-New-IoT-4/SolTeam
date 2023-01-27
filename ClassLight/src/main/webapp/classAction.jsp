@@ -8,7 +8,7 @@
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- index.html >>> Main.html로 타이틀 변경 -->
-    <title>classManage</title>
+    <title>classAction</title>
     <!-- Main : css-->
     <link rel="stylesheet" href="./Wep-CSS/ClassAction.css">
 
