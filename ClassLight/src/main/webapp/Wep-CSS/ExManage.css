@@ -1,0 +1,17 @@
+div>button {
+      width: 200px;
+      height: 50px;
+    }
+
+    #divbutton>button {
+      float: right;
+    }
+
+    #title,
+    #inputbtn {
+      border-radius: 15px;
+    }
+    .stretch-card{
+      width: 600px;
+      height: 600px;
+    }
