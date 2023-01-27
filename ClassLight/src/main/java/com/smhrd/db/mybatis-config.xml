@@ -10,7 +10,7 @@
 		<typeAlias type="com.smhrd.model.UserDTO" alias="UserDTO" />
 		<typeAlias type="com.smhrd.model.QuestionDTO" alias="QuestionDTO" />
 		<typeAlias type="com.smhrd.model.LedDTO" alias="LedDTO" />
-		<typeAlias type="com.smhrd.model.LevelcheckDTO" alias="LevelCheckDTO" />
+		<typeAlias type="com.smhrd.model.LevelCheckDTO" alias="LevelCheckDTO" />
 
 	</typeAliases>
 
