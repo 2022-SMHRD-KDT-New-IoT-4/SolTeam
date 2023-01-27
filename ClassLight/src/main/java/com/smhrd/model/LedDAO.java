@@ -9,7 +9,22 @@ import com.smhrd.db.SqlSessionManager;
 
 public class LedDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-
+	//온오프 제어
+	
+	public int OnOffUpdate(LedDTO dto) {
+		int row = 0;
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		try {
+			row = sqlSession.update("com.smhrd.model.DAO.LedUpdate", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return row;
+	}
+	
+	
 	// 시리얼넘버를 사용하여 현재 led의 값을 확인
 	public LedDTO LedSelect(LedDTO dto) {
 		LedDTO row = null;
