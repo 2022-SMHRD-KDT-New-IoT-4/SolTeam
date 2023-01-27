@@ -1,9 +1,13 @@
 package com.smhrd.model;
 
 public class LedDTO {
+	//온오프 제어
+	private int on_off;
+	
 	// 학생 led 점등현황 DTO
 	/////// 아두이노에서 받아온 센서값 DTO
 	private String control_seq;
+
 
 	// 빨강 LED
 	private Integer red_led;
@@ -88,6 +92,13 @@ public class LedDTO {
 
 	public void setStudent_id(String student_id) {
 		this.student_id = student_id;
+	}
+	public int getOn_off() {
+		return on_off;
+	}
+	
+	public void setOn_off(int on_off) {
+		this.on_off = on_off;
 	}
 
 }

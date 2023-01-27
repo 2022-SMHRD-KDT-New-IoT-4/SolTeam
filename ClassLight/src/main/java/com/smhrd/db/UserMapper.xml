@@ -43,5 +43,11 @@
 		from user_tb
 		where user_name = #{user_name} and user_id =#{user_id}
 	</select>
-	
+
+	<!-- 학생관리 select -->
+	<select id="SelectStudent" parameterType="UserDTO"
+		resultType="UserDTO">
+		select * from user_tb where user_class = #{user_class} and
+		user_name =#{user_name} and user_type != '1'
+	</select>
 </mapper>
