@@ -384,20 +384,46 @@
             </thead>
         </table>
         <br>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">반 선택</button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-            id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1">
-            <a class="dropdown-item" href="#">1반</a>
-            <a class="dropdown-item" href="#">2반</a>
-            <a class="dropdown-item" href="#">3반</a>
-            <a class="dropdown-item" href="#">4반</a>
-            <a class="dropdown-item" href="#">5반</a>
-          </div>
-        </div>
+       <div class="seat-position">
+              <!--강의실 선택 버튼 토글-->
+              <div class="btn-group" >
+                <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
+                <option >강의실 선택</option>
+                <option value="class1" >JSP/Servlet</option>
+                <option value="class2">Page 실습</option>
+                <option value="class3">인공지능 강의실3</option>
+                </select>
+              </div>
+            
+              <!-- 문제 선택 버튼 토글 -->
+              <div class="btn-group" >
+                <select id ="good" type="button" class="btn btn-primary">
+                <option>문제선택</option>
+                </select>
+              </div>
+              
+              <script>
+	function categoryChange(e) {
+	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+	var good_b = ["문제1", "문제2", "문제3", "문제4"];
+	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+	var target = document.getElementById("good");
+
+	if(e.value == "class1") var d = good_a;
+	else if(e.value == "class2") var d = good_b;
+	else if(e.value == "class3") var d = good_c;
+
+	target.options.length = 0;
+
+	for (x in d) {
+		var opt = document.createElement("option");
+		opt.value = d[x];
+		opt.innerHTML = d[x];
+		target.appendChild(opt);
+	}	
+}
+</script>
+              
         
         
         <div class="btn-group">
