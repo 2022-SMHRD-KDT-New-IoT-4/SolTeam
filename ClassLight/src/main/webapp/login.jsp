@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -12,7 +12,7 @@
 <!-- index.html >>> Main.html로 타이틀 변경 -->
 <title>Main</title>
 <!-- Main : css-->
-<link rel="stylesheet" href="./Wep-CSS/Main.css">
+
 
 <!-- plugins:css -->
 <link rel="stylesheet"
@@ -24,12 +24,12 @@
 <!-- endinject -->
 <!-- Plugin css for this page -->
 <link rel="stylesheet"
-	href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+	href="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
 <link rel="stylesheet"
-	href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
+	href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
 
 <link rel="stylesheet" type="text/css"
-	href="./template/js/select.dataTables.min.css">
+	href=".ClassLight/template/js/select.dataTables.min.css">
 <!-- End plugin css for this page -->
 <!-- inject:css -->
 <link rel="stylesheet"
@@ -50,7 +50,7 @@
               </div>
               <!-- <h4>Hello! let's get started</h4> -->
               <!-- <h6 class="font-weight-light">Sign in to continue.</h6> -->
-              <form class="pt-3" action="Login.do" method="post">
+              <form class="pt-3" action="mainTeacher.jsp" method="post">
                 <div class="form-group">
                   <input type="id" name="id" class="form-control form-control-lg" id="exampleInputId" placeholder="아이디">
                 </div>
