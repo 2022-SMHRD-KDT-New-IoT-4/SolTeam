@@ -29,6 +29,8 @@
 	String selectStudent_name = (String)request.getSession().getAttribute("name");
 	%>
 	<%=selectStudent_name%>
+	
+	
 
 </body>
 </html>
