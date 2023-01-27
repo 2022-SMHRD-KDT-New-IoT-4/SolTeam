@@ -40,10 +40,10 @@
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-          <a class="navbar-brand brand-logo mr-5" href="Main.html"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
+          <a class="navbar-brand brand-logo mr-5" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
               alt="logo" /></a>
           <!-- 최소화로고이미지 :  -->
-          <a class="navbar-brand brand-logo-mini" href="Main.html"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -388,10 +388,12 @@
               <!--강의실 선택 버튼 토글-->
               <div class="btn-group" >
                 <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
-                <option >강의실 선택</option>
+                <option >과목 선택</option>
                 <option value="class1" >JSP/Servlet</option>
-                <option value="class2">Page 실습</option>
-                <option value="class3">인공지능 강의실3</option>
+                <option value="class2">JavaScript</option>
+                <option value="class3">HTML/CSS</option>
+                <option value="class4">Arduino</option>
+                <option value="class5">Database</option>
                 </select>
               </div>
             
@@ -407,11 +409,16 @@
 	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
 	var good_b = ["문제1", "문제2", "문제3", "문제4"];
 	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+	var good_d = ["실습1","실습2","실습3","실습4","실습5"]
+	var good_e = ["예제실습1","예제실습2","예제실습3","예제실습4","예제실습5"]
 	var target = document.getElementById("good");
 
 	if(e.value == "class1") var d = good_a;
 	else if(e.value == "class2") var d = good_b;
 	else if(e.value == "class3") var d = good_c;
+	else if(e.value == "class4") var d = good_d;
+	else if(e.value == "class5") var d = good_e;
+	
 
 	target.options.length = 0;
 
@@ -426,41 +433,7 @@
               
         
         
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">과목선택</button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-            id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1">
-            <a class="dropdown-item" href="#">JSP/Servlet 기본개념</a>
-            <a class="dropdown-item" href="#">JSP/Servlet 기본실습</a>
-            <a class="dropdown-item" href="#">Page 실습</a>
-            <a class="dropdown-item" href="#">Servlet 과제 실습</a>
-            <a class="dropdown-item" href="#">지시자를 이용한 실습</a>
-            <a class="dropdown-item" href="#">Footer 출력 실습</a>
-            <a class="dropdown-item" href="#">내장객체 Request 실습</a>
-            <a class="dropdown-item" href="#">CreateInput 실습</a>
-          </div>
-        </div>
-
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">문제제목/내용</button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-            id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1">
-            <a class="dropdown-item" href="#">내용 1</a>
-            <a class="dropdown-item" href="#">내용 2</a>
-            <a class="dropdown-item" href="#">내용 3</a>
-            <a class="dropdown-item" href="#">내용 4</a>
-            <a class="dropdown-item" href="#">내용 5</a>
-            <a class="dropdown-item" href="#">내용 6</a>
-            <a class="dropdown-item" href="#">내용 7</a>
-            <a class="dropdown-item" href="#">내용 8</a>
-          </div>
-        </div>
+       
 
         <hr>
         <div class="col-lg-12 grid-margin stretch-card">
@@ -494,7 +467,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex01.html">
+                        <a href="">
                           <p style="font-size: 20px;">배열 예제 - 기본 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
@@ -507,7 +480,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex02.html">
+                        <a href="">
                           <p>배열 예제 - 점수계산 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -520,7 +493,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex03.html">
+                        <a href="">
                           <p>배열 예제 - 수박게임 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -533,7 +506,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex04.html">
+                        <a href="">
                           <p>이차원배열 예제 - 기본 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -546,7 +519,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex05.html">
+                        <a href="">
                           <p>이차원배열 예제 - 스네이크 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -559,7 +532,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex06.html">
+                        <a href="">
                           <p>메소드 예제 - 계산기 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -572,7 +545,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex07.html">
+                        <a href="">
                           <p>메소드 예제 - 피보나치수열 실습입니다. 문제를 확인해주세요.
                         </a>
 
@@ -586,7 +559,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex08.html">
+                        <a href="">
                           <p>메소드 오버로딩 개념 - 기본개념 입니다. 내용을 확인해주세요.
                         </a>
                       </td>
@@ -599,7 +572,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex09">
+                        <a href="">
                           <p>OOP 실습 예제 - 통장관리프로그램 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
