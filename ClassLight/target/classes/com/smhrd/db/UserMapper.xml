@@ -56,10 +56,6 @@
 		values(q_seq.nextval,#{title},#{content},#{time},#{score})
 	</insert>
 
-	<!-- Question구문 -->
-	<insert id="mQuestion" parameterType="QuestionDTO">
-		insert into question_tb
-		values(q_seq.nextval,#{title},#{content},#{time},#{score})
-	</insert>
+	
 
 </mapper>
