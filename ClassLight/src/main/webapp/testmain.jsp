@@ -32,12 +32,7 @@
 	out.print(Student.get(i).getUserId() + " ");
 	}
 	%>
-<<<<<<< HEAD
-	<%=selectStudent_name%>
-	
-	
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/SolTeam.git
+
 
 </body>
 </html>
