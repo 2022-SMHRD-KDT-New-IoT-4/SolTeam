@@ -1,15 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>수업준비</title>
-
-</head>
-
 <body>
   <!DOCTYPE html>
   <html lang="en">
@@ -20,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- index.html >>> Main.html로 타이틀 변경 -->
-    <title>Main</title>
+    <title>수업준비</title>
     <!-- Main : css-->
     <link rel="stylesheet" href="./Wep-CSS/ReadyToClass.css">
 
@@ -30,10 +20,10 @@
     <link rel="stylesheet" href="./ClassLight/template/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
 
-    <link rel="stylesheet" type="text/css" href="./template/js/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="./ClassLight/template/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
@@ -50,10 +40,10 @@
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <!-- 로고이미지 : tempLogo폴더 안에 "자산 3.png" -->
-          <a class="navbar-brand brand-logo mr-5" href="Main.html"><img src="../tempLogo/자산 3.png" class="mr-2"
+          <a class="navbar-brand brand-logo mr-5" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 3.png" class="mr-2"
               alt="logo" /></a>
           <!-- 최소화로고이미지 :  -->
-          <a class="navbar-brand brand-logo-mini" href="Main.html"><img src="../tempLogo/자산 4.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="mainTeacher.jsp"><img src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -126,7 +116,7 @@
             </li>
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                <img src="images/faces/face23.jpg" alt="profile" />
+                <img src="./ClassLight/template/images/faces/face23.jpg" alt="profile" />
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                 <a class="dropdown-item">
@@ -275,7 +265,7 @@
               </div>
               <ul class="chat-list">
                 <li class="list active">
-                  <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Thomas Douglas</p>
                     <p>Available</p>
@@ -283,7 +273,7 @@
                   <small class="text-muted my-auto">19 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
                   <div class="info">
                     <div class="wrapper d-flex">
                       <p>Catherine</p>
@@ -294,7 +284,7 @@
                   <small class="text-muted my-auto">23 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face3.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Daniel Russell</p>
                     <p>Available</p>
@@ -302,7 +292,7 @@
                   <small class="text-muted my-auto">14 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
                   <div class="info">
                     <p>James Richardson</p>
                     <p>Away</p>
@@ -310,15 +300,14 @@
                   <small class="text-muted my-auto">2 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face5.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Madeline Kennedy</p>
                     <p>Available</p>
                   </div>
                   <small class="text-muted my-auto">5 min</small>
-                </li>
                 <li class="list">
-                  <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="./ClassLight/template/images/faces/face6.jpg" alt="image"><span class="online"></span></div>
                   <div class="info">
                     <p>Sarah Graves</p>
                     <p>Available</p>
@@ -341,7 +330,7 @@
           <!-- 1) Dashboard 메뉴 -->
           <li class="nav-item">
             <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
-            <a class="nav-link" href="">
+            <a class="nav-link" href="classAction.jsp">
               <!-- 아이콘 -->
               <i class="icon-grid menu-icon"></i>
               <!-- 메뉴이름 -->
@@ -350,7 +339,7 @@
           </li>
           <!-- 2) 수업진행 -->
           <li class="nav-item">
-            <a class="nav-link" href="./ReadyToClass.html">
+            <a class="nav-link" href="./readyToClass.jsp">
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">수업 준비</span>
             </a>
@@ -364,15 +353,15 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="./Ex-manage.html">분석 조회</a></li>
-                <li class="nav-item"> <a class="nav-link" href="./Product-manage.html">제품연동관리</a></li>
+                <li class="nav-item"> <a class="nav-link" href="./exManage.jsp">분석 조회</a></li>
+                <li class="nav-item"> <a class="nav-link" href="./productManage.jsp">제품연동관리</a></li>
               </ul>
             </div>
           </li>
             
             <!-- 4) 게시판 -->
             <li class="nav-item">
-              <a class="nav-link" href="./Board.html">
+              <a class="nav-link" href="./board.jsp">
                 <i class="icon-head menu-icon"></i>
                 <span class="menu-title">게시판</span>
               </a>
@@ -395,57 +384,56 @@
             </thead>
         </table>
         <br>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">반 선택</button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-            id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1">
-            <a class="dropdown-item" href="#">1반</a>
-            <a class="dropdown-item" href="#">2반</a>
-            <a class="dropdown-item" href="#">3반</a>
-            <a class="dropdown-item" href="#">4반</a>
-            <a class="dropdown-item" href="#">5반</a>
-          </div>
-        </div>
-        
-        
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">과목선택</button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-            id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1">
-            <a class="dropdown-item" href="#">JSP/Servlet 기본개념</a>
-            <a class="dropdown-item" href="#">JSP/Servlet 기본실습</a>
-            <a class="dropdown-item" href="#">Page 실습</a>
-            <a class="dropdown-item" href="#">Servlet 과제 실습</a>
-            <a class="dropdown-item" href="#">지시자를 이용한 실습</a>
-            <a class="dropdown-item" href="#">Footer 출력 실습</a>
-            <a class="dropdown-item" href="#">내장객체 Request 실습</a>
-            <a class="dropdown-item" href="#">CreateInput 실습</a>
-          </div>
-        </div>
+       <div class="seat-position">
+              <!--강의실 선택 버튼 토글-->
+              <div class="btn-group" >
+                <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
+                <option >과목 선택</option>
+                <option value="class1" >JSP/Servlet</option>
+                <option value="class2">JavaScript</option>
+                <option value="class3">HTML/CSS</option>
+                <option value="class4">Arduino</option>
+                <option value="class5">Database</option>
+                </select>
+              </div>
+            
+              <!-- 문제 선택 버튼 토글 -->
+              <div class="btn-group" >
+                <select id ="good" type="button" class="btn btn-primary">
+                <option>문제선택</option>
+                </select>
+              </div>
+              
+              <script>
+	function categoryChange(e) {
+	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+	var good_b = ["문제1", "문제2", "문제3", "문제4"];
+	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+	var good_d = ["실습1","실습2","실습3","실습4","실습5"]
+	var good_e = ["예제실습1","예제실습2","예제실습3","예제실습4","예제실습5"]
+	var target = document.getElementById("good");
 
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary">문제제목/내용</button>
-          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-            id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1">
-            <a class="dropdown-item" href="#">내용 1</a>
-            <a class="dropdown-item" href="#">내용 2</a>
-            <a class="dropdown-item" href="#">내용 3</a>
-            <a class="dropdown-item" href="#">내용 4</a>
-            <a class="dropdown-item" href="#">내용 5</a>
-            <a class="dropdown-item" href="#">내용 6</a>
-            <a class="dropdown-item" href="#">내용 7</a>
-            <a class="dropdown-item" href="#">내용 8</a>
-          </div>
-        </div>
+	if(e.value == "class1") var d = good_a;
+	else if(e.value == "class2") var d = good_b;
+	else if(e.value == "class3") var d = good_c;
+	else if(e.value == "class4") var d = good_d;
+	else if(e.value == "class5") var d = good_e;
+	
+
+	target.options.length = 0;
+
+	for (x in d) {
+		var opt = document.createElement("option");
+		opt.value = d[x];
+		opt.innerHTML = d[x];
+		target.appendChild(opt);
+	}	
+}
+</script>
+              
+        
+        
+       
 
         <hr>
         <div class="col-lg-12 grid-margin stretch-card">
@@ -479,7 +467,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex01.html">
+                        <a href="">
                           <p style="font-size: 20px;">배열 예제 - 기본 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
@@ -492,7 +480,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex02.html">
+                        <a href="">
                           <p>배열 예제 - 점수계산 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -505,7 +493,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex03.html">
+                        <a href="">
                           <p>배열 예제 - 수박게임 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -518,7 +506,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex04.html">
+                        <a href="">
                           <p>이차원배열 예제 - 기본 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -531,7 +519,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex05.html">
+                        <a href="">
                           <p>이차원배열 예제 - 스네이크 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -544,7 +532,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex06.html">
+                        <a href="">
                           <p>메소드 예제 - 계산기 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
@@ -557,7 +545,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex07.html">
+                        <a href="">
                           <p>메소드 예제 - 피보나치수열 실습입니다. 문제를 확인해주세요.
                         </a>
 
@@ -571,7 +559,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex08.html">
+                        <a href="">
                           <p>메소드 오버로딩 개념 - 기본개념 입니다. 내용을 확인해주세요.
                         </a>
                       </td>
@@ -584,7 +572,7 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="./ReadyToClass-ex/ReadyToClass-ex09">
+                        <a href="">
                           <p>OOP 실습 예제 - 통장관리프로그램 실습입니다. 문제를 확인해주세요.
                         </a>
                       </td>
