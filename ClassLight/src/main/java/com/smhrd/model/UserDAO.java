@@ -55,7 +55,7 @@ public class UserDAO {
 		UserDTO row = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.selectOne("com.smhrd.UserDAO.researchId", dto);
+			row = sqlSession.selectOne("com.smhrd.model.UserDAO.researchId", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -69,13 +69,27 @@ public class UserDAO {
 		UserDTO row = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.selectOne("com.smhrd.UserDAO.researchPw", dto);
+			row = sqlSession.selectOne("com.smhrd.model.UserDAO.researchPw", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
 		}
 		return row;
+	}
+	
+	// InfoStudent
+	public List<UserDTO> SelectStudent(UserDTO dto) {
+		List<UserDTO> list = null;
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		try {
+			list = sqlSession.selectList("com.smhrd.model.UserDAO.SelectStudent", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return list;
 	}
 
 }
