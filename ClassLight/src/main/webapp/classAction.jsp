@@ -265,7 +265,33 @@
 	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
 	var target = document.getElementById("good");
 
-	if(e.value == "class1") var d = good_a;
+	if(e.value == "class1") {
+		var d = good_a;	
+             $.ajax({
+                 url: "Class5List.html",
+                 dataType: 'json',
+                 success: function (result) {
+                     console.log(result);
+                     var html="<table border='1'>";
+                   
+                     $.each(result, function (index, value) {
+                     	console.log(value.name);
+                     	
+                     	 html+="<tr>";
+                          html+="<td>"+value.name+"</td>";
+                          html+="</tr>";
+                     });
+                     html+="</table>";
+                     $("#row1").html(html);
+                     
+                     
+                 },
+                 error: function () {
+                     alert("통신실패");
+                 }
+             });
+	
+	}
 	else if(e.value == "class2") var d = good_b;
 	else if(e.value == "class3") var d = good_c;
 
