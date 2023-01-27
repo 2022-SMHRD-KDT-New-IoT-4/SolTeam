@@ -11,7 +11,6 @@ import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
 
 public class JoinProgram implements Command {
-	private static final long serialVersionUID = 1L;
 
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
