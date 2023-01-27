@@ -11,9 +11,7 @@ import com.smhrd.model.UserDAO;
 import com.smhrd.model.UserDTO;
 
 public class JoinProgram implements Command {
-	private static final long serialVersionUID = 1L;
 
-	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -34,9 +32,10 @@ public class JoinProgram implements Command {
 			int row = dao.joinTeacher(dto);
 			if (row > 0) {
 				request.getSession().setAttribute("name", name);
+				request.getSession().setAttribute("id", id);
 
 				// 웹 구현되면 join success 화면 만들어서 연결해야함!
-				result = "join.jsp";
+				result = "joinSuccess.jsp";
 			} else {
 				// 웹 구현되면 main 화면 만들어서 연결해야함!
 				result = "main.jsp";
@@ -49,9 +48,10 @@ public class JoinProgram implements Command {
 			int row = dao.joinStudent(dto);
 			if (row > 0) {
 				request.getSession().setAttribute("name", name);
+				request.getSession().setAttribute("id", id);
 
 				// 웹 구현되면 join success 화면 만들어서 연결해야함!
-				result = "join.jsp";
+				result = "joinSuccess.jsp";
 			} else {
 				// 웹 구현되면 main 화면 만들어서 연결해야함!
 				result = "main.jsp";
