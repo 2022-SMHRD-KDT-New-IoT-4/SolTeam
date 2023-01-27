@@ -28,7 +28,7 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
     
-  
+  	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 
 <body>
@@ -256,35 +256,83 @@
             
               <!-- 문제 선택 버튼 토글 -->
               <div class="btn-group" >
-                <select id ="good" type="button" class="btn btn-primary">
+                <select onchange="categoryChange1(this)" id ="good" type="button" class="btn btn-primary">
                 <option>문제선택</option>
                 </select>
               </div>
               
               <script>
-	function categoryChange(e) {
-	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
-	var good_b = ["문제1", "문제2", "문제3", "문제4"];
-	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
-	var target = document.getElementById("good");
+  				// 강의실 선택의 onchange 
+				function categoryChange(e) {
+					var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+					var good_b = ["문제1", "문제2", "문제3", "문제4"];
+					var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+					var target = document.getElementById("good");
 
-	if(e.value == "class1") var d = good_a;
-	else if(e.value == "class2") var d = good_b;
-	else if(e.value == "class3") var d = good_c;
+					if(e.value == "class1") var d = good_a;
+					else if(e.value == "class2") var d = good_b;
+					else if(e.value == "class3") var d = good_c;
 
-	target.options.length = 0;
+					target.options.length = 0;
 
-	for (x in d) {
-		var opt = document.createElement("option");
-		opt.value = d[x];
-		opt.innerHTML = d[x];
-		target.appendChild(opt);
-	}	
-}
-</script>
-              
-              
-              
+					for (x in d) {
+						var opt = document.createElement("option");
+						opt.value = d[x];
+						opt.innerHTML = d[x];
+						target.appendChild(opt);
+					}	
+				}
+				// 문제 선택에서의 onchange
+				function categoryChange1(e) {
+					console.log(e.value);	
+					/*if(e.value == "별찍기 프로그램"){
+		                $.ajax({
+		                    url: "test.html",
+		                    dataType: 'json',
+		                    success: function (result) {
+		                        console.log(result);
+		                        // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
+		                        // result.time 배열 안의 키time의 value값을 불러오는 작업
+		                        $("#time-left").text(result.time1);
+		                    },
+		                    error: function () {
+		                        alert("통신실패");
+		                    }
+		                });		        
+					}
+					else if(e.value == "포켓몬 프로그램"){
+						$.ajax({
+		                    url: "test.html",
+		                    dataType: 'json',
+		                    success: function (result) {
+		                        console.log(result);
+		                        // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
+		                        // result.time 배열 안의 키time의 value값을 불러오는 작업
+		                        $("#time-left").text(result.time2);
+		                    },
+		                    error: function () {
+		                        alert("통신실패");
+		                    }
+		                });	
+					}*/
+					if(e.value == "계산기 프로그램"){
+						$.ajax({
+		                    url: "test.html",
+		                    dataType: 'json',
+		                    success: function (result) {
+		                        console.log(result);
+		                        // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
+		                        // result.time 배열 안의 키time의 value값을 불러오는 작업
+		                        $("#time-left").text(result.time3);
+		                    },
+		                    error: function () {
+		                        alert("통신실패");
+		                    }
+		                });	
+					}
+				}
+				
+				</script>
               
               <!-- 자리 배치도 -->
               <div class="card">
@@ -379,6 +427,12 @@
 
             <!-- 남은 시간 표시 -->
             <div id="time-left">03:12</div>
+            
+            <!-- 비동기통신 -->
+           	<script type="text/javascript">
+
+           	
+           	</script>
 
             <!-- 타이머 버튼-->
             <div id="timer-button">
