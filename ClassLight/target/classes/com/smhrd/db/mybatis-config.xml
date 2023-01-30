@@ -6,37 +6,42 @@
 <configuration>
 
 	<typeAliases>
-	<!-- MemberMapper파일에서 사용할 type들의 별명을 지정해주는 공간 -->
-		<typeAlias type="com.smhrd.model.UserDTO" alias="UserDTO"/>
-		<typeAlias type="com.smhrd.model.QuestionDTO" alias="QuestionDTO"/>
-		<typeAlias type="com.smhrd.model.LedDTO" alias="LedDTO"/>
+		<!-- MemberMapper파일에서 사용할 type들의 별명을 지정해주는 공간 -->
+		<typeAlias type="com.smhrd.model.UserDTO" alias="UserDTO" />
+		<typeAlias type="com.smhrd.model.QuestionDTO" alias="QuestionDTO" />
+		<typeAlias type="com.smhrd.model.LedDTO" alias="LedDTO" />
+		<typeAlias type="com.smhrd.model.LevelCheckDTO" alias="LevelCheckDTO" />
+
 	</typeAliases>
 
-  <environments default="development">
+	<environments default="development">
 
-    <environment id="development">
+		<environment id="development">
 
-      <transactionManager type="JDBC"/>
+			<transactionManager type="JDBC" />
 
-      <dataSource type="POOLED">
-        <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@gjaischool-b.ddns.net:1525:xe"/>
-        <property name="username" value="cgi_5_0117_2"/>
-        <property name="password" value="smhrd2"/>
-      </dataSource>
-      
-    </environment>
-  </environments>
-  
-  <!-- 연결하고 싶은 파일의 명칭 -->
-  <!-- mapper파일이 생길때마다 반드시 연결할 수 있도록 기술해줄 것 -->
-  <mappers>
+			<dataSource type="POOLED">
+				<property name="driver"
+					value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@gjaischool-b.ddns.net:1525:xe" />
+				<property name="username" value="cgi_5_0117_2" />
+				<property name="password" value="smhrd2" />
+			</dataSource>
 
- 	<mapper resource="com/smhrd/db/LedMapper.xml"/>
-    <mapper resource="com/smhrd/db/QuestionMapper.xml"/>
-    <mapper resource="com/smhrd/db/UserMapper.xml"/>
-    
-  </mappers>
-  
-  
+		</environment>
+	</environments>
+
+	<!-- 연결하고 싶은 파일의 명칭 -->
+	<!-- mapper파일이 생길때마다 반드시 연결할 수 있도록 기술해줄 것 -->
+	<mappers>
+
+		<mapper resource="com/smhrd/db/LedMapper.xml" />
+		<mapper resource="com/smhrd/db/QuestionMapper.xml" />
+		<mapper resource="com/smhrd/db/UserMapper.xml" />
+		
+
+	</mappers>
+
+
 </configuration>
