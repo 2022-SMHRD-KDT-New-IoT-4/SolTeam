@@ -266,7 +266,7 @@
 					var good_b = ["문제1", "문제2", "문제3", "문제4"];
 					var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
 					var target = document.getElementById("good");
-					var cnt = 1;
+					var cnt = 1; //쓸모없는 것...
 
 					if(e.value == "class1") {
 						var d = good_a;	
@@ -282,9 +282,9 @@
 				                     	console.log(value.name1);
 				                     	if(num % 2 == 0){
 				                     	  html+="<tr>";
-				                          html+="<td>"+value.name1+"</td>";
+				                          html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
 				                     	}else{
-				                          html+="<td>"+value.name1+"</td>";
+				                          html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
 				                          html+="</tr>";                     		
 				                     	}
 				                  		 num++;
@@ -297,9 +297,9 @@
 				                 	console.log(value.name2);
 				                 	if(num % 2 == 0){
 				                 	  html+="<tr>";
-				                      html+="<td>"+value.name2+"</td>";
+				                      html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
 				                 	}else{
-				                      html+="<td>"+value.name2+"</td>";
+				                      html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
 				                      html+="</tr>";                     		
 				                 	}
 				                 	num++;
@@ -312,9 +312,9 @@
 					                	console.log(value.name3);
 					                	if(num % 2 == 0){
 					                	  html+="<tr>";
-					                     html+="<td>"+value.name3+"</td>";
+					                     html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
 					                	}else{
-					                     html+="<td>"+value.name3+"</td>";
+					                     html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
 					                     html+="</tr>";                     		
 					                	}
 					                	num++;
@@ -340,9 +340,9 @@
 				                	console.log(value.name1);
 				                	if(num % 2 == 0){
 				                	  html+="<tr>";
-				                     html+="<td>"+value.name1+"</td>";
+				                     html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
 				                	}else{
-				                     html+="<td>"+value.name1+"</td>";
+				                     html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
 				                     html+="</tr>";                     		
 				                	}
 				             		 num++;
@@ -355,9 +355,9 @@
 				            	console.log(value.name2);
 				            	if(num % 2 == 0){
 				            	  html+="<tr>";
-				                 html+="<td>"+value.name2+"</td>";
+				                 html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
 				            	}else{
-				                 html+="<td>"+value.name2+"</td>";
+				                 html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
 				                 html+="</tr>";                     		
 				            	}
 				            	num++;
@@ -370,9 +370,9 @@
 				               	console.log(value.name3);
 				               	if(num % 2 == 0){
 				               	  html+="<tr>";
-				                    html+="<td>"+value.name3+"</td>";
+				                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
 				               	}else{
-				                    html+="<td>"+value.name3+"</td>";
+				                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
 				                    html+="</tr>";                     		
 				               	}
 				               	num++;
@@ -400,9 +400,9 @@
 				                    	console.log(value.name1);
 				                    	if(num % 2 == 0){
 				                    	  html+="<tr>"; 
-				                    	  html+="<td>"+value.name1+"</td>";
+				                    	  html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
 				                    	}else{
-				                    		html+="<td>"+value.name1+"</td>";
+				                    		html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
 				                    		html+="</tr>";                     		
 				                    	}
 				                 		 num++;
@@ -415,9 +415,9 @@
 				                	console.log(value.name2);
 				                	if(num % 2 == 0){
 				                	  html+="<tr>";
-				                     html+="<td>"+value.name2+"</td>";
+				                     html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
 				                	}else{
-				                     html+="<td>"+value.name2+"</td>";
+				                     html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
 				                     html+="</tr>";                     		
 				                	}
 				                	num++;
@@ -430,9 +430,9 @@
 					                console.log(value.name3);
 					                if(num % 2 == 0){
 					                	html+="<tr>";
-					                    html+="<td>"+value.name3+"</td>";
+					                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
 					                }else{
-					                    html+="<td>"+value.name3+"</td>";
+					                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
 					                    html+="</tr>";                     		
 					                }
 					                num++;
@@ -493,66 +493,15 @@
 
                   <div>
                     <div id="row1">
-                      <table border="1px">
-                        <tr>
-                          <div id='test'><td></td></div>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                      </table>
+                      
                     </div>
 
                     <div id="row2">
-                      <table border="1px">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-
-                      </table>
+                      
                     </div>
 
                     <div id="row3">
-                      <table border="1px">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
+                      
 
                       </table>
 
@@ -579,10 +528,12 @@
 						console.log(result);
 						// red onoff data , 누가 누른건지
 						console.log(result[3].red_led);
+						//임시로 1 들어왔다고 가정
+						result[3].red_led = 0;
 						if(result[3].red_led == 1){
-							$('#test').css('background-color','red');
+							$('#seat1').css('background-color','red');
 						}else{
-							$('#test').css('background-color','blue');
+							$('#seat1').css('background-color','blue');
 						}
 					},
 					error: function () {
