@@ -419,22 +419,12 @@
           <div>
           </div>
 
-          <!--타이머-->
-
-          <div class="timer">
-            <div id="timer_title">
-              <h2>실습시간 제어</h2>
-            </div>
-
-            <!-- 남은 시간 표시 -->
-            <div id="time-left">03:12</div>
             
             <!-- 비동기통신 -->
            	<script type="text/javascript">
 
            	
            	</script>
-=======
     <title>classAction</title>
     <!-- Main : css-->
     <link rel="stylesheet" href="./Wep-CSS/ClassAction.css">
@@ -612,53 +602,6 @@
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
 
-      <!-- ***** 사이드바 ****** -->
-      <!-- ul > li (각 메뉴)-->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-
-          <!-- 1) Dashboard 메뉴 -->
-          <li class="nav-item">
-            <!-- 메뉴 클릭시 이동경로 / 스타일클래스 -->
-            <a class="nav-link" href="classAction.jsp">
-              <!-- 아이콘 -->
-              <i class="icon-grid menu-icon"></i>
-              <!-- 메뉴이름 -->
-              <span class="menu-title">수업 진행</span>
-            </a>
-          </li>
-          <!-- 2) 수업진행 -->
-          <li class="nav-item">
-            <a class="nav-link" href="readyToClass.jsp">
-              <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">수업 준비</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <!-- 3) 수업관리 -->
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">수업 관리</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="exManage.jsp">분석 조회</a></li>
-                <li class="nav-item"> <a class="nav-link" href="productManage.jsp">제품연동관리</a></li>
-              </ul>
-            </div>
-          </li>
-
-					<!-- 4) 게시판 -->
-					<li class="nav-item"><a class="nav-link" href="board.jsp">
-							<i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
-					</a></li>
-				</ul>
-			</nav>
-
-
-
-
 
       <!-- partial -->
       <div class="main-panel">
@@ -829,7 +772,6 @@
 
             <!-- 남은 시간 표시 -->
             <div id="time-left">03:12</div>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/SolTeam.git
 
             <!-- 타이머 버튼-->
             <div id="timer-button">
