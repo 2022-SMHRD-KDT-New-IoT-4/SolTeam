@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.smhrd.model.QuestionDAO">
+  <mapper namespace="com.smhrd.model.QuestionDAO">
 
 	<!-- 쿼리문 작성 -->
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
@@ -14,16 +14,23 @@
 		values(question_tb_seq.nextval,#{q_title},#{q_content},#{q_time},#{q_score})
 	</insert>
 
-
 	<!-- q_time 불러오는 구문 -->
 	<select id="time" parameterType="QuestionDTO" resultType="QuestionDTO" >
 		select *
 		from question_tb
 	</select>
-
-
-
-
+	<!-- 문제 만드는 구간? -->
+	<insert id="makeQuestion" parameterType="QuestionDTO">
+		insert into question_tb
+		values(q_seq.nextval,#{title},#{content},#{time},#{score})
+	</insert>
+	
+	<!-- 문제 뽑아오는 구간 -->
+	<select id="SelectQuestion" parameterType="QuestionDTO" resultType="QuestionDTO">
+		select *
+		from question_tb
+		where q_time = #{q_time}
+	</select>
 </mapper>
 
 

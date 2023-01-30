@@ -101,6 +101,19 @@
 	</form>
 	
 	
+	<!-- 타이머 서버로 보냄 -->
+	<form action="api/time">
+		
+		<input type="text" name="q_time">
+		<input type="submit" value = "제발">
+	</form>
+<br>
+	<!-- 온오프 제어 서버로 보냄 -->
+	<form action="OnOffSet">
+	
+	1<input type="radio" value ='1' name ="On_Off">
+	0<input type="radio" value ='0' name ="On_Off">
+	<input type="submit"> </form>
 	
 </body>
 </html>
