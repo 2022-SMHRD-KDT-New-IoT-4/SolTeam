@@ -11,7 +11,24 @@ public class QuestionDAO {
 	
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 
+	//문제 뽑아오는 구간 
+		public QuestionDTO QuestionSelect(QuestionDTO dto) {
+			QuestionDTO row = null;
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			try {
+				row = sqlSession.selectOne("com.smhrd.model.QuestionDAO.SelectQuestion", dto);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+			return row;
+		}
+	
+	
 	public int make_q(QuestionDTO dto) {
+		
+		
 		int row = 0;
 		// 1) sqlsession 열어주기
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);

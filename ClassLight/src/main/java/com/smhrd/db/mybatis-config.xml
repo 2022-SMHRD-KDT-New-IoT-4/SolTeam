@@ -11,8 +11,7 @@
 		<typeAlias type="com.smhrd.model.QuestionDTO" alias="QuestionDTO" />
 		<typeAlias type="com.smhrd.model.LedDTO" alias="LedDTO" />
 		<typeAlias type="com.smhrd.model.LevelCheckDTO" alias="LevelCheckDTO" />
-		
-
+		<typeAlias type="com.smhrd.model.OnOffDTO" alias="OnOffDTO"/>
 	</typeAliases>
 
 	<environments default="development">
@@ -42,6 +41,8 @@
 		<mapper resource="com/smhrd/db/UserMapper.xml" />
 		
 
+		<!--  온오프 제어 -->
+     <mapper resource="com/smhrd/db/OnOffMapper.xml"/>
 	</mappers>
 
 
