@@ -282,7 +282,7 @@
 				                     	console.log(value.name1);
 				                     	if(num % 2 == 0){
 				                     	  html+="<tr>";
-				                          html+="<td>"+value.name1+"</td>";
+				                          html+="<td id='test"+num+"'=>"+value.name1+"</td>";
 				                     	}else{
 				                          html+="<td>"+value.name1+"</td>";
 				                          html+="</tr>";                     		
@@ -580,9 +580,9 @@
 						// red onoff data , 누가 누른건지
 						console.log(result[3].red_led);
 						if(result[3].red_led == 1){
-							$('#test').css('background-color','red');
+							$('#num').css('background-color','red');
 						}else{
-							$('#test').css('background-color','blue');
+							$('#num').css('background-color','blue');
 						}
 					},
 					error: function () {
