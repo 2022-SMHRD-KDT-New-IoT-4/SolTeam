@@ -264,9 +264,184 @@
 					var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
 					var target = document.getElementById("good");
 
-					if(e.value == "class1") var d = good_a;
-					else if(e.value == "class2") var d = good_b;
-					else if(e.value == "class3") var d = good_c;
+					if(e.value == "class1") {
+						var d = good_a;	
+				             $.ajax({ 
+				                 url: "Class5List.html",
+				                 dataType: 'json',
+				                 success: function (result) {
+				                	 //console.log(result);
+				                     //console.log(result.iot);
+				                    var html ="<table border='1'>";
+				                   	 var num = 0;		
+				                     $.each(result.iot, function (index, value) {
+				                     	console.log(value.name1);
+				                     	if(num % 2 == 0){
+				                     	  html+="<tr>";
+				                          html+="<td>"+value.name1+"</td>";
+				                     	}else{
+				                          html+="<td>"+value.name1+"</td>";
+				                          html+="</tr>";                     		
+				                     	}
+				                  		 num++;
+				                 	})
+				                 html+="</table>";
+				                 $("#row1").html(html);
+				                 
+				                    html ="<table border='1'>";
+				                 $.each(result.bigdata, function (index, value) {
+				                 	console.log(value.name2);
+				                 	if(num % 2 == 0){
+				                 	  html+="<tr>";
+				                      html+="<td>"+value.name2+"</td>";
+				                 	}else{
+				                      html+="<td>"+value.name2+"</td>";
+				                      html+="</tr>";                     		
+				                 	}
+				                 	num++;
+				                 });
+				                 html+="</table>";
+				                 $("#row2").html(html);
+				                 
+				                 html ="<table border='1'>";
+					                $.each(result.ai, function (index, value) {
+					                	console.log(value.name3);
+					                	if(num % 2 == 0){
+					                	  html+="<tr>";
+					                     html+="<td>"+value.name3+"</td>";
+					                	}else{
+					                     html+="<td>"+value.name3+"</td>";
+					                     html+="</tr>";                     		
+					                	}
+					                	num++;
+					                });
+					                html+="</table>";
+					                $("#row3").html(html);
+					                
+				                 },
+				                 error: function () {
+				                     alert("통신실패");
+				                 }
+				             });
+					
+						}else if(e.value == "class2") {
+						var d = good_b;	
+				        $.ajax({
+				            url: "Class5List.html",
+				            dataType: 'json',
+				            success: function (result) {
+				            	var html ="<table border='1'>";
+				              	 var num = 0;		
+				                $.each(result.iot, function (index, value) {
+				                	console.log(value.name1);
+				                	if(num % 2 == 0){
+				                	  html+="<tr>";
+				                     html+="<td>"+value.name1+"</td>";
+				                	}else{
+				                     html+="<td>"+value.name1+"</td>";
+				                     html+="</tr>";                     		
+				                	}
+				             		 num++;
+				            	})
+				            html+="</table>";
+				            $("#row3").html(html);
+				            
+				            html ="<table border='1'>";
+				            $.each(result.bigdata, function (index, value) {
+				            	console.log(value.name2);
+				            	if(num % 2 == 0){
+				            	  html+="<tr>";
+				                 html+="<td>"+value.name2+"</td>";
+				            	}else{
+				                 html+="<td>"+value.name2+"</td>";
+				                 html+="</tr>";                     		
+				            	}
+				            	num++;
+				            });
+				            html+="</table>";
+				            $("#row1").html(html);
+				            
+				            	html ="<table border='1'>";
+				               $.each(result.ai, function (index, value) {
+				               	console.log(value.name3);
+				               	if(num % 2 == 0){
+				               	  html+="<tr>";
+				                    html+="<td>"+value.name3+"</td>";
+				               	}else{
+				                    html+="<td>"+value.name3+"</td>";
+				                    html+="</tr>";                     		
+				               	}
+				               	num++;
+				               });
+				               html+="</table>";
+				               $("#row2").html(html);
+				                
+				                
+				            },
+				            error: function () {
+				                alert("통신실패");
+				            }
+				        	});
+
+							}else if(e.value == "class3") {
+								var d = good_c;	
+					        $.ajax({
+					            url: "Class5List.html",
+					            dataType: 'json',
+					            success: function (result) {
+					                console.log(result);
+					                var html ="<table border='1'>";
+				                  	 var num = 0;		
+				                    $.each(result.iot, function (index, value) {
+				                    	console.log(value.name1);
+				                    	if(num % 2 == 0){
+				                    	  html+="<tr>";
+				                         html+="<td>"+value.name1+"</td>";
+				                    	}else{
+				                         html+="<td>"+value.name1+"</td>";
+				                         html+="</tr>";                     		
+				                    	}
+				                 		 num++;
+				                	})
+				                html+="</table>";
+				                $("#row2").html(html);
+				                
+				                   html ="<table border='1'>";
+				                $.each(result.bigdata, function (index, value) {
+				                	console.log(value.name2);
+				                	if(num % 2 == 0){
+				                	  html+="<tr>";
+				                     html+="<td>"+value.name2+"</td>";
+				                	}else{
+				                     html+="<td>"+value.name2+"</td>";
+				                     html+="</tr>";                     		
+				                	}
+				                	num++;
+				                });
+				                html+="</table>";
+				                $("#row3").html(html);
+				                
+				                html ="<table border='1'>";
+					            $.each(result.ai, function (index, value) {
+					                console.log(value.name3);
+					                if(num % 2 == 0){
+					                	html+="<tr>";
+					                    html+="<td>"+value.name3+"</td>";
+					                }else{
+					                    html+="<td>"+value.name3+"</td>";
+					                    html+="</tr>";                     		
+					                }
+					                num++;
+					               });
+					               html+="</table>";
+					               $("#row1").html(html);
+					            },
+					            error: function () {
+					                alert("통신실패");
+					            }
+					        });
+
+					}
 
 					target.options.length = 0;
 
