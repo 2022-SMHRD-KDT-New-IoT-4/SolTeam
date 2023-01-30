@@ -267,7 +267,7 @@
 					if(e.value == "class1") {
 						var d = good_a;	
 				             $.ajax({ 
-				                 url: "Class5List.html",
+				                 url: "jsonData.html",
 				                 dataType: 'json',
 				                 success: function (result) {
 				                	 //console.log(result);
@@ -327,7 +327,7 @@
 						}else if(e.value == "class2") {
 						var d = good_b;	
 				        $.ajax({
-				            url: "Class5List.html",
+				            url: "jsonData.html",
 				            dataType: 'json',
 				            success: function (result) {
 				            	var html ="<table border='1'>";
@@ -386,7 +386,7 @@
 							}else if(e.value == "class3") {
 								var d = good_c;	
 					        $.ajax({
-					            url: "Class5List.html",
+					            url: "jsonData.html",
 					            dataType: 'json',
 					            success: function (result) {
 					                console.log(result);
@@ -464,7 +464,7 @@
 						num=2;
 					}
 						$.ajax({
-		                    url: "timeOfQuestion.html",
+		                    url: "jsonData.html",
 		                    dataType: 'json',
 		                    success: function (result) {
 		                        console.log(result.time);
