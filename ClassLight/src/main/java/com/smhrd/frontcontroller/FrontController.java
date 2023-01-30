@@ -24,7 +24,8 @@ import com.smhrd.usercontroller.ResearchPw;
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, Command> map = null;
-     
+	
+	@Override
 	public void init() throws ServletException {
 	map = new HashMap<>();
 	
