@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.LedDTO"%>
+<%@page import="com.smhrd.model.UserDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -263,6 +266,7 @@
 					var good_b = ["문제1", "문제2", "문제3", "문제4"];
 					var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
 					var target = document.getElementById("good");
+					var cnt = 1;
 
 					if(e.value == "class1") {
 						var d = good_a;	
@@ -395,11 +399,11 @@
 				                    $.each(result.iot, function (index, value) {
 				                    	console.log(value.name1);
 				                    	if(num % 2 == 0){
-				                    	  html+="<tr>";
-				                         html+="<td>"+value.name1+"</td>";
+				                    	  html+="<tr>"; 
+				                    	  html+="<td>"+value.name1+"</td>";
 				                    	}else{
-				                         html+="<td>"+value.name1+"</td>";
-				                         html+="</tr>";                     		
+				                    		html+="<td>"+value.name1+"</td>";
+				                    		html+="</tr>";                     		
 				                    	}
 				                 		 num++;
 				                	})
@@ -479,10 +483,7 @@
 		                });	
 				}
 			</script>
-              
-              
-              
-              
+
               <!-- 자리 배치도 -->
               <div class="card">
                 <div class="card-body">
@@ -494,7 +495,7 @@
                     <div id="row1">
                       <table border="1px">
                         <tr>
-                          <td></td>
+                          <div id='test'><td></td></div>
                           <td></td>
                         </tr>
                         <tr>
@@ -566,6 +567,32 @@
           </div>
           <div>
           </div>
+          
+          <!-- 실시간으로 데이터 받아오기 -->
+			<script>
+			setInterval(() => {
+				// DB에서 데이터 조회하는 코드 ajax로 구현
+				$.ajax({
+					url : "SelectLedState.do",
+					dataType:"json",
+					success : function(result) {
+						console.log(result);
+						// red onoff data , 누가 누른건지
+						console.log(result[3].red_led);
+						if(result[3].red_led == 1){
+							$('#test').css('background-color','red');
+						}else{
+							$('#test').css('background-color','blue');
+						}
+					},
+					error: function () {
+						alert("통신 실패");
+					}
+					
+				})
+
+			}, 1000);
+			</script>
 
           <!--타이머-->
 
@@ -619,7 +646,7 @@
         <!-- inject:js -->
         <script src="./ClassLight/template/js/off-canvas.js"></script>
         <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
-        <script src="./ClassLight/template/s/template.js"></script>
+        
         <script src="./ClassLight/template/js/settings.js"></script>
         <script src="./ClassLight/template/js/todolist.js"></script>
         <!-- endinject -->
