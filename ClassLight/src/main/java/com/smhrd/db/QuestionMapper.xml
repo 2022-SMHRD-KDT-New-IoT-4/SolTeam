@@ -14,6 +14,16 @@
 		values(question_tb_seq.nextval,#{q_title},#{q_content},#{q_time},#{q_score})
 	</insert>
 
+
+	<!-- q_time 불러오는 구문 -->
+	<select id="time" parameterType="QuestionDTO" resultType="QuestionDTO" >
+		select q_time
+		from question_tb
+	</select>
+
+
+
+
 </mapper>
 
 

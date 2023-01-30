@@ -3,7 +3,7 @@ package com.smhrd.model;
 public class QuestionDTO {
 
 	    // 문제 순번 
-	    private Double q_seq;
+	    private String q_seq;
 
 	    // 문제 제목 
 	    private String q_title;
@@ -17,11 +17,11 @@ public class QuestionDTO {
 	    // 문제 점수 
 	    private String q_score;
 
-	    public Double getQSeq() {
+	    public String getQSeq() {
 	        return q_seq;
 	    }
 
-	    public void setQSeq(Double q_seq) {
+	    public void setQSeq(String q_seq) {
 	        this.q_seq = q_seq;
 	    }
 
@@ -64,6 +64,12 @@ public class QuestionDTO {
 			this.q_time = q_time;
 			this.q_score = q_score;
 		}
+
+		public QuestionDTO() {
+			super();
+		}
+		
+		
 		
 		
 

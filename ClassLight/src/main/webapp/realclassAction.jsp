@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.QuestionDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +17,6 @@
     <!-- plugins:css -->
     <link rel="stylesheet" href="./ClassLight/template/vendors/feather/feather.css">
     <link rel="stylesheet" href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="./ClassLight/template/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -28,10 +29,18 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
     
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
   
 </head>
 
 <body>
+   <%
+     // timeList 배열 불러오는 부분
+     List<QuestionDTO> timeList = (List<QuestionDTO>)session.getAttribute("q_time");
+   
+   
+   %>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
 
@@ -267,7 +276,7 @@
 					if(e.value == "class1") {
 						var d = good_a;	
 				             $.ajax({ 
-				                 url: "Class5List.html",
+				                 url: "jsonData.html",
 				                 dataType: 'json',
 				                 success: function (result) {
 				                	 //console.log(result);
@@ -327,7 +336,7 @@
 						}else if(e.value == "class2") {
 						var d = good_b;	
 				        $.ajax({
-				            url: "Class5List.html",
+				            url: "jsonData.html",
 				            dataType: 'json',
 				            success: function (result) {
 				            	var html ="<table border='1'>";
@@ -386,7 +395,7 @@
 							}else if(e.value == "class3") {
 								var d = good_c;	
 					        $.ajax({
-					            url: "Class5List.html",
+					            url: "jsonData.html",
 					            dataType: 'json',
 					            success: function (result) {
 					                console.log(result);
@@ -455,28 +464,28 @@
 				// 문제 선택에서의 onchange
 				function categoryChange1(e) {
 					console.log(e.value);
-					var num;
+					var num ;
 					if(e.value == "별찍기 프로그램"){
-						num=0;
-					}else if(e.value == "포켓몬 프로그램"){
-						num=1;
-					}else if(e.value == "계산기 프로그램"){
-						num=2;
-					}
+						num = 0;
 						$.ajax({
-		                    url: "timeOfQuestion.html",
-		                    dataType: 'json',
+		                    url: "time.do",
 		                    success: function (result) {
-		                        console.log(result.time);
-		                        console.log(result.time[num].time1);
+		                        console.log(result);
 		                        // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
 		                        // result.time 배열 안의 키time의 value값을 불러오는 작업
-		                        $("#time-left").text(result.time[num].time1);
+		                        //$("#time-left").text(result.q_seq.q_time);
 		                    },
 		                    error: function () {
 		                        alert("통신실패");
 		                    }
 		                });	
+					}else if(e.value == "포켓몬 프로그램"){
+						num = 1;
+					}else if(e.value == "계산기 프로그램"){
+						num = 2;
+					}else if(e.value == "뭐로하지"){
+						num = 3;
+					}
 				}
 			</script>
               
@@ -606,27 +615,7 @@
 
 
 
-    <!-- plugins:js -->
-        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
-        <!-- endinject -->
-        <!-- Plugin js for this page -->
-        <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
-        <script src="./ClassLight/template/vendors/datatables.net/jquery.dataTables.js"></script>
-        <script src="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-        <script src="./ClassLight/template/js/dataTables.select.min.js"></script>
-
-        <!-- End plugin js for this page -->
-        <!-- inject:js -->
-        <script src="./ClassLight/template/js/off-canvas.js"></script>
-        <script src="./ClassLight/template/js/hoverable-collapse.js"></script>
-        <script src="./ClassLight/template/s/template.js"></script>
-        <script src="./ClassLight/template/js/settings.js"></script>
-        <script src="./ClassLight/template/js/todolist.js"></script>
-        <!-- endinject -->
-        <!-- Custom js for this page-->
-        <script src="./ClassLight/template/js/dashboard.js"></script>
-        <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
-        <!-- End custom js for this page-->
+    
 </body>
 
 </html>
