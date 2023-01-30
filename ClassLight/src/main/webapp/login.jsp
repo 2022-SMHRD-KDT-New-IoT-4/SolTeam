@@ -50,15 +50,16 @@
               </div>
               <!-- <h4>Hello! let's get started</h4> -->
               <!-- <h6 class="font-weight-light">Sign in to continue.</h6> -->
-              <form class="pt-3" action="mainTeacher.jsp" method="post">
+              <form class="pt-3" action="Login.do" method="post">
                 <div class="form-group">
-                  <input type="id" name="id" class="form-control form-control-lg" id="exampleInputId" placeholder="아이디">
+                  <input type="id" name="user_id" class="form-control form-control-lg" id="exampleInputId" placeholder="아이디">
                 </div>
                 <div class="form-group">
-                  <input type="password" name="pw" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="비밀번호">
+                  <input type="password" name="user_pw" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="비밀번호">
                 </div>
                 <div class="mt-3">
                   <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="로그인" >
+              </form>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                 </div>
@@ -71,7 +72,6 @@
                   <span style="color: gray;"></span>
                   <a href="join.jsp" class="text-primary">회원가입</a>
                 </div>
-              </form>
             </div>
           </div>
         </div>
