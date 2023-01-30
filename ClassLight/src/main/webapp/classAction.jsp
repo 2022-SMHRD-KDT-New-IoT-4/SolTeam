@@ -543,16 +543,24 @@
                url : "SelectLedState.do",
                dataType:"json",
                success : function(result) {
-                  console.log(result);
+                  //console.log(result);
                   // red onoff data , 누가 누른건지
-                  console.log(result[3].red_led);
+                  console.log(result[0].red_led);
+                  console.log(result[0].orange_led);
+                  console.log(result[0].green_led);
                   //임시로 1 들어왔다고 가정
-                  result[3].red_led = 0;
-                  if(result[3].red_led == 1){
+                  //result[3].red_led = 0;
+                  if(result[0].red_led == 1){
                      $('#seat1').css('background-color','red');
-                  }else{
-                     $('#seat1').css('background-color','blue');
+                  }else if(result[0].orange_led == 1){
+                     $('#seat1').css('background-color','orange');
+                  }else if(result[0].green_led == 1){
+                     $('#seat1').css('background-color','green');
                   }
+                  // 0으로 햇을 때 db에 010 저장되어 있어서 안눌러도 오렌지, 조작 안됨
+                  // 1으로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
+                  // 2로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
+                  // 3로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
                },
                error: function () {
                   alert("통신 실패");
