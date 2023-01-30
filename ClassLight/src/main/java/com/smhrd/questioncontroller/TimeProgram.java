@@ -5,8 +5,6 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,17 +17,20 @@ public class TimeProgram implements Command {
 
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-        String result = null;
+        String result;
 		QuestionDAO dao = new QuestionDAO();
 		List<QuestionDTO> timeList = dao.time();
         PrintWriter out = response.getWriter();
-
+        
+       
 		if (timeList != null) {
 			Gson gson = new Gson();
 			out.print(gson.toJson(timeList));
-			System.out.println("들어옴 >>> " + timeList.get(3).getQTitle());
+			System.out.println("시간 들어옴 >>> " + timeList.get(5).getQTime());
 			
 		} 
+        
+        
 		return null;
 	}
 
