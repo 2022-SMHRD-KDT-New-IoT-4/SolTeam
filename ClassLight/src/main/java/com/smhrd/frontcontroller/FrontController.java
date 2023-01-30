@@ -37,6 +37,7 @@ public class FrontController extends HttpServlet {
 	map.put("LevelCheck.do", new LevelCheckProgram());
 	map.put("InfoStudent.do", new InfoStudent());
 	map.put("mainTeacher.do", new MainProgram());
+	map.put("time.do",new TimeProgram());
 	}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
