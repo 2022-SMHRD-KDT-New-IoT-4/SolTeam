@@ -22,7 +22,8 @@ import com.smhrd.model.LedDAO;
 import com.google.gson.Gson;
 /////////////////////////아두이노 센서 신호 읽어오는 구간
 
-public class LedStateProgram implements Command {
+@WebServlet("/api/info")
+public class LedStateProgram extends HttpServlet {
 
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 아두이노 요청을 읽어오는 구간
@@ -87,10 +88,4 @@ public class LedStateProgram implements Command {
 
 	}
 
-	@Override
-	public String execute(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

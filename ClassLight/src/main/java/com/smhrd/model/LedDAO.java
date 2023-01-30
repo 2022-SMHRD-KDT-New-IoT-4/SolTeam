@@ -44,7 +44,7 @@ public class LedDAO {
 		int row = 0;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = sqlSession.update("com.smhrd.model.DAO.LedUpdate", dto);
+			row = sqlSession.update("com.smhrd.model.LedDAO.LedUpdate", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -52,5 +52,22 @@ public class LedDAO {
 		}
 		return row;
 	}
+	
+	public List<LedDTO> SelectLedState() {
+		List<LedDTO> list = null;
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		try {
+			list = sqlSession.selectList("com.smhrd.model.LedDAO.SelectLedState");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return list;
+	}
+	
+
+	
+	
 
 }
