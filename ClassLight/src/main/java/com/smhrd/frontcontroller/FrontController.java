@@ -27,7 +27,6 @@ public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, Command> map = null;
 
-	@Override
 	public void init() throws ServletException {
 	map = new HashMap<>();
 	
@@ -40,7 +39,7 @@ public class FrontController extends HttpServlet {
 	map.put("InfoStudent.do", new InfoStudent());
 	map.put("mainTeacher.do", new MainProgram());
 	map.put("time.do",new TimeProgram());
-
+	map.put("SelectLedState.do", new SelectLedState());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
