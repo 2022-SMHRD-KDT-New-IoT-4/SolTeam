@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- index.html >>> Main.html로 타이틀 변경 -->
-<title>Main</title>
+<title>Login</title>
 <!-- Main : css-->
-<link rel="stylesheet" href="./Wep-CSS/Main.css">
+
 
 <!-- plugins:css -->
 <link rel="stylesheet"
@@ -24,12 +24,12 @@
 <!-- endinject -->
 <!-- Plugin css for this page -->
 <link rel="stylesheet"
-	href="./ClassLight//template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+	href="./ClassLight/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
 <link rel="stylesheet"
-	href="./ClassLight//template/vendors/ti-icons/css/themify-icons.css">
+	href="./ClassLight/template/vendors/ti-icons/css/themify-icons.css">
 
 <link rel="stylesheet" type="text/css"
-	href="./template/js/select.dataTables.min.css">
+	href=".ClassLight/template/js/select.dataTables.min.css">
 <!-- End plugin css for this page -->
 <!-- inject:css -->
 <link rel="stylesheet"
@@ -52,13 +52,14 @@
               <!-- <h6 class="font-weight-light">Sign in to continue.</h6> -->
               <form class="pt-3" action="Login.do" method="post">
                 <div class="form-group">
-                  <input type="id" name="id" class="form-control form-control-lg" id="exampleInputId" placeholder="아이디">
+                  <input type="id" name="user_id" class="form-control form-control-lg" id="exampleInputId" placeholder="아이디">
                 </div>
                 <div class="form-group">
-                  <input type="password" name="pw" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="비밀번호">
+                  <input type="password" name="user_pw" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="비밀번호">
                 </div>
                 <div class="mt-3">
                   <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="로그인" >
+              </form>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                 </div>
@@ -71,7 +72,6 @@
                   <span style="color: gray;"></span>
                   <a href="join.jsp" class="text-primary">회원가입</a>
                 </div>
-              </form>
             </div>
           </div>
         </div>
