@@ -461,26 +461,44 @@
                console.log(e.value);
                var num;
                if(e.value == "별찍기 프로그램"){
-                  num=0;
+                  num=5; 
                }else if(e.value == "포켓몬 프로그램"){
-                  num=1;
+                  num=6;
                }else if(e.value == "계산기 프로그램"){
-                  num=2;
+                  num=7;
+               }else if(e.value == "뭐로하지"){
+            	  num=8;
+               }else if(e.value == "문제1"){
+            	   num=10;
+               }else if(e.value == "문제2"){
+            	   num=11;
+               }else if(e.value == "문제3"){
+            	   num=0;
+               }else if(e.value == "문제4"){
+            	   num=1;
+               }else if(e.value == "예제1"){
+            	   num=2;
+               }else if(e.value == "예제2"){
+            	   num=3;
+               }else if(e.value == "예제3"){
+            	   num=4;
+               }else if(e.value == "예제4"){
+            	   num=9;
+               }else if(e.value == "예제5"){
+            	   num=12;
                }
                   $.ajax({
-                          url: "jsonData.html",
-                          dataType: 'json',
-                          success: function (result) {
-                              console.log(result.time);
-                              console.log(result.time[num].time1);
-                              // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
-                              // result.time 배열 안의 키time의 value값을 불러오는 작업
-                              $("#time-left").text(result.time[num].time1);
-                          },
-                          error: function () {
-                              alert("통신실패");
-                          }
-                      });   
+                      url: "time.do",
+                      dataType: "json",
+                      success: function (result) {
+                          console.log(result[num].q_time);
+                          $("#time-left").text(result[num].q_time + " : 00");
+                      },
+                      error: function () {
+                          alert("통신실패");
+                      }
+              });   
+                	 
             }
          </script>
 
@@ -553,7 +571,7 @@
             </div>
 
             <!-- 남은 시간 표시 -->
-            <div id="time-left">03:12</div>
+            <div id="time-left">00:00</div>
 
             <!-- 타이머 버튼-->
             <div id="timer-button">
