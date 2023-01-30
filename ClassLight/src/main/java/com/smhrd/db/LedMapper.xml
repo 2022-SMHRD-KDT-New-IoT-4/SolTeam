@@ -19,5 +19,9 @@
 		green_led =#{green_led}
 		where serial_no =#{serial_no}
 	</update>
+	
+	<select id="SelectLedState" parameterType="LedDTO" resultType="LedDTO">
+		select * from control_led_tb
+	</select>
 
 </mapper>
