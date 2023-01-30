@@ -14,6 +14,19 @@
 		values(question_tb_seq.nextval,#{q_title},#{q_content},#{q_time},#{q_score})
 	</insert>
 
+
+	<!-- 문제 만드는 구간? -->
+	<insert id="makeQuestion" parameterType="QuestionDTO">
+		insert into question_tb
+		values(q_seq.nextval,#{title},#{content},#{time},#{score})
+	</insert>
+	
+	<!-- 문제 뽑아오는 구간 -->
+	<select id="SelectQuestion" parameterType="QuestionDTO" resultType="QuestionDTO">
+		select *
+		from question_tb
+		where q_time = #{q_time}
+	</select>
 </mapper>
 
 
