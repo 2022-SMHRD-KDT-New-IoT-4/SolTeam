@@ -224,12 +224,12 @@
               </ul>
             </div>
           </li>
-			<!-- 4) 게시판 -->
-			<li class="nav-item"><a class="nav-link" href="board.jsp">
-				<i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
-				</a></li>
-			</ul>
-		</nav>
+         <!-- 4) 게시판 -->
+         <li class="nav-item"><a class="nav-link" href="board.jsp">
+            <i class="icon-head menu-icon"></i> <span class="menu-title">게시판</span>
+            </a></li>
+         </ul>
+      </nav>
 
 
 
@@ -261,228 +261,228 @@
               </div>
               
               <script>
-				function categoryChange(e) {
-					var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
-					var good_b = ["문제1", "문제2", "문제3", "문제4"];
-					var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
-					var target = document.getElementById("good");
-					var cnt = 1;
+            function categoryChange(e) {
+               var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+               var good_b = ["문제1", "문제2", "문제3", "문제4"];
+               var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
+               var target = document.getElementById("good");
+               var cnt = 1; //쓸모없는 것...
 
-					if(e.value == "class1") {
-						var d = good_a;	
-				             $.ajax({ 
-				                 url: "jsonData.html",
-				                 dataType: 'json',
-				                 success: function (result) {
-				                	 //console.log(result);
-				                     //console.log(result.iot);
-				                    var html ="<table border='1'>";
-				                   	 var num = 0;		
-				                     $.each(result.iot, function (index, value) {
-				                     	console.log(value.name1);
-				                     	if(num % 2 == 0){
-				                     	  html+="<tr>";
-				                          html+="<td>"+value.name1+"</td>";
-				                     	}else{
-				                          html+="<td>"+value.name1+"</td>";
-				                          html+="</tr>";                     		
-				                     	}
-				                  		 num++;
-				                 	})
-				                 html+="</table>";
-				                 $("#row1").html(html);
-				                 
-				                    html ="<table border='1'>";
-				                 $.each(result.bigdata, function (index, value) {
-				                 	console.log(value.name2);
-				                 	if(num % 2 == 0){
-				                 	  html+="<tr>";
-				                      html+="<td>"+value.name2+"</td>";
-				                 	}else{
-				                      html+="<td>"+value.name2+"</td>";
-				                      html+="</tr>";                     		
-				                 	}
-				                 	num++;
-				                 });
-				                 html+="</table>";
-				                 $("#row2").html(html);
-				                 
-				                 html ="<table border='1'>";
-					                $.each(result.ai, function (index, value) {
-					                	console.log(value.name3);
-					                	if(num % 2 == 0){
-					                	  html+="<tr>";
-					                     html+="<td>"+value.name3+"</td>";
-					                	}else{
-					                     html+="<td>"+value.name3+"</td>";
-					                     html+="</tr>";                     		
-					                	}
-					                	num++;
-					                });
-					                html+="</table>";
-					                $("#row3").html(html);
-					                
-				                 },
-				                 error: function () {
-				                     alert("통신실패");
-				                 }
-				             });
-					
-						}else if(e.value == "class2") {
-						var d = good_b;	
-				        $.ajax({
-				            url: "jsonData.html",
-				            dataType: 'json',
-				            success: function (result) {
-				            	var html ="<table border='1'>";
-				              	 var num = 0;		
-				                $.each(result.iot, function (index, value) {
-				                	console.log(value.name1);
-				                	if(num % 2 == 0){
-				                	  html+="<tr>";
-				                     html+="<td>"+value.name1+"</td>";
-				                	}else{
-				                     html+="<td>"+value.name1+"</td>";
-				                     html+="</tr>";                     		
-				                	}
-				             		 num++;
-				            	})
-				            html+="</table>";
-				            $("#row3").html(html);
-				            
-				            html ="<table border='1'>";
-				            $.each(result.bigdata, function (index, value) {
-				            	console.log(value.name2);
-				            	if(num % 2 == 0){
-				            	  html+="<tr>";
-				                 html+="<td>"+value.name2+"</td>";
-				            	}else{
-				                 html+="<td>"+value.name2+"</td>";
-				                 html+="</tr>";                     		
-				            	}
-				            	num++;
-				            });
-				            html+="</table>";
-				            $("#row1").html(html);
-				            
-				            	html ="<table border='1'>";
-				               $.each(result.ai, function (index, value) {
-				               	console.log(value.name3);
-				               	if(num % 2 == 0){
-				               	  html+="<tr>";
-				                    html+="<td>"+value.name3+"</td>";
-				               	}else{
-				                    html+="<td>"+value.name3+"</td>";
-				                    html+="</tr>";                     		
-				               	}
-				               	num++;
-				               });
-				               html+="</table>";
-				               $("#row2").html(html);
-				                
-				                
-				            },
-				            error: function () {
-				                alert("통신실패");
-				            }
-				        	});
+               if(e.value == "class1") {
+                  var d = good_a;   
+                         $.ajax({ 
+                             url: "jsonData.html",
+                             dataType: 'json',
+                             success: function (result) {
+                                //console.log(result);
+                                 //console.log(result.iot);
+                                var html ="<table border='1'>";
+                                   var num = 0;      
+                                 $.each(result.iot, function (index, value) {
+                                    console.log(value.name1);
+                                    if(num % 2 == 0){
+                                      html+="<tr>";
+                                      html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                    }else{
+                                      html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                      html+="</tr>";                           
+                                    }
+                                     num++;
+                                })
+                             html+="</table>";
+                             $("#row1").html(html);
+                             
+                                html ="<table border='1'>";
+                             $.each(result.bigdata, function (index, value) {
+                                console.log(value.name2);
+                                if(num % 2 == 0){
+                                  html+="<tr>";
+                                  html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                                }else{
+                                  html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                                  html+="</tr>";                           
+                                }
+                                num++;
+                             });
+                             html+="</table>";
+                             $("#row2").html(html);
+                             
+                             html ="<table border='1'>";
+                               $.each(result.ai, function (index, value) {
+                                  console.log(value.name3);
+                                  if(num % 2 == 0){
+                                    html+="<tr>";
+                                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                  }else{
+                                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                    html+="</tr>";                           
+                                  }
+                                  num++;
+                               });
+                               html+="</table>";
+                               $("#row3").html(html);
+                               
+                             },
+                             error: function () {
+                                 alert("통신실패");
+                             }
+                         });
+               
+                  }else if(e.value == "class2") {
+                  var d = good_b;   
+                    $.ajax({
+                        url: "jsonData.html",
+                        dataType: 'json',
+                        success: function (result) {
+                           var html ="<table border='1'>";
+                              var num = 0;      
+                            $.each(result.iot, function (index, value) {
+                               console.log(value.name1);
+                               if(num % 2 == 0){
+                                 html+="<tr>";
+                                 html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                               }else{
+                                 html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                 html+="</tr>";                           
+                               }
+                                num++;
+                           })
+                        html+="</table>";
+                        $("#row3").html(html);
+                        
+                        html ="<table border='1'>";
+                        $.each(result.bigdata, function (index, value) {
+                           console.log(value.name2);
+                           if(num % 2 == 0){
+                             html+="<tr>";
+                             html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                           }else{
+                             html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                             html+="</tr>";                           
+                           }
+                           num++;
+                        });
+                        html+="</table>";
+                        $("#row1").html(html);
+                        
+                           html ="<table border='1'>";
+                           $.each(result.ai, function (index, value) {
+                              console.log(value.name3);
+                              if(num % 2 == 0){
+                                html+="<tr>";
+                                html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                              }else{
+                                html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                html+="</tr>";                           
+                              }
+                              num++;
+                           });
+                           html+="</table>";
+                           $("#row2").html(html);
+                            
+                            
+                        },
+                        error: function () {
+                            alert("통신실패");
+                        }
+                       });
 
-							}else if(e.value == "class3") {
-								var d = good_c;	
-					        $.ajax({
-					            url: "jsonData.html",
-					            dataType: 'json',
-					            success: function (result) {
-					                console.log(result);
-					                var html ="<table border='1'>";
-				                  	 var num = 0;		
-				                    $.each(result.iot, function (index, value) {
-				                    	console.log(value.name1);
-				                    	if(num % 2 == 0){
-				                    	  html+="<tr>"; 
-				                    	  html+="<td>"+value.name1+"</td>";
-				                    	}else{
-				                    		html+="<td>"+value.name1+"</td>";
-				                    		html+="</tr>";                     		
-				                    	}
-				                 		 num++;
-				                	})
-				                html+="</table>";
-				                $("#row2").html(html);
-				                
-				                   html ="<table border='1'>";
-				                $.each(result.bigdata, function (index, value) {
-				                	console.log(value.name2);
-				                	if(num % 2 == 0){
-				                	  html+="<tr>";
-				                     html+="<td>"+value.name2+"</td>";
-				                	}else{
-				                     html+="<td>"+value.name2+"</td>";
-				                     html+="</tr>";                     		
-				                	}
-				                	num++;
-				                });
-				                html+="</table>";
-				                $("#row3").html(html);
-				                
-				                html ="<table border='1'>";
-					            $.each(result.ai, function (index, value) {
-					                console.log(value.name3);
-					                if(num % 2 == 0){
-					                	html+="<tr>";
-					                    html+="<td>"+value.name3+"</td>";
-					                }else{
-					                    html+="<td>"+value.name3+"</td>";
-					                    html+="</tr>";                     		
-					                }
-					                num++;
-					               });
-					               html+="</table>";
-					               $("#row1").html(html);
-					            },
-					            error: function () {
-					                alert("통신실패");
-					            }
-					        });
+                     }else if(e.value == "class3") {
+                        var d = good_c;   
+                       $.ajax({
+                           url: "jsonData.html",
+                           dataType: 'json',
+                           success: function (result) {
+                               console.log(result);
+                               var html ="<table border='1'>";
+                                  var num = 0;      
+                                $.each(result.iot, function (index, value) {
+                                   console.log(value.name1);
+                                   if(num % 2 == 0){
+                                     html+="<tr>"; 
+                                     html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                   }else{
+                                      html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                      html+="</tr>";                           
+                                   }
+                                    num++;
+                               })
+                            html+="</table>";
+                            $("#row2").html(html);
+                            
+                               html ="<table border='1'>";
+                            $.each(result.bigdata, function (index, value) {
+                               console.log(value.name2);
+                               if(num % 2 == 0){
+                                 html+="<tr>";
+                                 html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                               }else{
+                                 html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                                 html+="</tr>";                           
+                               }
+                               num++;
+                            });
+                            html+="</table>";
+                            $("#row3").html(html);
+                            
+                            html ="<table border='1'>";
+                           $.each(result.ai, function (index, value) {
+                               console.log(value.name3);
+                               if(num % 2 == 0){
+                                  html+="<tr>";
+                                   html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                               }else{
+                                   html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                   html+="</tr>";                           
+                               }
+                               num++;
+                              });
+                              html+="</table>";
+                              $("#row1").html(html);
+                           },
+                           error: function () {
+                               alert("통신실패");
+                           }
+                       });
 
-					}
+               }
 
-					target.options.length = 0;
+               target.options.length = 0;
 
-					for (x in d) {
-						var opt = document.createElement("option");
-						opt.value = d[x];
-						opt.innerHTML = d[x];
-						target.appendChild(opt);
-					}	
-				}
-				// 문제 선택에서의 onchange
-				function categoryChange1(e) {
-					console.log(e.value);
-					var num;
-					if(e.value == "별찍기 프로그램"){
-						num=0;
-					}else if(e.value == "포켓몬 프로그램"){
-						num=1;
-					}else if(e.value == "계산기 프로그램"){
-						num=2;
-					}
-						$.ajax({
-		                    url: "jsonData.html",
-		                    dataType: 'json',
-		                    success: function (result) {
-		                        console.log(result.time);
-		                        console.log(result.time[num].time1);
-		                        // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
-		                        // result.time 배열 안의 키time의 value값을 불러오는 작업
-		                        $("#time-left").text(result.time[num].time1);
-		                    },
-		                    error: function () {
-		                        alert("통신실패");
-		                    }
-		                });	
-				}
-			</script>
+               for (x in d) {
+                  var opt = document.createElement("option");
+                  opt.value = d[x];
+                  opt.innerHTML = d[x];
+                  target.appendChild(opt);
+               }   
+            }
+            // 문제 선택에서의 onchange
+            function categoryChange1(e) {
+               console.log(e.value);
+               var num;
+               if(e.value == "별찍기 프로그램"){
+                  num=0;
+               }else if(e.value == "포켓몬 프로그램"){
+                  num=1;
+               }else if(e.value == "계산기 프로그램"){
+                  num=2;
+               }
+                  $.ajax({
+                          url: "jsonData.html",
+                          dataType: 'json',
+                          success: function (result) {
+                              console.log(result.time);
+                              console.log(result.time[num].time1);
+                              // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
+                              // result.time 배열 안의 키time의 value값을 불러오는 작업
+                              $("#time-left").text(result.time[num].time1);
+                          },
+                          error: function () {
+                              alert("통신실패");
+                          }
+                      });   
+            }
+         </script>
 
               <!-- 자리 배치도 -->
               <div class="card">
@@ -493,66 +493,15 @@
 
                   <div>
                     <div id="row1">
-                      <table border="1px">
-                        <tr>
-                          <div id='test'><td></td></div>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                      </table>
+                      
                     </div>
 
                     <div id="row2">
-                      <table border="1px">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-
-                      </table>
+                      
                     </div>
 
                     <div id="row3">
-                      <table border="1px">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
+                      
 
                       </table>
 
@@ -569,30 +518,32 @@
           </div>
           
           <!-- 실시간으로 데이터 받아오기 -->
-			<script>
-			setInterval(() => {
-				// DB에서 데이터 조회하는 코드 ajax로 구현
-				$.ajax({
-					url : "SelectLedState.do",
-					dataType:"json",
-					success : function(result) {
-						console.log(result);
-						// red onoff data , 누가 누른건지
-						console.log(result[3].red_led);
-						if(result[3].red_led == 1){
-							$('#test').css('background-color','red');
-						}else{
-							$('#test').css('background-color','blue');
-						}
-					},
-					error: function () {
-						alert("통신 실패");
-					}
-					
-				})
+         <script>
+         setInterval(() => {
+            // DB에서 데이터 조회하는 코드 ajax로 구현
+            $.ajax({
+               url : "SelectLedState.do",
+               dataType:"json",
+               success : function(result) {
+                  console.log(result);
+                  // red onoff data , 누가 누른건지
+                  console.log(result[3].red_led);
+                  //임시로 1 들어왔다고 가정
+                  result[3].red_led = 0;
+                  if(result[3].red_led == 1){
+                     $('#seat1').css('background-color','red');
+                  }else{
+                     $('#seat1').css('background-color','blue');
+                  }
+               },
+               error: function () {
+                  alert("통신 실패");
+               }
+               
+            })
 
-			}, 1000);
-			</script>
+         }, 1000);
+         </script>
 
           <!--타이머-->
 
