@@ -388,7 +388,14 @@
           <table class="display expandable-table" style="width:100%">
             <thead>
               <tr>
+<<<<<<< HEAD
                 <th id="title" height="100px">
+=======
+                <th id="title" height="100px" style="
+                padding-left: 20px;
+                padding-top: 20px;
+                ">
+>>>>>>> refs/remotes/origin/master
                   <h1>예제 관리</h1>
                 </th>
               </tr>
