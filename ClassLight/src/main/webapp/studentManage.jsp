@@ -407,7 +407,10 @@ div>button {
           <table class="display expandable-table" style="width:100%">
             <thead>
               <tr>
-                <th id="title" height="100px">
+                <th id="title" height="100px" style="
+                padding-left: 20px;
+                padding-top: 20px;
+                ">
                   <h1>학생 관리</h1>
                 </th>
               </tr>
