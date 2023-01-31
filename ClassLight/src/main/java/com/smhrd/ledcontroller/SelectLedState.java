@@ -31,7 +31,9 @@ public class SelectLedState implements Command {
 			Gson gson = new Gson();
 			out.print(gson.toJson(list));
 			// ajax 통신으로 다시 값을 되돌려주겠다
-			System.out.println("들어옴>>>"+list.get(3).getRed_led());
+			System.out.println("빨>>>"+list.get(3).getRed_led());
+			System.out.println("주>>>"+list.get(3).getOrange_led());
+			System.out.println("초>>>"+list.get(3).getGreen_led());
 		}
 		
 		return null;
