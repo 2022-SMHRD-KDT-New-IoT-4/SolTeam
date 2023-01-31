@@ -47,24 +47,28 @@ img{
 
 .control_led,.timer{
     position: absolute;
-    width: 400px;
-    height: 300px;
+    width: 450px;
+    height: 325px;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     border: 10px solid rgb(89, 61, 155);
     border-radius: 50px;
-    
+}
+
+#time-box{
+	padding-left: 35px;
+	padding-top: 50px;
 }
 
 .timer{
-    left: 70%;
-    top: 170px;
+    left: 75%;
+    top: 157px;
 }
 
 .control_led{
-    left: 70%;
-    top: 500px;
+    left: 75%;
+    top: 510px;
     
 }
 
@@ -95,15 +99,24 @@ img{
     height: 50px;
     width: 250px;
     position: absolute;
-    top: 7%;
+    top: 13%;
+    padding-top: 10px;
    
 }
-#time-left , .control_led{
+
+#time-left{
     background-color: aliceblue;
     font-size: 100px;
     font-weight: 900;
-    padding: 10px;
+    padding-right: 20px;
+    
 }
+
+
+#ledfont{
+	font-size: 100px;
+}
+
 #timer_display{
     background-color: gainsboro;
 }
@@ -142,12 +155,12 @@ img{
 }
 
 #timer-button{
-    top: 170px
+    top: 200px
 }
 
 #led-button{
-    top:100px;
-    left: 20px;
+    top: 200px;
+    left: 50px;
 }
 
 .btn-group{
