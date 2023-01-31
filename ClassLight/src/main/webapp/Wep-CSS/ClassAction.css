@@ -42,8 +42,6 @@ img{
 .timer , .control_led{
     display: flex;
     flex-basis: 20%;
-    
-
 
 }
 
