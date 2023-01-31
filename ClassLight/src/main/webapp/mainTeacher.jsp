@@ -285,7 +285,7 @@
           </li>
           <li class="nav-item">
             <!-- 3) 수업관리 -->
-            <a class="nav-link" data-toggle="collapse" href="classManage.jsp" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="studentManage.jsp" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">수업 관리</span>
             </a>
