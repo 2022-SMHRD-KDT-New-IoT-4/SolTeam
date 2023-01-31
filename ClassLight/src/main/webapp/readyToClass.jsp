@@ -379,7 +379,10 @@
           <table  class="display expandable-table" style="width:100%">
             <thead>
               <tr>
-                <th  id ="title" height="100px"><h1>수업준비</h1></th>
+                <th  id ="title" height="100px" style="
+                padding-left: 20px;
+                padding-top: 20px;
+                "><h1 id="h1text"> 수업준비</h1></th>
               </tr>
             </thead>
         </table>
@@ -439,7 +442,7 @@
         <div class="col-lg-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">수업용 자료</h4>
+              <h2 class="card-title">수업용 자료</h2>
               <p class="card-description">
                 수업에 필요한 컨텐츠를 찾아주세요.
               </p>

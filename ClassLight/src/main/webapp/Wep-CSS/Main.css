@@ -1,5 +1,8 @@
 .menu{
     margin: 20px;
     color: darkslateblue;
-    
+    font-weight: bold;
+}
+*{
+	font-family:Algerian;
 }
