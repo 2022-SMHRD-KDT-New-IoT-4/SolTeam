@@ -36,6 +36,8 @@
 <!-- endinject -->
 <link rel="shortcut icon"
 	href="./ClassLight/template/images/favicon.png" />
+	
+
 </head>
 
 <body>
@@ -50,8 +52,8 @@
 				<a class="navbar-brand brand-logo mr-5" href="main.jsp"><img
 					src="./ClassLight/tempLogo/자산 3.png" class="mr-2" alt="logo" /></a>
 				<!-- 최소화로고이미지 :  -->
-				<a class="navbar-brand brand-logo-mini" href="main.jsp"><img
-					src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
+				<a class="navbar-brand brand-logo-mini" href="main.jsp">
+				<img id="mainLogo" src="./ClassLight/tempLogo/자산 4.png" alt="logo" /></a>
 			</div>
 			<!-- 상단 고정 바-->
 			<div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -94,7 +96,7 @@
 		<!-- main 이미지-->
 		<div class="card tale-bg">
 			<div class="card-people mt-auto">
-				<img src="./ClassLight/template/images/dashboard/people.svg"
+				<img  id = "mainImg"  src="./ClassLight/tempLogo/main.png"
 					alt="people">
 
 				<div class="weather-info">
@@ -106,22 +108,12 @@
 				</div>
 			</div>
 		</div>
-		</div>
-		</div>
-		<footer class="footer">
-			<div
-				class="d-sm-flex justify-content-center justify-content-sm-between">
-				<span
-					class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-					© 2021. Premium <a href="https://www.bootstrapdash.com/"
-					target="_blank">Bootstrap admin template</a> from BootstrapDash.
-					All rights reserved.
-				</span> <span
-					class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted
-					& made with <i class="ti-heart text-danger ml-1"></i>
-				</span>
-			</div>
-		</footer>
+<footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+        </footer>		
 		<!-- partial -->
 		</div>
 		<!-- main-panel ends -->
