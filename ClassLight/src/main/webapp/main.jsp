@@ -62,7 +62,7 @@
 						<div class="input-group">
 							<div class="input-group-prepend hover-cursor"
 								id="navbar-search-icon">
-								<span class="input-group-text" id="search"> </span>
+								<span class="input-group-text" id="search"> 학생과 교사간의 학습소통 도우미 </span>
 							</div>
 						</div>
 					</li>
@@ -70,8 +70,8 @@
 				<ul class="navbar-nav navbar-nav-right">
 					<li class="nav-item dropdown">
 						<!-- 사이드바 A태그 --> <a class="menu" id="notificationDropdown"
-						href="login.jsp"> <span>로그인</span>
-					</a> <a class="menu" href="join.jsp"> <span>회원가입</span>
+						href="login.jsp"> <button id="box1" type="button" class="btn btn-primary"  >로그인</button>
+					</a> <a class="menu" href="join.jsp"> <button id="box2" type="button" class="btn btn-primary">회원가입</button>
 					</a>
 					</li>
 				</ul>
