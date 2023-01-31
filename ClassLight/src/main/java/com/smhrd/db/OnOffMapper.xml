@@ -2,30 +2,27 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-  
-  <mapper namespace="com.smhrd.model.OnOffDAO">
+
+
+<mapper namespace="com.smhrd.model.OnOffDAO">
 
 	<!-- 쿼리문 작성 -->
 	<!-- 받아올 데이터의 데이터 타입을 적을 때는 parameterType -->
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
-	
 
-	
 	<!-- 온오프 제어 구문 -->
 	<select id="OnOffDTOSelect" resultType="int">
 		select *
 		from on_off_tb
-
 	</select>
 	<!-- 온오프 수정 -->
-	<update id="OnOffUpdate" parameterType="OnOffDTO"  >
-	update on_off_tb
+	<update id="OnOffUpdate" parameterType="OnOffDTO">
+		update on_off_tb
 		set on_off = #{On_Off}
 	</update>
-		<!-- where q_time = #{q_time} -->
-		
-		
-		
+	<!-- where q_time = #{q_time} -->
+
+
+
 
 </mapper>

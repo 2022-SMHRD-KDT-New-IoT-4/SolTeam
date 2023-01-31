@@ -546,14 +546,13 @@
          </script>
 
           <!--타이머-->
-
           <div class="timer">
             <div id="timer_title">
               <h2>실습시간 제어</h2>
             </div>
 
             <!-- 남은 시간 표시 -->
-            <div id="time-left">03:12</div>
+            <div id="time-left">00:00</div>
 
             <!-- 타이머 버튼-->
             <div id="timer-button">
