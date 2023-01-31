@@ -215,7 +215,6 @@
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">수업 관리</span>
-              <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
@@ -492,7 +491,7 @@
                       dataType: "json",
                       success: function (result) {
                           console.log(result[num].q_time);
-                          $("#time-left").text(result[num].q_time + " : 00");
+                          $("#time-left").text(result[num].q_time + ":00");
                       },
                       error: function () {
                           alert("통신실패");
@@ -545,16 +544,14 @@
                success : function(result) {
                   //console.log(result);
                   // red onoff data , 누가 누른건지
-                  console.log(result[0].red_led);
-                  console.log(result[0].orange_led);
-                  console.log(result[0].green_led);
-                  //임시로 1 들어왔다고 가정
-                  //result[3].red_led = 0;
-                  if(result[0].red_led == 1){
+                  console.log(result[3].red_led);
+                  console.log(result[3].orange_led);
+                  console.log(result[3].green_led);
+                  if(result[3].red_led == 1){
                      $('#seat1').css('background-color','red');
-                  }else if(result[0].orange_led == 1){
+                  }else if(result[3].orange_led == 1){
                      $('#seat1').css('background-color','orange');
-                  }else if(result[0].green_led == 1){
+                  }else if(result[3].green_led == 1){
                      $('#seat1').css('background-color','green');
                   }
                   // 0으로 햇을 때 db에 010 저장되어 있어서 안눌러도 오렌지, 조작 안됨
@@ -572,10 +569,10 @@
          </script>
 
           <!--타이머-->
-
           <div class="timer">
+          <div id="time-box">
             <div id="timer_title">
-              <h2>실습시간 제어</h2>
+              <h2>실습시간</h2>
             </div>
 
             <!-- 남은 시간 표시 -->
@@ -587,20 +584,55 @@
               <button type="button" class="btn btn-primary">시간추가</button>
               <button type="button" class="btn btn-primary">타이머 종료</button>
             </div>
-
+           </div>
           </div>
 
           <!-- led 제어 -->
           <div class="control_led">
             <div id="control_led_title">
-              <h2>led 제어</h2>
+              <h2 id="ledfont">LED</h2>
+              <h2>기기제어</h2>
             </div>
             <!-- led 제어 버튼-->
             <div id="led-button">
-              <button  type="button" class="btn btn-primary">기기 ON</button>
-              <button type="button" class="btn btn-primary">기기 OFF</button>
+              <button type="button" id="allLedOn" onclick="onFunc()" value ='1' name ="On_Off" class="btn btn-primary">기기 ON</button>
+              <button type="button" id="allLedOff" onclick="offFunc()" value ='0' name ="On_Off" class="btn btn-primary">기기 OFF</button>
+              
             </div>
+            <script>
+            let onFunc =()=>{
+            	var on = 1;
+            	$.ajax({
+                    url: "OnOff.do",
+                    data: {"allLedOn": on}
+                    success: function () {
+                        console.log('성공');
+                    },
+                    error: function () {
+                        alert("통신실패");
+                    }
+            });   
+            	
+            let offFunc =()=>{
+            	var off = 0;
+            	$.ajax({
+                    url: "OnOff.do",
+                    data: {"allLedOff": off}
+                    success: function (result) {
+                        console.log(result);
+                    },
+                    error: function () {
+                        alert("통신실패");
+                    }
+            });   
+            	
+            	
+            }	
+            	
+            }
             
+            
+            </script>
           </div>
         </div>
 

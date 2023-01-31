@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.infocontroller.InfoStudent;
+import com.smhrd.ledcontroller.OnOffSet;
 import com.smhrd.ledcontroller.SelectLedState;
 import com.smhrd.questioncontroller.QuestionProgram;
 import com.smhrd.questioncontroller.TimeProgram;
@@ -40,6 +41,7 @@ public class FrontController extends HttpServlet {
 	map.put("mainTeacher.do", new MainProgram());
 	map.put("time.do",new TimeProgram());
 	map.put("SelectLedState.do", new SelectLedState());
+	map.put("OnOff.do", new OnOffSet());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
