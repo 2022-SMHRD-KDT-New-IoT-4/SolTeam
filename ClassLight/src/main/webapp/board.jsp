@@ -390,7 +390,10 @@
 					<table class="display expandable-table" style="width: 100%">
 						<thead>
 							<tr>
-								<th id="title" height="100px"><h1 align="center">게시판</h1></th>
+								<th id="title" height="100px" style="
+                		padding-left: 17px;
+               			padding-top: 3px;
+                		"><h1 align="center">게시판</h1></th>
 							</tr>
 						</thead>
 					</table>
