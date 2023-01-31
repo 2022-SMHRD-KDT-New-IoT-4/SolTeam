@@ -116,6 +116,8 @@
 /* === Import template variables === */
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
+
+
 @-moz-keyframes flash {
   0% {
     opacity: 1;
@@ -8687,8 +8689,6 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 *,
@@ -8698,7 +8698,6 @@
 }
 
 html {
-  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -8710,7 +8709,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -8831,7 +8829,6 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -8892,7 +8889,6 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
@@ -15151,7 +15147,6 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -15264,7 +15259,6 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -17006,6 +17000,10 @@ button.bg-dark:focus,
 .template-demo > .btn-group-vertical, .template-demo > .dropdown,
 .mx-2 {
   margin-right: 0.5rem !important;
+}
+
+#mainLogo{
+	width:70px;
 }
 
 .mb-2,
@@ -18772,9 +18770,7 @@ button.bg-dark:focus,
   background-color: rgba(0, 0, 0, 0);
 }
 
-.text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-}
+
 
 .text-justify {
   text-align: justify !important;
@@ -18866,29 +18862,9 @@ button.bg-dark:focus,
   text-transform: capitalize !important;
 }
 
-.font-weight-light {
-  font-weight: 300 !important;
-}
 
-.font-weight-lighter {
-  font-weight: lighter !important;
-}
 
-.font-weight-normal {
-  font-weight: 400 !important;
-}
 
-.font-weight-bold {
-  font-weight: 700 !important;
-}
-
-.font-weight-bolder {
-  font-weight: bolder !important;
-}
-
-.font-italic {
-  font-style: italic !important;
-}
 
 .text-white {
   color: #ffffff !important;
@@ -19326,37 +19302,7 @@ input:focus {
   outline: none;
 }
 
-@font-face {
-  font-family: 'Nunito';
-  src: url("../../fonts/Nunito/Nunito-Light.eot");
-  src: url("../../fonts/Nunito/Nunito-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Nunito/Nunito-Light.woff2") format("woff2"), url("../../fonts/Nunito/Nunito-Light.woff") format("woff"), url("../../fonts/Nunito/Nunito-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Nunito';
-  src: url("../../fonts/Nunito/Nunito-Bold.eot");
-  src: url("../../fonts/Nunito/Nunito-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Nunito/Nunito-Bold.woff2") format("woff2"), url("../../fonts/Nunito/Nunito-Bold.woff") format("woff"), url("../../fonts/Nunito/Nunito-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url("../../fonts/Nunito/Nunito-SemiBold.eot");
-  src: url("../../fonts/Nunito/Nunito-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Nunito/Nunito-SemiBold.woff2") format("woff2"), url("../../fonts/Nunito/Nunito-SemiBold.woff") format("woff"), url("../../fonts/Nunito/Nunito-SemiBold.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url("../../fonts/Nunito/Nunito-Regular.eot");
-  src: url("../../fonts/Nunito/Nunito-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/Nunito/Nunito-Regular.woff2") format("woff2"), url("../../fonts/Nunito/Nunito-Regular.woff") format("woff"), url("../../fonts/Nunito/Nunito-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
 .bg-twitter {
   background: #4747A1;
@@ -19433,7 +19379,6 @@ input:focus {
 /* Typography */
 body {
   font-size: 1rem;
-  font-family: "Nunito", sans-serif;
   font-weight: initial;
   line-height: normal;
   -webkit-font-smoothing: antialiased;
@@ -19691,7 +19636,6 @@ pre {
 code {
   padding: 5px;
   color: #FF4747;
-  font-family: "Nunito", sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   border-radius: 4px;
@@ -19706,7 +19650,6 @@ code {
   -webkit-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
   font-size: calc(0.875rem - 0.05rem);
-  font-family: "Nunito", sans-serif;
   font-weight: 400;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -20085,7 +20028,6 @@ code {
 }
 
 .performance-overview-carousel .carousel-control-prev:after {
-  font-family: "themify";
   content: '\e64a';
   font-size: .875rem;
   color: #ffffff;
@@ -20103,7 +20045,6 @@ code {
 }
 
 .performance-overview-carousel .carousel-control-next:after {
-  font-family: "themify";
   content: '\e649';
   font-size: .875rem;
   color: #ffffff;
@@ -20136,7 +20077,6 @@ code {
 }
 
 .detailed-report-carousel .carousel-control-prev:after {
-  font-family: "themify";
   content: '\e64a';
   font-size: .875rem;
   color: #6c7383;
@@ -20154,7 +20094,6 @@ code {
 }
 
 .detailed-report-carousel .carousel-control-next:after {
-  font-family: "themify";
   content: '\e649';
   font-size: .875rem;
   color: #6c7383;
@@ -20197,12 +20136,11 @@ code {
 }
 
 .card-people img {
-  border-radius: 20px;
   display : flex;
-  width: 70%;
+  width: 90%;
   position:relative;
-  left : 15%;
-  height: 100%;
+  left : 5%;
+  height: 80%;
   
 }
 
@@ -20334,7 +20272,6 @@ code {
 }
 
 .accordion > .card .card-header a:before {
-  font-family: "themify";
   position: absolute;
   right: 7px;
   top: 0;
@@ -21989,7 +21926,8 @@ code {
 }
 
 .card.tale-bg {
-	background:#cfe7d1;
+	background:#F5F7FF;
+	border-radius: 0%;
 }
 
 .card.transparent {
@@ -22011,7 +21949,6 @@ code {
   font-size: 1.125rem;
   font-weight: 600;
 }
-
 .card .card-subtitle {
   font-weight: 400;
   margin-top: 0.625rem;
@@ -22394,7 +22331,6 @@ code {
   transition-duration: 0s;
   -webkit-transition-duration: 250ms;
   transition-duration: 250ms;
-  font-family: themify;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transform: scale(0);
@@ -22598,7 +22534,6 @@ code {
   border-right: 0;
   border-left: 0;
   border-bottom: 0;
-  font: normal normal normal 24px/1 "themify";
   content: "\e64b";
   width: auto;
   height: auto;
@@ -23632,7 +23567,6 @@ dl li {
 .list-ticked li:before,
 .list-arrow li:before,
 .list-star li:before {
-  font-family: "themify";
   margin-left: -1.5rem;
   width: 1.5rem;
   margin-right: .5rem;
@@ -23756,7 +23690,6 @@ dl li {
   padding-left: 0;
   position: relative;
   margin-bottom: 0;
-  font-family: "Nunito", sans-serif;
 }
 
 .icon-data-list li {
@@ -24551,7 +24484,6 @@ dl li {
 }
 
 .preview-list .preview-item .preview-item-content p .content-category {
-  font-family: 'source-sans-pro-semibold', sans-serif;
   padding-right: 15px;
   border-right: 1px solid #CED4DA;
 }
@@ -25741,7 +25673,6 @@ dl li {
   margin: auto;
   height: 300px;
   width: 100%;
-  font: 14px/normal SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .ace_editor .ace_content {
@@ -26104,7 +26035,6 @@ body.avgrund-active {
 /* Context Menu */
 .context-menu-icon:before {
   color: #000;
-  font: normal normal normal 15px/1 "themify";
 }
 
 .context-menu-icon.context-menu-icon-cut:before {
@@ -26197,7 +26127,6 @@ body.avgrund-active {
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:before,
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
   line-height: 2.5;
-  font-family: themify;
   font-size: .65rem;
 }
 
@@ -26330,7 +26259,6 @@ body.avgrund-active {
 
 .expandable-table tr td.details-control:before {
   content: '\e64b';
-  font-family: "themify";
 }
 
 .expandable-table tr.shown td.details-control:before {
@@ -26407,7 +26335,6 @@ table.dataTable tbody td.select-checkbox:after {
 
 .datepicker.datepicker-dropdown .datepicker-days table.table-condensed thead tr th.dow,
 .datepicker.datepicker-inline .datepicker-days table.table-condensed thead tr th.dow {
-  font-family: "Nunito", sans-serif;
   color: #1F1F1F;
   font-size: 0.875rem;
   font-weight: initial;
@@ -27571,7 +27498,6 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 3px;
   padding: 6px;
   font-size: .625rem;
-  font-family: inherit;
   line-height: 1;
 }
 
@@ -27722,7 +27648,6 @@ div.tagsinput span.tag {
   color: #ffffff;
   padding: 6px 14px;
   font-size: .8125rem;
-  font-family: inherit;
   line-height: 1;
 }
 
@@ -27833,7 +27758,6 @@ div.tagsinput span.tag a {
 .wysi-editor textarea {
   height: 280px;
   border: 1px solid #CED4DA;
-  font-family: inherit;
   font-size: 1rem;
 }
 
@@ -28472,7 +28396,6 @@ div.tagsinput span.tag a {
 .sidebar {
   min-height: calc(100vh - 60px);
   background: #fff;
-  font-family: "Nunito", sans-serif;
   font-weight: 500;
   padding: 0;
   width: 235px;
@@ -28555,7 +28478,6 @@ div.tagsinput span.tag a {
 
 .sidebar .nav .nav-item .nav-link i.menu-arrow:before {
   content: "\e649";
-  font-family: "themify";
   font-style: normal;
   display: block;
   font-size: 0.687rem;
@@ -30309,7 +30231,6 @@ div.tagsinput span.tag a {
 .settings-panel .settings-heading {
   padding: 16px 0 13px 35px;
   font-size: 0.875rem;
-  font-family: "Nunito", sans-serif;
   font-weight: 500;
   line-height: 1;
   color: rgba(0, 0, 0, 0.9);
@@ -30504,7 +30425,6 @@ div.tagsinput span.tag a {
 }
 
 .settings-panel .events p {
-  font-family: "Nunito", sans-serif;
   font-weight: 400;
 }
 
