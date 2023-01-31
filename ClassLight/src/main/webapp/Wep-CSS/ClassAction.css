@@ -55,17 +55,17 @@ img{
     box-sizing: border-box;
     display: flex;
     border: 10px solid rgb(89, 61, 155);
-    border-radius: 20px;
+    border-radius: 50px;
     
 }
 
 .timer{
-    left: 78%;
+    left: 70%;
     top: 170px;
 }
 
 .control_led{
-    left: 78%;
+    left: 70%;
     top: 500px;
     
 }
@@ -156,7 +156,4 @@ img{
     padding-bottom:10px;
     padding-left:5px
     }
-#seatPosition{
-	width: 500px;
-	height: 400px;
-}
+
