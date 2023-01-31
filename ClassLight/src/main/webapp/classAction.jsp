@@ -595,10 +595,44 @@
             </div>
             <!-- led 제어 버튼-->
             <div id="led-button">
-              <button  type="button" class="btn btn-primary">기기 ON</button>
-              <button type="button" class="btn btn-primary">기기 OFF</button>
+              <button type="button" id="allLedOn" onclick="onFunc()" value ='1' name ="On_Off" class="btn btn-primary">기기 ON</button>
+              <button type="button" id="allLedOff" onclick="offFunc()" value ='0' name ="On_Off" class="btn btn-primary">기기 OFF</button>
+              
             </div>
+            <script>
+            let onFunc =()=>{
+            	var on = 1;
+            	$.ajax({
+                    url: "OnOff.do",
+                    data: {"allLedOn": on}
+                    success: function () {
+                        console.log('성공');
+                    },
+                    error: function () {
+                        alert("통신실패");
+                    }
+            });   
+            	
+            let offFunc =()=>{
+            	var off = 0;
+            	$.ajax({
+                    url: "OnOff.do",
+                    data: {"allLedOff": off}
+                    success: function (result) {
+                        console.log(result);
+                    },
+                    error: function () {
+                        alert("통신실패");
+                    }
+            });   
+            	
+            	
+            }	
+            	
+            }
             
+            
+            </script>
           </div>
         </div>
 

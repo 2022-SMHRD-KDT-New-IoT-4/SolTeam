@@ -11,6 +11,7 @@
 	<!-- 결과 데이터의 데이터 타입을 적을 때는 resultType -->
 
 	<!-- 온오프 제어 구문 -->
+	
 	<select id="OnOffDTOSelect" resultType="int">
 		select *
 		from on_off_tb
