@@ -461,26 +461,44 @@
                console.log(e.value);
                var num;
                if(e.value == "별찍기 프로그램"){
-                  num=0;
+                  num=5; 
                }else if(e.value == "포켓몬 프로그램"){
-                  num=1;
+                  num=6;
                }else if(e.value == "계산기 프로그램"){
-                  num=2;
+                  num=7;
+               }else if(e.value == "뭐로하지"){
+            	  num=8;
+               }else if(e.value == "문제1"){
+            	   num=10;
+               }else if(e.value == "문제2"){
+            	   num=11;
+               }else if(e.value == "문제3"){
+            	   num=0;
+               }else if(e.value == "문제4"){
+            	   num=1;
+               }else if(e.value == "예제1"){
+            	   num=2;
+               }else if(e.value == "예제2"){
+            	   num=3;
+               }else if(e.value == "예제3"){
+            	   num=4;
+               }else if(e.value == "예제4"){
+            	   num=9;
+               }else if(e.value == "예제5"){
+            	   num=12;
                }
                   $.ajax({
-                          url: "jsonData.html",
-                          dataType: 'json',
-                          success: function (result) {
-                              console.log(result.time);
-                              console.log(result.time[num].time1);
-                              // $("#time-left") : 해당 아이디를 가지고 있는 태그를 불러오는 작업
-                              // result.time 배열 안의 키time의 value값을 불러오는 작업
-                              $("#time-left").text(result.time[num].time1);
-                          },
-                          error: function () {
-                              alert("통신실패");
-                          }
-                      });   
+                      url: "time.do",
+                      dataType: "json",
+                      success: function (result) {
+                          console.log(result[num].q_time);
+                          $("#time-left").text(result[num].q_time + " : 00");
+                      },
+                      error: function () {
+                          alert("통신실패");
+                      }
+              });   
+                	 
             }
          </script>
 
@@ -525,16 +543,24 @@
                url : "SelectLedState.do",
                dataType:"json",
                success : function(result) {
-                  console.log(result);
+                  //console.log(result);
                   // red onoff data , 누가 누른건지
-                  console.log(result[3].red_led);
+                  console.log(result[0].red_led);
+                  console.log(result[0].orange_led);
+                  console.log(result[0].green_led);
                   //임시로 1 들어왔다고 가정
-                  result[3].red_led = 0;
-                  if(result[3].red_led == 1){
+                  //result[3].red_led = 0;
+                  if(result[0].red_led == 1){
                      $('#seat1').css('background-color','red');
-                  }else{
-                     $('#seat1').css('background-color','blue');
+                  }else if(result[0].orange_led == 1){
+                     $('#seat1').css('background-color','orange');
+                  }else if(result[0].green_led == 1){
+                     $('#seat1').css('background-color','green');
                   }
+                  // 0으로 햇을 때 db에 010 저장되어 있어서 안눌러도 오렌지, 조작 안됨
+                  // 1으로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
+                  // 2로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
+                  // 3로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
                },
                error: function () {
                   alert("통신 실패");
