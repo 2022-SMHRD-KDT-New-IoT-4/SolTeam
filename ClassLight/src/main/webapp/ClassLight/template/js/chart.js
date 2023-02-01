@@ -102,9 +102,9 @@ $(function() {
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-      'Pink',
-      'Blue',
-      'Yellow',
+      '빨강',
+      '초록',
+      '노랑',
     ]
   };
   var doughnutPieOptions = {
