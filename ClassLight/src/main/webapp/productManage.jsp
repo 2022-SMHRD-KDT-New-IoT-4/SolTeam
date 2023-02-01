@@ -25,6 +25,32 @@ td {
 #divbtn {
 	text-align: right;
 }
+#topline {
+	background-color: lavender ;
+}
+#product_title {
+	margin-top : 50px;
+	margin-bottom : 30px;
+	font-weight: 500;
+}
+
+#studentState{
+	font-size: 25px;
+	font-weight: 500;
+}
+#box_primary{
+	display: flex;
+	flex-direction: row;
+}
+#studentState{
+	flex-basis: 30%;
+}
+#interval{
+	flex-basis: 60%;
+}
+#btn_primary{
+	flex-basis: 10%
+}
 </style>
 
 <!-- Required meta tags -->
@@ -400,75 +426,123 @@ td {
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
-					<button type="button" class="btn btn-primary">Primary</button>
-					<h1 style="text-align: center;">제품 연동관리</h1>
+					
+					<h1 id='product_title' style="text-align: center;">제품 연동관리</h1>
 					<hr width="100%" color="black" size="3">
-
-					<div class="col-lg-12 grid-margin stretch-card">
+					<!-- 수업용 자료 하얀색 박스 div(왼쪽 여백 수정 필요) -->
+					<div id= 'margin_' class="col-lg-12 grid-margin stretch-card">
 						<div class="card">
 							<div class="card-body">
-								<h4 class="card-title">학생현황</h4>
-
+							<!--
+								<h4 class="card-title" id = 'studentState'>학생현황</h4>
+							  -->
+							  	<div id='box_primary'>
+								<span class="card-title" id = 'studentState'>학생현황</span>
+								<div id='interval'></div>
+								<button type="button" id = 'btn_primary'class="btn btn-primary">초기화</button>
+								</div>
 								<div class="table-responsive pt-3">
 									<table class="table table-bordered">
 										<thead>
-											<tr>
+											<tr id= 'topline'>
 												<th>번호</th>
 												<th>사용자</th>
 												<th>LED</th>
 												<th>버튼</th>
-												<th>PC연결</th>
+												<th>연결PC</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
 												<td>1</td>
 												<td>김경진</td>
-												<td>SM_PC_0044</td>
-												<td>SM_MONITOR_0085</td>
-												<td>CUMA023</td>
+												<td>SM_PC_0684</td>
+												<td>SM_MONITOR_0031</td>
+												<td>CUMA003</td>
 											</tr>
 											<tr>
 												<td>2</td>
 												<td>김담희</td>
-												<td>SM_PC_0044</td>
-												<td>SM_MONITOR_0085</td>
+												<td>SM_PC_4658</td>
+												<td>SM_MONITOR_0012</td>
 												<td>CUMA023</td>
 											</tr>
 											<tr>
 												<td>3</td>
-												<td>김담희</td>
-												<td>SM_PC_0044</td>
-												<td>SM_MONITOR_0085</td>
-												<td>CUMA023</td>
+												<td>이솔</td>
+												<td>SM_PC_0041</td>
+												<td>SM_MONITOR_0020</td>
+												<td>CUMA015</td>
 											</tr>
 											<tr>
 												<td>4</td>
-												<td>김담희</td>
-												<td>SM_PC_0044</td>
-												<td>SM_MONITOR_0085</td>
-												<td>CUMA023</td>
+												<td>이채영</td>
+												<td>SM_PC_9987</td>
+												<td>SM_MONITOR_8711</td>
+												<td>CUMA004</td>
 											</tr>
 											<tr>
 												<td>5</td>
-												<td>김담희</td>
-												<td>SM_PC_0044</td>
-												<td>SM_MONITOR_0085</td>
-												<td>CUMA023</td>
+												<td>이인영</td>
+												<td>SM_PC_3304</td>
+												<td>SM_MONITOR_0773</td>
+												<td>CUMA019</td>
 											</tr>
 											<tr>
 												<td>6</td>
-												<td>김담희</td>
-												<td>SM_PC_0044</td>
-												<td>SM_MONITOR_0085</td>
-												<td>CUMA023</td>
+												<td>정윤한</td>
+												<td>SM_PC_8856</td>
+												<td>SM_MONITOR_1409</td>
+												<td>CUMA016</td>
 											</tr>
 											<tr>
 												<td>7</td>
-												<td>김담희</td>
-												<td>SM_PC_0044</td>
+												<td>류승주</td>
+												<td>SM_PC_0045</td>
 												<td>SM_MONITOR_0085</td>
-												<td>CUMA023</td>
+												<td>CUMA008</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>정인홍</td>
+												<td>SM_PC_8043</td>
+												<td>SM_MONITOR_0489</td>
+												<td>CUMA001</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>반재영</td>
+												<td>SM_PC_0347</td>
+												<td>SM_MONITOR_9045</td>
+												<td>CUMA018</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>이영이</td>
+												<td>SM_PC_0145</td>
+												<td>SM_MONITOR_2168</td>
+												<td>CUMA025</td>
+											</tr>
+											<tr>
+												<td>11</td>
+												<td>나혜수</td>
+												<td>SM_PC_4877</td>
+												<td>SM_MONITOR_3044</td>
+												<td>CUMA001</td>
+											</tr>
+											<tr>
+												<td>12</td>
+												<td>염승철</td>
+												<td>SM_PC_8979</td>
+												<td>SM_MONITOR_5468</td>
+												<td>CUMA027</td>
+											</tr>
+											<tr>
+												<td>13</td>
+												<td>송진우</td>
+												<td>SM_PC_7365</td>
+												<td>SM_MONITOR_0987</td>
+												<td>CUMA031</td>
 											</tr>
 										</tbody>
 									</table>
