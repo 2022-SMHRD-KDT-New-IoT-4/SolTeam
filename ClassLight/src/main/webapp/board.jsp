@@ -364,7 +364,6 @@
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">수업 관리</span>
-              <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
@@ -390,7 +389,10 @@
 					<table class="display expandable-table" style="width: 100%">
 						<thead>
 							<tr>
-								<th id="title" height="100px"><h1 align="center">게시판</h1></th>
+								<th id="title" height="100px" style="
+                		padding-left: 17px;
+               			padding-top: 3px;
+                		"><h1 align="center">게시판</h1></th>
 							</tr>
 						</thead>
 					</table>

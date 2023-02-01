@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -45,5 +47,25 @@ public class QuestionDAO {
 		return row;
 		
 	}
+    
+	
+	// 문제 시간 불러오기 
+	public List<QuestionDTO> time() {
+		List<QuestionDTO> timeList = null;
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		try {
+			timeList = sqlSession.selectList("com.smhrd.model.QuestionDAO.time");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return timeList;
+		
+	}
+
+
+
 
 }
