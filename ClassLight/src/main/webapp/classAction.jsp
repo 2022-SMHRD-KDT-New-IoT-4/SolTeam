@@ -248,7 +248,7 @@
                 <option >강의실 선택</option>
                 <option value="class1" >IoT 강의실5</option>
                 <option value="class2">빅데이터 강의실8</option>
-                <option value="class3">인공지능 강의실7</option>
+                <option value="class3">인공지능 강의실4</option>
                 </select>
               </div>
             
