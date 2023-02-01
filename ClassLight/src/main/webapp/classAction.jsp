@@ -526,9 +526,7 @@
 							<!-- 자리 배치도 -->
 							<div class="card">
 								<div class="card-body">
-									<div>
-										<h4 class="card-title">자리 배치도</h4>
-									</div>
+										<h3>자리 배치도</h3>
 
 									<div>
 										<div id="row1"></div>
@@ -560,15 +558,23 @@
                url : "SelectLedState.do",
                dataType:"json",
                success : function(result) {
-                  //console.log(result);
+                  console.log(result);
                   // red onoff data , 누가 누른건지
                   if(result[3].red_led == 1){
-                     $('#seat1').css('background-color','red');
+                     $('#seat1').css({
+                    	 'background-color':'rgba(255, 95, 95, 0.5)', // 빨간색
+                    	 'border-top-left-radius':'20px'
+                    	 });
                   }else if(result[3].orange_led == 1){
-                	 
-                     $('#seat1').css('background-color','orange');
+                     $('#seat1').css({
+                    	 'background-color':'rgba(255, 206, 86, 0.5)', // 노란색
+                    	 'border-top-left-radius':'20px'
+                    	 });
                   }else if(result[3].green_led == 1){
-                     $('#seat1').css('background-color','green');
+                     $('#seat1').css({ 
+                    	 'background-color':'rgba(75, 192, 192, 0.5)', // 초록색
+                    	 'border-top-left-radius':'20px'
+                    	 });
                   }
                 
                },
@@ -652,8 +658,9 @@
             					alert("통신실패");
             				}
             			});
-            		
             	}
+            		
+            	};
          
             
             
