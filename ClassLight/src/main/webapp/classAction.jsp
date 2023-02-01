@@ -257,6 +257,7 @@
 				<div class="content-wrapper">
 					<div class="main">
 
+<<<<<<< HEAD
 						<!-- 배치도-->
 						<div class="seat-position">
 							<!--강의실 선택 버튼 토글-->
@@ -279,13 +280,35 @@
 							</div>
 
 							<script>
+=======
+            <!-- 배치도-->
+            <div class="seat-position">
+              <!--강의실 선택 버튼 토글-->
+              <div class="btn-group" >
+                <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
+                <option >강의실 선택</option>
+                <option value="class1" >IoT 강의실5</option>
+                <option value="class2">빅데이터 강의실8</option>
+                <option value="class3">인공지능 강의실4</option>
+                </select>
+              </div>
+            
+              <!-- 문제 선택 버튼 토글 -->
+              <div class="btn-group" >
+                <select id ="good" onchange="categoryChange1(this)" type="button" class="btn btn-primary">
+                <option>문제선택</option>
+                </select>
+              </div>
+              
+              <script>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/SolTeam.git
             function categoryChange(e) {
-               var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+               var good_a = ["선택해주세요", "포켓몬 프로그램", "계산기 프로그램", "별찍기 프로그램"];
                var good_b = ["문제1", "문제2", "문제3", "문제4"];
                var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
                var target = document.getElementById("good");
-               var cnt = 1; //쓸모없는 것...
 
+               // IOT강의실 선택 경우
                if(e.value == "class1") {
                   var d = good_a;   
                          $.ajax({ 
@@ -293,16 +316,18 @@
                              dataType: 'json',
                              success: function (result) {
                                 //console.log(result);
-                                 //console.log(result.iot);
+                                var rowNum = 0;
+                                console.log(result.iot);
+                                console.log(result.iot[0]);
+                                console.log(result.iot[0].row0[0].name);
                                 var html ="<table border='1'>";
-                                   var num = 0;      
-                                 $.each(result.iot, function (index, value) {
-                                    console.log(value.name1);
+                                   var num = 0; 
+                                 $.each(result.iot[0].row0, function (index, value) {
                                     if(num % 2 == 0){
                                       html+="<tr>";
-                                      html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                      html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                     }else{
-                                      html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                      html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                       html+="</tr>";                           
                                     }
                                      num++;
@@ -311,13 +336,12 @@
                              $("#row1").html(html);
                              
                                 html ="<table border='1'>";
-                             $.each(result.bigdata, function (index, value) {
-                                console.log(value.name2);
+                             $.each(result.iot[1].row1, function (index, value) {
                                 if(num % 2 == 0){
                                   html+="<tr>";
-                                  html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                                  html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                 }else{
-                                  html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                                  html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                   html+="</tr>";                           
                                 }
                                 num++;
@@ -326,13 +350,12 @@
                              $("#row2").html(html);
                              
                              html ="<table border='1'>";
-                               $.each(result.ai, function (index, value) {
-                                  console.log(value.name3);
+                               $.each(result.iot[2].row2, function (index, value) {
                                   if(num % 2 == 0){
                                     html+="<tr>";
-                                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                    html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                   }else{
-                                    html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                    html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                     html+="</tr>";                           
                                   }
                                   num++;
@@ -346,6 +369,7 @@
                              }
                          });
                
+                         // 클래스2
                   }else if(e.value == "class2") {
                   var d = good_b;   
                     $.ajax({
@@ -354,13 +378,12 @@
                         success: function (result) {
                            var html ="<table border='1'>";
                               var num = 0;      
-                            $.each(result.iot, function (index, value) {
-                               console.log(value.name1);
+                            $.each(result.bigdata[0].row0, function (index, value) {
                                if(num % 2 == 0){
                                  html+="<tr>";
-                                 html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                }else{
-                                 html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                  html+="</tr>";                           
                                }
                                 num++;
@@ -369,13 +392,12 @@
                         $("#row3").html(html);
                         
                         html ="<table border='1'>";
-                        $.each(result.bigdata, function (index, value) {
-                           console.log(value.name2);
+                        $.each(result.bigdata[1].row1, function (index, value) {
                            if(num % 2 == 0){
                              html+="<tr>";
-                             html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                             html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                            }else{
-                             html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                             html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                              html+="</tr>";                           
                            }
                            num++;
@@ -384,13 +406,13 @@
                         $("#row1").html(html);
                         
                            html ="<table border='1'>";
-                           $.each(result.ai, function (index, value) {
+                           $.each(result.bigdata[2].row2, function (index, value) {
                               console.log(value.name3);
                               if(num % 2 == 0){
                                 html+="<tr>";
-                                html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                               }else{
-                                html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                 html+="</tr>";                           
                               }
                               num++;
@@ -411,16 +433,14 @@
                            url: "jsonData.html",
                            dataType: 'json',
                            success: function (result) {
-                               console.log(result);
                                var html ="<table border='1'>";
                                   var num = 0;      
-                                $.each(result.iot, function (index, value) {
-                                   console.log(value.name1);
+                                $.each(result.ai[0].row0, function (index, value) {
                                    if(num % 2 == 0){
                                      html+="<tr>"; 
-                                     html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                     html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                    }else{
-                                      html+="<td id=seat"+(num+1)+">"+value.name1+"</td>";
+                                      html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                       html+="</tr>";                           
                                    }
                                     num++;
@@ -429,13 +449,12 @@
                             $("#row2").html(html);
                             
                                html ="<table border='1'>";
-                            $.each(result.bigdata, function (index, value) {
-                               console.log(value.name2);
+                            $.each(result.ai[1].row1, function (index, value) {
                                if(num % 2 == 0){
                                  html+="<tr>";
-                                 html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                }else{
-                                 html+="<td id=seat"+(num+1)+">"+value.name2+"</td>";
+                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                  html+="</tr>";                           
                                }
                                num++;
@@ -444,13 +463,12 @@
                             $("#row3").html(html);
                             
                             html ="<table border='1'>";
-                           $.each(result.ai, function (index, value) {
-                               console.log(value.name3);
+                           $.each(result.ai[2].row2, function (index, value) {
                                if(num % 2 == 0){
                                   html+="<tr>";
-                                   html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                   html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                }else{
-                                   html+="<td id=seat"+(num+1)+">"+value.name3+"</td>";
+                                   html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
                                    html+="</tr>";                           
                                }
                                num++;
@@ -472,8 +490,13 @@
                   opt.value = d[x];
                   opt.innerHTML = d[x];
                   target.appendChild(opt);
-               }   
+               }  
+               // 반 선택 중괄호 끝
             }
+            
+            
+            
+            
             // 문제 선택에서의 onchange
             //////////////// 문제 선택할 때 DB에서 시간 끌어오는 부분 ////////////////
             function categoryChange1(e) {
@@ -560,9 +583,6 @@
                success : function(result) {
                   //console.log(result);
                   // red onoff data , 누가 누른건지
-                  console.log(result[3].red_led);
-                  console.log(result[3].orange_led);
-                  console.log(result[3].green_led);
                   if(result[3].red_led == 1){
                      $('#seat1').css('background-color','red');
                   }else if(result[3].orange_led == 1){
@@ -570,10 +590,7 @@
                   }else if(result[3].green_led == 1){
                      $('#seat1').css('background-color','green');
                   }
-                  // 0으로 햇을 때 db에 010 저장되어 있어서 안눌러도 오렌지, 조작 안됨
-                  // 1으로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
-                  // 2로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
-                  // 3로 했을 때 000에서 안변함. 불은 들어옴. db에도 안 들어감
+                
                },
                error: function () {
                   alert("통신 실패");
@@ -657,7 +674,7 @@
             			});
             		
             	}
-            }
+         
             
             
             </script>
