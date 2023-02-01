@@ -64,7 +64,7 @@ public class LedStateProgram extends HttpServlet {
 			System.out.println(inputState.getSerial_no());
 
 			return;
-		}
+		} 
 
 		boolean updateFlag = false;
 		//현재 led의 값 확인
