@@ -5,7 +5,7 @@ $(function() {
    */
   'use strict';
   var data = {
-    labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
+    labels: ["0분 이하", "1분 이하", "2분 이하", "3분 이하", "4분 이하", "5분 이하"],
     datasets: [{
       label: '# of Votes',
       data: [10, 19, 3, 5, 2, 3],
@@ -78,33 +78,34 @@ $(function() {
     }
 
   };
+  /////////////////////////
   var doughnutPieData = {
     datasets: [{
       data: [10, 70, 20],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.5)', // 핑크
-        'rgba(54, 162, 235, 0.5)', // 파랑
+        'rgba(49, 224, 142, 0.5)', // 초록
         'rgba(255, 206, 86, 0.5)', // 노랑
+        'rgba(255, 95, 95, 0.5)', // 빨강
         'rgba(75, 192, 192, 0.5)', // 청록
         'rgba(153, 102, 255, 0.5)', // 보라
         'rgba(255, 159, 64, 0.5)' // 주황
        
       ],
       borderColor: [
-        'rgba(255,99,132,1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)'
+        'rgba(49, 224, 142, 1)', // 초록
+        'rgba(255, 206, 86, 1)', // 노랑
+        'rgba(255, 95, 95, 1)', // 빨강
+        'rgba(75, 192, 192, 1)', // 청록
+        'rgba(153, 102, 255, 1)', // 보라
+        'rgba(255, 159, 64, 1)' // 주황
       ],
     }],
-
+/////////////////////////////////////
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-      'Pink',
-      'Blue',
-      'Yellow',
+      '초록불',
+      '노란불',
+      '빨간불',
     ]
   };
   var doughnutPieOptions = {
