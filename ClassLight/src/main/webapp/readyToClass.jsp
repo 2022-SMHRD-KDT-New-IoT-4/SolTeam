@@ -3,7 +3,7 @@
 <body>
   <!DOCTYPE html>
   <html lang="en">
-
+	
   <head>
     <!-- Required meta tags -->
      <!-- Required meta tags -->
@@ -29,6 +29,26 @@
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
+  	<style type="text/css">
+  	a>p{
+  		text-decoration: none;
+  		color : black;
+  		font-size : 15px;
+  	}
+  	#topLine{
+  		background-color : lavender;
+  	}
+  	#class-file{
+  		margin-top : 20px;
+  		margin-left : 5px;
+  		font-size : 25px;
+  	}
+  	#class-fileInfo{
+  		margin-left : 5px;
+  		font-size : 18px;
+  		
+  	}
+  	</style>
   </head>
 
   <body>
@@ -349,7 +369,6 @@
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">수업 관리</span>
-              <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
@@ -379,7 +398,10 @@
           <table  class="display expandable-table" style="width:100%">
             <thead>
               <tr>
-                <th  id ="title" height="100px"><h1>수업준비</h1></th>
+                <th  id ="title" height="100px" style="
+                padding-left: 20px;
+                padding-top: 20px;
+                "><h1 id="h1text"> 수업준비</h1></th>
               </tr>
             </thead>
         </table>
@@ -436,17 +458,18 @@
        
 
         <hr>
-        <div class="col-lg-12 grid-margin stretch-card">
+        <!-- 땡길거 -->
+        <div class="col-lg-12 grid-margin stretch-card" style = "padding-left : 0px;">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">수업용 자료</h4>
-              <p class="card-description">
+              <h2 class="card-title" id="class-file">수업용 자료</h2>
+              <p class="card-description" id = "class-fileInfo">
                 수업에 필요한 컨텐츠를 찾아주세요.
               </p>
               <div class="table-responsive pt-3">
                 <table class="table table-bordered">
                   <thead>
-                    <tr>
+                    <tr id="topLine">
                       <th class="th1">
                         순번
                       </th>
@@ -467,8 +490,9 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p style="font-size: 20px;">배열 예제 - 기본 실습입니다. 문제를 확인해주세요.</p>
+                      	<!-- style="font-size: 15px;" -->
+                        <a href="./ClassLight/tempLogo/ex1.png" >
+                          <p>배열 예제 - 기본 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -480,8 +504,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>배열 예제 - 점수계산 실습입니다. 문제를 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex2.png">
+                          <p>배열 예제 - 점수계산 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -493,8 +517,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>배열 예제 - 수박게임 실습입니다. 문제를 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex3.png">
+                          <p>배열 예제 - 수박게임 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -506,8 +530,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>이차원배열 예제 - 기본 실습입니다. 문제를 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex4.png">
+                          <p>이차원배열 예제 - 기본 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -519,8 +543,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>이차원배열 예제 - 스네이크 실습입니다. 문제를 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex5.png">
+                          <p>이차원배열 예제 - 스네이크 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -532,8 +556,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>메소드 예제 - 계산기 실습입니다. 문제를 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex6.png">
+                          <p>메소드 예제 - 계산기 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -545,8 +569,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>메소드 예제 - 피보나치수열 실습입니다. 문제를 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex7.png">
+                          <p>메소드 예제 - 피보나치수열 실습입니다. 문제를 확인해주세요.</p>
                         </a>
 
                       </td>
@@ -559,8 +583,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>메소드 오버로딩 개념 - 기본개념 입니다. 내용을 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex8.png">
+                          <p>메소드 오버로딩 개념 - 기본개념 입니다. 내용을 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -572,8 +596,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="">
-                          <p>OOP 실습 예제 - 통장관리프로그램 실습입니다. 문제를 확인해주세요.
+                        <a href="./ClassLight/tempLogo/ex9.png">
+                          <p>OOP 실습 예제 - 통장관리프로그램 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>
@@ -585,8 +609,8 @@
                         JAVA
                       </td>
                       <td>
-                        <a href="#">
-                          <p style="font-size: 20px;">내용을 추가해주세요.</p>
+                        <a href="./ClassLight/tempLogo/ex10.png">
+                          <p style="font-size: 15px;">반복문 예제 - 별찍기 실습입니다. 문제를 확인해주세요.</p>
                         </a>
                       </td>
                     </tr>

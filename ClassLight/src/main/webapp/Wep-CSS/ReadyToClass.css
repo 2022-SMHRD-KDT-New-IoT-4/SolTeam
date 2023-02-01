@@ -18,8 +18,10 @@
     tr>.th2 {
       text-align: center;
       width: 300px;
+      font-size: 20px;
     }
 
     td>a~p {
       font-size: 20px;
 }
+

@@ -1,5 +1,21 @@
 .menu{
     margin: 20px;
     color: darkslateblue;
-    
+    font-weight: bold;
+}
+#box1:hover{
+	background-color: #F5F7FF;
+	color: indigo;
+	
+}
+
+#box2:hover{
+	background-color: #F5F7FF;
+	color: indigo;
+}
+
+#search{
+	font-weight: bolder;
+	font-size :15px;
+	color:#B1A5C8;
 }

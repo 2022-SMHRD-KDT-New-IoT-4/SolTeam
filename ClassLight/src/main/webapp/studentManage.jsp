@@ -51,7 +51,14 @@ div>button {
     <link rel="stylesheet" href="./ClassLight/template/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="./ClassLight/template/images/favicon.png" />
-
+	<style type="text/css">
+		#chart_box3{
+			padding-left: 0px;
+		
+		}
+	
+	
+	</style>
 </head>
 <body>
 	<div class="container-scroller">
@@ -382,7 +389,6 @@ div>button {
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">수업 관리</span>
-              <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
@@ -404,11 +410,14 @@ div>button {
 
 			  <!-- partial -->
       <div class="main-panel">
-        <div class="content-wrapper">
+        <div class="content-wrapper" >
           <table class="display expandable-table" style="width:100%">
             <thead>
               <tr>
-                <th id="title" height="100px">
+                <th id="title" height="100px" style="
+                padding-left: 20px;
+                padding-top: 20px;
+                ">
                   <h1>학생 관리</h1>
                 </th>
               </tr>
@@ -461,12 +470,12 @@ div>button {
 
           <!-- partial -->
           <div class="main-panel">
-            <div class="content-wrapper">
+            <div class="content-wrapper" id="chart_box3">
               <div class="row">
                 <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Pie chart</h4>
+                      <h4 class="card-title">점등현황</h4>
                       <canvas id="pieChart" width="226" height="140"
                         style="display: block; height: 141px; width: 283px;" class="chartjs-render-monitor"></canvas>
                       <canvas id="pieChart"></canvas>
@@ -476,7 +485,7 @@ div>button {
                 <div class="col-lg-6 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Bar chart</h4>
+                      <h4 class="card-title">소요시간</h4>
                       <canvas id="barChart" width="226" height="140"
                         style="display: block; height: 141px; width: 283px;" class="chartjs-render-monitor"></canvas>
                       <canvas id="barChart"></canvas>
@@ -509,6 +518,8 @@ div>button {
 							<!-- container-scroller -->
 
 							 <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
+        <!-- plugins:js -->
+        <script src="./ClassLight/template/vendors/js/vendor.bundle.base.js"></script>
         <!-- endinject -->
         <!-- Plugin js for this page -->
         <script src="./ClassLight/template/vendors/chart.js/Chart.min.js"></script>
@@ -528,6 +539,18 @@ div>button {
         <script src="./ClassLight/template/js/dashboard.js"></script>
         <script src="./ClassLight/template/js/Chart.roundedBarCharts.js"></script>
         <!-- End custom js for this page-->
+        <script src="./ClassLight/template/js/chart.js"></script>
+        <!-- --------------- -->
+	<!-- End plugin js for this page -->
+	<!-- inject:js -->
+	<script src="../../js/off-canvas.js"></script>
+	<script src="../../js/hoverable-collapse.js"></script>
+	<script src="../../js/template.js"></script>
+	<script src="../../js/settings.js"></script>
+	<script src="../../js/todolist.js"></script>
+	<!-- endinject -->
+	<!-- Custom js for this page-->
+	<script src="../../js/chart.js"></script>
 </body>
 
 </html>
