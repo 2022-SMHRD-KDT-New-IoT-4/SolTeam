@@ -30,57 +30,45 @@ import com.google.gson.Gson;
 public class TimeProgram extends HttpServlet {
 
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//int set = Integer.parseInt(request.getParameter("onoff"));
+		// int set = Integer.parseInt(request.getParameter("onoff"));
 		String q_time = request.getParameter("q_time");
-	
-	
-		
-	// int q_time = Integer.parseInt(request.getParameter("q_time"));
-		
+
+		// int q_time = Integer.parseInt(request.getParameter("q_time"));
+
 		QuestionDTO dto = new QuestionDTO();
-		
+
 		dto.setQTime("12");
 		// 컬럼이 한 개 일 때 select * 로 움직이는 타이머
 		QuestionDAO dao = new QuestionDAO();
 		QuestionDTO row = dao.QuestionSelect(dto);
-	
-		
+
 		// row = 문제에 대한 정보를 조회한 값이 담겨있음
 
-	   
-	
 //      int time = 12000; // q_time 문제 시간 값 담아주기
 		// 오더값이 증가함에 따라 아두이노에서는 다음 문제로 인식한다.
 //      int order = 100;  //q_seq 문제 번호 값 담아주기
-		
-	    
-		int realTime = Integer.parseInt(row.getQTime()); 
-		
-		
-		//온오프 제어
-		
+
+		int realTime = Integer.parseInt(row.getQTime());
+
+		// 온오프 제어
+
 		OnOffDAO ofdao = new OnOffDAO();
 		int onoff = ofdao.OnOffDTOSelect();
-		
-	
-	
-			
+
 		OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-		//타이머 값 
+		// 타이머 값
 		writer.append(Integer.toString(row.getQSeq()));
 		writer.append(",");
 		writer.append(Integer.toString(realTime * 6000));
-		//온오프 제어 값
+		// 온오프 제어 값
 		writer.append(".");
 		writer.append(Integer.toString(onoff));
-		
+
 		writer.flush(); // 100,12345
 		writer.close();
-		
+
 		System.out.println("무슨 값?" + onoff);
-		System.out.println("타이머 무슨 값?"+row.getQTime()); 
+		System.out.println("타이머 무슨 값?" + row.getQTime());
 	}
-	
-	
-	
-	}
+
+}

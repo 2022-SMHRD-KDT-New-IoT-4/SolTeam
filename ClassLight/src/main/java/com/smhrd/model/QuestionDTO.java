@@ -21,6 +21,7 @@ public class QuestionDTO {
 	    public int getQSeq() {
 	        return q_seq;
 	    }
+
 	    
 		public void setQSeq(int q_seq) {
 	        this.q_seq = q_seq;
@@ -69,6 +70,10 @@ public class QuestionDTO {
 		public QuestionDTO() {
 			super();
 		}
+		
+		
+		
+		
 
 		
 		
