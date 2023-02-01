@@ -257,7 +257,6 @@
 				<div class="content-wrapper">
 					<div class="main">
 
-<<<<<<< HEAD
 						<!-- 배치도-->
 						<div class="seat-position">
 							<!--강의실 선택 버튼 토글-->
@@ -280,28 +279,8 @@
 							</div>
 
 							<script>
-=======
-            <!-- 배치도-->
-            <div class="seat-position">
-              <!--강의실 선택 버튼 토글-->
-              <div class="btn-group" >
-                <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
-                <option >강의실 선택</option>
-                <option value="class1" >IoT 강의실5</option>
-                <option value="class2">빅데이터 강의실8</option>
-                <option value="class3">인공지능 강의실4</option>
-                </select>
-              </div>
-            
-              <!-- 문제 선택 버튼 토글 -->
-              <div class="btn-group" >
-                <select id ="good" onchange="categoryChange1(this)" type="button" class="btn btn-primary">
-                <option>문제선택</option>
-                </select>
-              </div>
+
               
-              <script>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/SolTeam.git
             function categoryChange(e) {
                var good_a = ["선택해주세요", "포켓몬 프로그램", "계산기 프로그램", "별찍기 프로그램"];
                var good_b = ["문제1", "문제2", "문제3", "문제4"];
@@ -586,6 +565,7 @@
                   if(result[3].red_led == 1){
                      $('#seat1').css('background-color','red');
                   }else if(result[3].orange_led == 1){
+                	 
                      $('#seat1').css('background-color','orange');
                   }else if(result[3].green_led == 1){
                      $('#seat1').css('background-color','green');
