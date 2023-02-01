@@ -278,14 +278,16 @@
                                 console.log(result.iot);
                                 console.log(result.iot[0]);
                                 console.log(result.iot[0].row0[0].name);
+                                var text = row+rowNum;
+                                console.log(text);
                                 var html ="<table border='1'>";
                                    var num = 0; 
                                  $.each(result.iot[0].row0, function (index, value) {
                                     if(num % 2 == 0){
-                                      html+="<tr>";
-                                      html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                      html+="<tr align=center>";
+                                      html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                     }else{
-                                      html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                      html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                       html+="</tr>";                           
                                     }
                                      num++;
@@ -296,10 +298,10 @@
                                 html ="<table border='1'>";
                              $.each(result.iot[1].row1, function (index, value) {
                                 if(num % 2 == 0){
-                                  html+="<tr>";
-                                  html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                  html+="<tr align=center>";
+                                  html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                 }else{
-                                  html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                  html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                   html+="</tr>";                           
                                 }
                                 num++;
@@ -310,10 +312,10 @@
                              html ="<table border='1'>";
                                $.each(result.iot[2].row2, function (index, value) {
                                   if(num % 2 == 0){
-                                    html+="<tr>";
-                                    html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                    html+="<tr align=center>";
+                                    html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                   }else{
-                                    html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                    html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                     html+="</tr>";                           
                                   }
                                   num++;
@@ -338,10 +340,10 @@
                               var num = 0;      
                             $.each(result.bigdata[0].row0, function (index, value) {
                                if(num % 2 == 0){
-                                 html+="<tr>";
-                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                 html+="<tr align=center>";
+                                 html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                }else{
-                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                 html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                  html+="</tr>";                           
                                }
                                 num++;
@@ -352,10 +354,10 @@
                         html ="<table border='1'>";
                         $.each(result.bigdata[1].row1, function (index, value) {
                            if(num % 2 == 0){
-                             html+="<tr>";
-                             html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                             html+="<tr align=center>";
+                             html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                            }else{
-                             html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                             html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                              html+="</tr>";                           
                            }
                            num++;
@@ -367,10 +369,10 @@
                            $.each(result.bigdata[2].row2, function (index, value) {
                               console.log(value.name3);
                               if(num % 2 == 0){
-                                html+="<tr>";
-                                html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                html+="<tr align=center>";
+                                html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                               }else{
-                                html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                 html+="</tr>";                           
                               }
                               num++;
@@ -395,10 +397,10 @@
                                   var num = 0;      
                                 $.each(result.ai[0].row0, function (index, value) {
                                    if(num % 2 == 0){
-                                     html+="<tr>"; 
-                                     html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                     html+="<tr align=center>"; 
+                                     html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                    }else{
-                                      html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                      html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                       html+="</tr>";                           
                                    }
                                     num++;
@@ -409,10 +411,10 @@
                                html ="<table border='1'>";
                             $.each(result.ai[1].row1, function (index, value) {
                                if(num % 2 == 0){
-                                 html+="<tr>";
-                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                 html+="<tr align=center>";
+                                 html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                }else{
-                                 html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                 html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                  html+="</tr>";                           
                                }
                                num++;
@@ -423,10 +425,10 @@
                             html ="<table border='1'>";
                            $.each(result.ai[2].row2, function (index, value) {
                                if(num % 2 == 0){
-                                  html+="<tr>";
-                                   html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                  html+="<tr align=center>";
+                                   html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                }else{
-                                   html+="<td id=seat"+(num+1)+">"+value.name+"</td>";
+                                   html+="<th id=seat"+(num+1)+">"+value.name+"</th>";
                                    html+="</tr>";                           
                                }
                                num++;
@@ -543,11 +545,14 @@
                dataType:"json",
                success : function(result) {
                   //console.log(result);
+                  console.log(result[3].red_led);
+                  console.log(result[3].orange_led);
+                  console.log(result[3].green_led);
                   // red onoff data , 누가 누른건지
                   if(result[3].red_led == 1){
-                     $('#seat1').css('background-color','red');
+                     $('#seat1').css('background-color','tomato');
                   }else if(result[3].orange_led == 1){
-                     $('#seat1').css('background-color','orange');
+                     $('#seat1').css('background-color','yellow');
                   }else if(result[3].green_led == 1){
                      $('#seat1').css('background-color','green');
                   }
