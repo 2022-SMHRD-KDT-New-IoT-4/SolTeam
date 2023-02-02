@@ -411,7 +411,7 @@
               <div class="btn-group" >
                 <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
                 <option >과목 선택</option>
-                <option value="class1" >JSP/Servlet</option>
+                <option value="class1" >Java</option>
                 <option value="class2">JavaScript</option>
                 <option value="class3">HTML/CSS</option>
                 <option value="class4">Arduino</option>
@@ -428,7 +428,7 @@
               
               <script>
 	function categoryChange(e) {
-	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "배열예제"];
 	var good_b = ["문제1", "문제2", "문제3", "문제4"];
 	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
 	var good_d = ["실습1","실습2","실습3","실습4","실습5"]
