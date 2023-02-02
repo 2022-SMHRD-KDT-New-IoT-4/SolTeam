@@ -177,19 +177,23 @@ table{
 table  > tr {
 	align :center;
 }
+
 .help{
 	width:30px;
 	height:20px;
 	background-color: rgba(255, 95, 95, 0.5);
 	position : relative;
-	left : 20px;
+	left : 145px;
+	bottom : 25px;
+	
 }
-.question{
+.needTime{
 	width:30px;
 	height:20px;
 	background-color: rgba(255, 206, 86, 0.5);
 	position : relative;
-	left : 30px;
+	left : 300px;
+	bottom : 65px;
 }
 
 .complete{
@@ -197,24 +201,40 @@ table  > tr {
 	height:20px;
 	background-color: rgba(75, 192, 192, 0.5);
 	position : relative;
-	left : 50px;
+	left : 460px;
+	bottom : 105px;
 }
 .card-title{
 	flex-basis: 100%;
+	font-size:25px !important;
 }
 
 .help ~ span{
 	position : relative;
-	left : 25px;
+	left : 180px;
 	font-size: 15px;
+	display : flex;
+	flex-basis : 20%;
+	bottom : 46px;
+	
 }
 
-.question ~ span{
+.needTime ~ span{
 	position : relative;
-	left :40px;
+	left :340px;
+	bottom : 85px;
 }
 
 .complete ~ span{
 	position : relative;
-	left :55px;
+	left :500px;
+	bottom : 125px;
 }
+.seat-menu {
+	height : 38px;
+}
+
+
+
+
+
