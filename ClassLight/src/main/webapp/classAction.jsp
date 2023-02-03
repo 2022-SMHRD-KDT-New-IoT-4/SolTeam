@@ -257,7 +257,7 @@
 				<div class="content-wrapper">
 					<div class="main">
 
-<<<<<<< HEAD
+
 						<!-- 배치도-->
 						<div class="seat-position">
 							<!--강의실 선택 버튼 토글-->
