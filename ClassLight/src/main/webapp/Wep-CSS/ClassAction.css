@@ -144,9 +144,8 @@ img{
 }
 
 .card-body{
-    padding: 10px;
+    padding: 8px;
     position: relative;
-    top: 10px;
 }
 
 
@@ -172,7 +171,70 @@ table{
 	border-style: hidden;
   	box-shadow: 0 0 0 1px #000;
   	border-radius: 20px;
+  	
 }
+
+table  > tr {
+	align :center;
+}
+
+.help{
+	width:30px;
+	height:20px;
+	background-color: rgba(255, 95, 95, 0.5);
+	position : relative;
+	left : 145px;
+	bottom : 25px;
+	
+}
+.needTime{
+	width:30px;
+	height:20px;
+	background-color: rgba(255, 206, 86, 0.5);
+	position : relative;
+	left : 300px;
+	bottom : 65px;
+}
+
+.complete{
+	width:30px;
+	height:20px;
+	background-color: rgba(75, 192, 192, 0.5);
+	position : relative;
+	left : 460px;
+	bottom : 105px;
+}
+.card-title{
+	flex-basis: 100%;
+	font-size:25px !important;
+}
+
+.help ~ span{
+	position : relative;
+	left : 180px;
+	font-size: 15px;
+	display : flex;
+	flex-basis : 20%;
+	bottom : 46px;
+	
+}
+
+.needTime ~ span{
+	position : relative;
+	left :340px;
+	bottom : 85px;
+}
+
+.complete ~ span{
+	position : relative;
+	left :500px;
+	bottom : 125px;
+}
+.seat-menu {
+	height : 38px;
+}
+
+
 
 
 
