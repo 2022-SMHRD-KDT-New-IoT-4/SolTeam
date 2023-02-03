@@ -411,7 +411,7 @@
               <div class="btn-group" >
                 <select onchange="categoryChange(this)" type="button" class="btn btn-primary">
                 <option >과목 선택</option>
-                <option value="class1" >JSP/Servlet</option>
+                <option value="class1" >Java</option>
                 <option value="class2">JavaScript</option>
                 <option value="class3">HTML/CSS</option>
                 <option value="class4">Arduino</option>
@@ -425,10 +425,24 @@
                 <option>문제선택</option>
                 </select>
               </div>
+              <button type="button" class="btn btn-primary" style="width :150px;">수업 문제 등록</button>
               
               <script>
 	function categoryChange(e) {
-	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "뭐로하지"];
+		if(e.value == "class1"){
+			$.ajax({
+                url: "question.do",
+                dataType: "json",
+                success: function (result) {
+                    console.log(result);
+                },
+                error: function () {
+                    alert("통신실패");
+                }
+        });   
+			
+		}
+	var good_a = ["별찍기 프로그램", "포켓몬 프로그램", "계산기 프로그램", "배열예제"];
 	var good_b = ["문제1", "문제2", "문제3", "문제4"];
 	var good_c = ["예제1", "예제2", "예제3", "예제4", "예제5"];
 	var good_d = ["실습1","실습2","실습3","실습4","실습5"]
@@ -464,6 +478,20 @@
             <div class="card-body">
               <h2 class="card-title" id="class-file">수업용 자료</h2>
               <p class="card-description" id = "class-fileInfo">
+                수업 문제를 등록해주세요.
+              </p>
+              <form action="question.do" method = "post">
+                    <input name="q_title"  placeholder="문제 제목 입력" class="form-control form-control-lg"> 
+                   <br>
+                   <input name="q_content" placeholder="문제 내용 입력" class="form-control form-control-lg"  >
+                   <br>
+                   <input name="q_time" placeholder="문제 시간 입력" class="form-control form-control-lg"  >
+                   <br>
+                   <input name="q_score" placeholder="문제 점수 입력" class="form-control form-control-lg"  >
+                   <br>
+                   <input type="submit" value = "문제 등록" class="btn btn-primary">
+              </form>
+               <p class="card-description" id = "class-fileInfo">
                 수업에 필요한 컨텐츠를 찾아주세요.
               </p>
               <div class="table-responsive pt-3">
