@@ -42,6 +42,7 @@ public class FrontController extends HttpServlet {
 	map.put("time.do",new TimeProgram());
 	map.put("SelectLedState.do", new SelectLedState());
 	map.put("OnOff.do", new OnOffSet());
+	map.put("question.do", new QuestionProgram());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
