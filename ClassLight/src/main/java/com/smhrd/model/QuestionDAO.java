@@ -26,7 +26,7 @@ public class QuestionDAO {
 		}
 	
 	
-	public int make_q(QuestionDTO dto) {
+	public int makeQuestion(QuestionDTO dto) {
 		
 		
 		int row = 0;
