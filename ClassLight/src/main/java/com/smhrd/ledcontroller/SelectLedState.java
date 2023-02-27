@@ -27,7 +27,7 @@ public class SelectLedState implements Command {
 		PrintWriter out = response.getWriter();
 		
 		if(list != null) {
-//			request.getSession().setAttribute("list", list);
+			request.getSession().setAttribute("list", list);
 			Gson gson = new Gson();
 			out.print(gson.toJson(list));
 			// ajax 통신으로 다시 값을 되돌려주겠다
