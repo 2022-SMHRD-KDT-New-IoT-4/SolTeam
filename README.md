@@ -3,6 +3,8 @@
 <img src ="https://user-images.githubusercontent.com/121835105/230528917-ef64c99d-96f6-4dd8-b31b-2442797cc28a.png" width="250" height="200"></img>
 </div>
 
-### 1.프로젝트 개요
+## 1. 프로젝트 개요
+<b> 주제 : 일대다 수업 방식 중 발생하는 학생과 교사간 소통 문제 해결 </b>
+ 
  
 
