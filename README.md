@@ -1,2 +1,2 @@
-<b  style = " font-size:34px;"> :traffic_light: </b>    <small>강의용 소통 도구 수신호 (팀명 : 수신호)</small>
+<img src="![free-icon-traffic-lights-3009015](https://user-images.githubusercontent.com/121835105/230526681-f3c4e629-d080-4a47-af54-e64f01747e6b.png)">   <small>강의용 소통 도구 수신호 (팀명 : 수신호)</small>
 
