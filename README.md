@@ -43,6 +43,10 @@
 ## 7.WEB페이지
 
 ## 8.트러블슈팅
+### 1
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230778691-f170e41b-dc30-4dde-8997-1f580c8c3ae7.png" width="800" height="300"></img>
+</div>
 
 ## 9.시연영상
 
