@@ -21,13 +21,10 @@
 <img src="https://user-images.githubusercontent.com/121835105/230776617-86bdcb08-86eb-4b96-bd6a-b92d185d096c.png" width="800" height="300"></img>
 </div>
 
-
-
-
-
-
 ## 3. 개발환경
-
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230777559-1c28c9a5-a7b1-44a9-b59a-175058219170.png" width="800" height="300"></img>
+</div>
 ## 4. 유스케이스
 #### 사용자(강사) 유스케이스
 <div align ="center">
