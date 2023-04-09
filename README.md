@@ -44,7 +44,10 @@
 </div>
 
 ## 7.WEB페이지
-
+- 메인페이지
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230781227-38e42f8d-1171-46a6-a470-55e2240d0fa6.png" width="800" height="300"></img>
+</div>
 
 
 
