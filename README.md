@@ -32,3 +32,19 @@
 <img src="https://user-images.githubusercontent.com/121835105/230776867-31872b40-6a23-406f-936b-c04e185e74f6.png" width="800" height="300"></img>
 </div>
 
+## 5. ER다이어그램
+
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230777872-f41aaa91-3782-4fe9-a7b6-e02a3fde6dc3.png" width="800" height="300"></img>
+</div>
+
+## 6.구현
+
+## 7.WEB페이지
+
+## 8.트러블슈팅
+
+## 9.시연영상
+
+## 10.참고문헌
+
