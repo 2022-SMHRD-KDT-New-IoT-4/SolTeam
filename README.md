@@ -49,22 +49,17 @@
 <img src="https://user-images.githubusercontent.com/121835105/230781227-38e42f8d-1171-46a6-a470-55e2240d0fa6.png" width="800" height="300"></img>
 </div>
 
-- 무슨페이지
+- 수업진행 페이지
 <div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230781301-b09a94df-392b-493a-bc42-f1eae6a8300c.png" width="800" height="300"></img>
 </div>
 
-- 무슨페이지
-<div align ="center">
-<img src="https://user-images.githubusercontent.com/121835105/230781303-6b923db8-e1bf-455f-9f96-ee56373e057f.png" width="800" height="300"></img>
-</div>
-
-- 무슨페이지
+- 수업관리 페이지
 <div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230781306-bfb3715e-731c-4a1a-a19e-5ddeacb129b1.png" width="800" height="300"></img>
 </div>
 
-- 무슨페이지
+- 학생관리 페이지
 <div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230781307-8fa1e1fc-1a30-48ae-a562-1da0711ebc2c.png" width="800" height="300"></img>
 </div>
