@@ -38,9 +38,15 @@
 <img src="https://user-images.githubusercontent.com/121835105/230777872-f41aaa91-3782-4fe9-a7b6-e02a3fde6dc3.png" width="800" height="300"></img>
 </div>
 
-## 6.구현
+## 6.완성시제품
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230780083-9a3c16f0-2134-4f5b-abb9-a99ff4a9254a.png" width="800" height="300"></img>
+</div>
 
 ## 7.WEB페이지
+
+
+
 
 ## 8.트러블슈팅
 
