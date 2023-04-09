@@ -11,8 +11,11 @@
 - 문제별 Led 점등 상태를 저장하여 풀이 완료 시간과 질문 수를 통계치로 확인 가능 
  
 ## 2. 주요기능
-<img src="https://user-images.githubusercontent.com/121835105/230775838-7e68a1bb-3b58-4e29-a12f-7f9bc98e4e7b.png"></img>
 
+### 3.서비스 흐름도
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/121835105/230775838-7e68a1bb-3b58-4e29-a12f-7f9bc98e4e7b.png" width="250" height="200"></img>
+</div>
 ## 3. 개발환경
 
 ## 4. 유스케이스
