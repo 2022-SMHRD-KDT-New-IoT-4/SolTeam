@@ -43,9 +43,17 @@
 ## 7.WEB페이지
 
 ## 8.트러블슈팅
-### 1
+
 <div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230778691-f170e41b-dc30-4dde-8997-1f580c8c3ae7.png" width="800" height="300"></img>
+</div>
+
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230779201-ec3d2b99-22de-485d-9d82-18d39fa99eb9.png" width="800" height="300"></img>
+</div>
+
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230779218-5acaa285-c608-45fa-a4c2-72a59e4d6e31.png" width="800" height="300"></img>
 </div>
 
 ## 9.시연영상
