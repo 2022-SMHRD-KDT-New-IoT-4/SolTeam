@@ -56,11 +56,6 @@
 
 - 무슨페이지
 <div align ="center">
-<img src="https://user-images.githubusercontent.com/121835105/230781227-38e42f8d-1171-46a6-a470-55e2240d0fa6.png" width="800" height="300"></img>
-</div>
-
-- 무슨페이지
-<div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230781303-6b923db8-e1bf-455f-9f96-ee56373e057f.png" width="800" height="300"></img>
 </div>
 
