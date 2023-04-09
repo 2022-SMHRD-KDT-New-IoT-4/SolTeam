@@ -28,7 +28,6 @@
 
 ## 4. 유스케이스
 
-#### 사용자(강사) 유스케이스
 <div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230776867-31872b40-6a23-406f-936b-c04e185e74f6.png" width="800" height="300"></img>
 </div>
