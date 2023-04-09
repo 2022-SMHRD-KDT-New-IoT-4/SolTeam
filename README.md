@@ -13,9 +13,10 @@
 ## 2. 주요기능
 <div>
 <img src="https://user-images.githubusercontent.com/121835105/230775961-00ead3ad-ba58-4e9c-b8d4-10a3961396f0.png" width="300" height ="200"></img>
+#### 서비스 흐름도
 <img src="https://user-images.githubusercontent.com/121835105/230775838-7e68a1bb-3b58-4e29-a12f-7f9bc98e4e7b.png" width="250" height="200"></img>
 </div>
-#### 서비스 흐름도
+
 
 
 
