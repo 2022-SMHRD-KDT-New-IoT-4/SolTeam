@@ -54,15 +54,22 @@
 <img src="https://user-images.githubusercontent.com/121835105/230781301-b09a94df-392b-493a-bc42-f1eae6a8300c.png" width="800" height="300"></img>
 </div>
 
-- 수업관리 페이지
+- 수업진행 페이지- 자리배치도, 타이머, 타이머 제어 기능 구동 화면
 <div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230781306-bfb3715e-731c-4a1a-a19e-5ddeacb129b1.png" width="800" height="300"></img>
 </div>
 
-- 학생관리 페이지
+- 수업관리 페이지
 <div align ="center">
 <img src="https://user-images.githubusercontent.com/121835105/230781307-8fa1e1fc-1a30-48ae-a562-1da0711ebc2c.png" width="800" height="300"></img>
 </div>
+
+- 학생관리 페이지
+<div align ="center">
+<img src="https://user-images.githubusercontent.com/121835105/230781311-0506a5be-5544-4374-bd4c-ccfa85dad44b.png" width="800" height="300"></img>
+</div>
+
+https://user-images.githubusercontent.com/121835105/230781311-0506a5be-5544-4374-bd4c-ccfa85dad44b.png
 
 ## 8.트러블슈팅
 
