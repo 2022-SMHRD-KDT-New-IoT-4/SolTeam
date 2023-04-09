@@ -17,7 +17,7 @@
 
 ##### 서비스 흐름도
 
-<img src="https://user-images.githubusercontent.com/121835105/230775838-7e68a1bb-3b58-4e29-a12f-7f9bc98e4e7b.png" width="250" height="200"></img>
+<img src="https://user-images.githubusercontent.com/121835105/230775838-7e68a1bb-3b58-4e29-a12f-7f9bc98e4e7b.png" width="500" height="200"></img>
 
 
 
