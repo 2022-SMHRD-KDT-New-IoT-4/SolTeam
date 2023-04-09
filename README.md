@@ -13,12 +13,12 @@
 ## 2. 주요기능
 #### 개발 목표
 <div align ="center">
-<img src="https://user-images.githubusercontent.com/121835105/230776419-f90b72f4-409f-4b6b-b475-f0a442731eb7.png" width="800" height ="250"></img>
+<img src="https://user-images.githubusercontent.com/121835105/230776419-f90b72f4-409f-4b6b-b475-f0a442731eb7.png" width="800" height ="300"></img>
 </div>
 
 #### 서비스 흐름도
 <div align ="center">
-<img src="https://user-images.githubusercontent.com/121835105/230776617-86bdcb08-86eb-4b96-bd6a-b92d185d096c.png" width="800" height="250"></img>
+<img src="https://user-images.githubusercontent.com/121835105/230776617-86bdcb08-86eb-4b96-bd6a-b92d185d096c.png" width="800" height="300"></img>
 </div>
 
 
