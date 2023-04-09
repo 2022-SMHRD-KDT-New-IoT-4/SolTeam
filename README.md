@@ -66,8 +66,7 @@
 </div>
 
 ## 9.시연영상
-#### [시연영상 링크]      
- (https://www.canva.com/design/DAFfn8Vt7sI/qn2eLbjzyWbrcmKiAeQHXw/editutm_content=DAFfn8Vt7sI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+#### [시연영상 링크]       (https://www.canva.com/design/DAFfn8Vt7sI/qn2eLbjzyWbrcmKiAeQHXw/editutm_content=DAFfn8Vt7sI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## 10.참고문헌
 
