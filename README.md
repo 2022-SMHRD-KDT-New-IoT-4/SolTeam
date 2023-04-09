@@ -12,8 +12,8 @@
  
 ## 2. 주요기능
 
-### 3.서비스 흐름도
-<div align = "center">
+####서비스 흐름도
+<div align = "left">
 <img src="https://user-images.githubusercontent.com/121835105/230775838-7e68a1bb-3b58-4e29-a12f-7f9bc98e4e7b.png" width="250" height="200"></img>
 </div>
 ## 3. 개발환경
